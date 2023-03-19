@@ -1,18 +1,24 @@
+<template>
+  <Link
+    :href="href"
+    :class="classes"
+  >
+    <slot />
+  </Link>
+</template>
+
 <script setup>
 import { computed } from 'vue';
 import { Link } from '@inertiajs/vue3';
 
-const props = defineProps(['href', 'active']);
+const props = defineProps({
+  href: { type: String, default: null },
+  active: { type: Boolean, default: false }
+});
 
 const classes = computed(() =>
     props.active
-        ? 'block w-full pl-3 pr-4 py-2 border-l-4 border-indigo-400 text-left text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out'
-        : 'block w-full pl-3 pr-4 py-2 border-l-4 border-transparent text-left text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out'
+        ? 'py-2 font-roboto uppercase font-bold outline-0  border-tan border-b-2 focus:border-grey-300'
+        : 'py-2 font-roboto uppercase font-bold outline-0  border-tan hover:border-b-2 active:border-b-2 focus:border-b-2'
 );
 </script>
-
-<template>
-    <Link :href="href" :class="classes">
-        <slot />
-    </Link>
-</template>

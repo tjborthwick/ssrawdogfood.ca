@@ -1,9 +1,12 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CatalogueController;
+use App\Http\Controllers\MarketingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,18 +19,24 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+Route::controller(MarketingController::class)->group(function() {
+    Route::get('/', 'home')->name('marketing.home');
+    Route::get('/benefits-of-raw', 'benefits')->name('marketing.benefits');
+    Route::get('/transitioning-feeding', 'feeding')->name('marketing.feeding');
+    Route::get('/faq', 'faq')->name('marketing.faq');
+    Route::get('/about-us', 'about')->name('marketing.about');
+    Route::get('/contact-us', 'contact')->name('marketing.contact');
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::controller(CatalogueController::class)->group(function() {
+    Route::get('/products', 'index')->name('catalogue.index');
+});
+
+Route::controller(CartController::class)->group(function() {
+    Route::get('/cart', 'index')->name('shop.cart');
+});
+
+Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth', 'verified'])->name('admin');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
