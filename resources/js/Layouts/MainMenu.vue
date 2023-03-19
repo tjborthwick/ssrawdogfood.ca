@@ -1,101 +1,41 @@
 <template>
-  <ul class="flex items-center gap-x-5">
-    <li>
+  <ul class="hidden xl:flex items-center gap-x-5">
+    <li
+      v-for="(link, index) in textLinks"
+      :key="index"
+    >
       <responsive-nav-link
-        :active="route().current('marketing.home')"
-        :href="route('marketing.home')"
+        :active="route().current(link.route)"
+        :href="route(link.route)"
+        :class="{ 'text-white': isInverted }"
+        class="no-underline"
       >
-        Home
+        {{ link.name }}
       </responsive-nav-link>
     </li>
     <li>
-      <responsive-nav-link
-        :active="route().current('catalogue.index')"
-        :href="route('catalogue.index')"
-      >
-        Products
-      </responsive-nav-link>
-    </li>
-    <li>
-      <responsive-nav-link
-        :active="route().current('marketing.benefits')"
-        :href="route('marketing.benefits')"
-      >
-        Benefits
-      </responsive-nav-link>
-    </li>
-    <li>
-      <responsive-nav-link
-        :active="route().current('marketing.feeding')"
-        :href="route('marketing.feeding')"
-      >
-        Transitioning &amp; Feeding
-      </responsive-nav-link>
-    </li>
-    <li>
-      <responsive-nav-link
-        :active="route().current('marketing.faq')"
-        :href="route('marketing.faq')"
-      >
-        FAQ
-      </responsive-nav-link>
-    </li>
-    <li>
-      <responsive-nav-link
-        :active="route().current('marketing.about')"
-        :href="route('marketing.about')"
-      >
-        About
-      </responsive-nav-link>
-    </li>
-    <li>
-      <responsive-nav-link
-        :active="route().current('marketing.contact')"
-        :href="route('marketing.contact')"
-      >
-        Contact
-      </responsive-nav-link>
-    </li>
-    <li>
-      <ul class="flex items-center gap-x-2">
-        <li>
-          <Link
-            class="hover:opacity-75"
-            :href="route('profile.edit')"
-          >
-            <img
-              class="inline-block"
-              src="/images/icons/icon-account.png"
-              width="32"
-              height="auto"
-            >
-          </Link>
-        </li>
-        <li>
-          <Link
-            class="hover:opacity-75"
-            :href="route('shop.cart')"
-          >
-            <img
-              class="inline-block"
-              src="/images/icons/icon-cart.png"
-              width="32"
-              height="auto"
-            >
-          </Link>
-        </li>
-      </ul>
+      <user-menu />
     </li>
   </ul>
 </template>
 
 <script setup>
-import { Link } from '@inertiajs/vue3';
+import { inject } from 'vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import UserMenu from '@/Layouts/UserMenu.vue';
+
+const isInverted = inject('inverted')
+
+const textLinks = [
+  { name: 'Home', route: 'marketing.home' },
+  { name: 'Products', route: 'catalogue.index' },
+  { name: 'Benefits', route: 'marketing.benefits' },
+  { name: 'Transitioning & Feeding', route: 'marketing.feeding' },
+  { name: 'FAQ', route: 'marketing.faq' },
+  { name: 'About', route: 'marketing.about' },
+  { name: 'Contact', route: 'marketing.contact' },
+]
 </script>
 
 <style scoped>
-.active {
-
-}
 </style>

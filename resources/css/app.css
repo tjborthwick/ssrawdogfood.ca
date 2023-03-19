@@ -13,6 +13,15 @@ body {
 #app {
     @apply h-full;
 }
+
+a {
+    @apply font-bold underline hover:no-underline;
+}
+
+p {
+    @apply leading-7;
+}
+
 /* .container {
     @apply max-w-[1280px] p-5;
 }

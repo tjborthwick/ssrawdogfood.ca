@@ -1,6 +1,9 @@
 <template>
-  <div class="h-[100px] absolute top-0 w-full overlay">
-    <div class="max-w-7xl mx-auto flex justify-between items-center py-2">
+  <div
+    class="h-[100px] absolute top-0 w-full"
+    :class="{ overlay: !inverted }"
+  >
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-2">
       <Link href="/">
         <ApplicationLogo />
       </Link>
@@ -11,9 +14,12 @@
 </template>
 
 <script setup>
+import { inject } from 'vue';
 import { Link } from '@inertiajs/vue3';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import MainMenu from '@/Layouts/MainMenu.vue'
+
+const inverted = inject('inverted')
 </script>
 
 <style scoped>

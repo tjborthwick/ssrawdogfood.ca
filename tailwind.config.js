@@ -13,7 +13,24 @@ module.exports = {
         extend: {
             backgroundImage: {
                 'hero-home': "url('/images/dogs/awesome-food-awesome-friends.jpg')",
-            }
+                'hero-about': "url('/images/dogs/about.png')",
+                'hero-about-2': "url('/images/dogs/about-2.jpg')",
+            },
+
+            fontSize: {
+                '5xl': '2.625rem',
+                '4xl': ['2.25rem', '1.25em'],
+                '3xl': '1.75rem',
+                '2xl': ['1.5rem', '1.5em'],
+                'xl': ['1.25rem', '1.5em'],
+                'lg': '1.125rem',
+                'sm': ['0.9rem', '1.25em'],
+                'xs': '0.875rem',
+            },
+
+            screens: {
+                '3xl': '1920px',
+            },
         },
 
         colors: {
@@ -27,7 +44,10 @@ module.exports = {
             'green': '#009385',
             'tan': '#BEA88B',
             'white': '#FFFFFF',
+            'orange-100': '#ee8746',
+            'orange-200': '#a83c24'
         },
+
         fontFamily: {
             sans: ['Arial', 'Helvetica', 'sans-serif'],
             cubano: ['cubano', 'sans-serif'],

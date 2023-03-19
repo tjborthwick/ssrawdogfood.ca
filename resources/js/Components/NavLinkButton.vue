@@ -1,17 +1,16 @@
 <template>
-  <button
-    :type="type"
+  <Link
+    :href="href"
     class="font-cubano px-4 py-2 bg-grey-400 text-tan text-xl uppercase rounded-sm focus:outline-none transition ease-in-out duration-150"
   >
     <slot />
-  </button>
+  </Link>
 </template>
 
 <script setup>
+import { Link } from '@inertiajs/vue3';
+
 defineProps({
-    type: {
-        type: String,
-        default: 'submit',
-    },
+    href: { type: String, default: null },
 });
 </script>
