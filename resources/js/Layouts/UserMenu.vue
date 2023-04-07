@@ -30,13 +30,15 @@
 </template>
 
 <script setup>
-import { computed, inject } from 'vue'
+import { computed } from 'vue'
 import { Link } from '@inertiajs/vue3';
 
-const isInverted = inject('inverted')
+const props = defineProps({
+  inverted: { type: Boolean, default: false }
+})
 
-const accountIconSrc = computed(() => isInverted ? '/images/icons/icon-account-inverse.png' : '/images/icons/icon-account.png')
-const cartIconSrc = computed(() => isInverted ? '/images/icons/icon-cart-inverse.png' : '/images/icons/icon-cart.png')
+const accountIconSrc = computed(() => props.inverted ? '/images/icons/icon-account-inverse.png' : '/images/icons/icon-account.png')
+const cartIconSrc = computed(() => props.inverted ? '/images/icons/icon-cart-inverse.png' : '/images/icons/icon-cart.png')
 </script>
 
 <style scoped>

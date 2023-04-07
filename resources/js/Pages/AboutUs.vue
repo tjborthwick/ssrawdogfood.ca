@@ -3,13 +3,10 @@
     <title>About Us</title>
   </Head>
 
-  <guest-layout
-    :inverted="true"
-    class=""
-  >
+  <guest-layout :inverted="true">
     <div class="bg-grey-400 pt-[100px]">
       <div class="relative max-w-7xl mx-auto px-10 bg-hero-about bg-no-repeat bg-right-bottom">
-        <div class="bg-hero-about-food bg-no-repeat bg-[left_bottom_-6rem] h-[420px]">
+        <div class="h-[420px]">
           <h1 class="text-5xl text-white font-cubano uppercase tracking-wide absolute top-16">
             About Us
           </h1>

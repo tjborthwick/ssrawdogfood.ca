@@ -11,7 +11,7 @@
         </p>
       </div>
 
-      <user-menu />
+      <user-menu :inverted="true" />
     </div>
   </div>
 </template>

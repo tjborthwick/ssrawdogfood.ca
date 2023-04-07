@@ -14,7 +14,7 @@
       </responsive-nav-link>
     </li>
     <li>
-      <user-menu />
+      <user-menu :inverted="isInverted" />
     </li>
   </ul>
 </template>

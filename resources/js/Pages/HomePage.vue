@@ -10,7 +10,7 @@
           Awesome Food <br> For Awesome <br> Friends
         </h1>
 
-        <div class="flex flex-col absolute top-0 -right-4">
+        <div class="flex flex-col absolute top-0 right-0">
           <div class="bg-purple p-8 max-w-xs">
             <h2 class="text-3xl text-white uppercase font-cubano mb-4">
               Raw Dog Food
@@ -81,10 +81,10 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
 </script>
 
 <style scoped>
-
 @screen xl {
   .bg-hero-home {
-    background-position-y: calc(100vw * 0.115 * -1)
+    background-position-y: calc(100vw * 0.05 * -1)
+    /* background-position-y: calc(100vw * 0.115 * -1) */
   }
 }
 

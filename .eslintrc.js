@@ -10,6 +10,9 @@ module.exports = {
       // 'vue/no-unused-vars': 'error'
       "vue/multi-word-component-names": ["error", {
         "ignores": ['Index', 'Edit', 'Create', 'View', 'Login', 'Register'],
+      }],
+      "vue/singleline-html-element-content-newline": ["error", {
+        "ignores": ["pre", "Link"]
       }]
     }
   }

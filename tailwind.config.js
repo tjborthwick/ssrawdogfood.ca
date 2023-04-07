@@ -15,10 +15,16 @@ module.exports = {
                 'hero-home': "url('/images/dogs/awesome-food-awesome-friends.jpg')",
                 'hero-about': "url('/images/dogs/about.png')",
                 'hero-about-2': "url('/images/dogs/about-2.jpg')",
+                'hero-benefits': "url('/images/dogs/benefits-of-raw-dog-food.jpg')",
+                'hero-feeding': "url('/images/dogs/raw-diet-feeding-guidelines.jpg')",
+                'hero-faq': "url('/images/dogs/raw-dog-food-faq.jpg')",
+                'hero-contact': "url(/images/dogs/contact.jpg)",
             },
 
             fontSize: {
-                '5xl': '2.625rem',
+                '7xl': ['3.875rem', '1.175'],
+                '6xl': ['3.5rem', '1.175'],
+                '5xl': ['2.625rem', '1.175'],
                 '4xl': ['2.25rem', '1.25em'],
                 '3xl': '1.75rem',
                 '2xl': ['1.5rem', '1.5em'],
@@ -30,6 +36,8 @@ module.exports = {
 
             screens: {
                 '3xl': '1920px',
+                '4xl': '2304px',
+                '5xl': '2560px',
             },
         },
 
