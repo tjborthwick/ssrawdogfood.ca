@@ -21,7 +21,7 @@
 
           <p class="text-white">
             There are many benefits to a raw diet. S&S Raw Dog Food products do not contain any additives,
-            preservatives or grains. Grains are a major source of allergies in dogs as their system can’t digest them.
+            preservatives or grains. Grains are a major source of allergies in dogs as their system can't digest them.
             Raw food and natural treats are the way nature intended!
           </p>
 

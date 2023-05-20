@@ -1,0 +1,185 @@
+[
+    {
+        "title": "Chicken",
+        "price": 2,
+        "slug": "chicken",
+        "category": "Pure Proteins",
+        "image": "/images/products/chicken.png",
+        "images": [
+            { "src": "/images/products/patty.png", "title": "Chicken Patty", "alt": "Chicken Patty" }
+        ],
+        "description": "Pure raw high quality chicken, sourced from local butchers. Contains only chicken meat, bone and organ and nothing else. A fantastic raw base to add your own ingredients.",
+        "crossSells": ["turkey", "pork", "beef", "gourmet-chicken"]
+    },
+    {
+        "title": "Turkey",
+        "price": 2.5,
+        "slug": "turkey",
+        "category": "Pure Proteins",
+        "images": [
+            { "src": "/images/products/patty.png", "title": "Turkey Patty", "alt": "Turkey Patty" }
+        ],
+        "image": "/images/products/turkey.png",
+        "description": "Pure raw high quality turkey, sourced from local butchers. Contains only turkey meat, bone and organ and nothing else. A fantastic raw base to add your own ingredients.",
+        "crossSells": ["chicken", "pork", "beef", "gourmet-turkey"]
+    },
+    {
+        "title": "Pork",
+        "price": 2.5,
+        "slug": "pork",
+        "category": "Pure Proteins",
+        "images": [
+            { "src": "/images/products/patty.png", "title": "Pork Patty", "alt": "Pork Patty" }
+        ],
+        "image": "/images/products/pork.png",
+        "description": "Pure raw high quality pork, sourced from local butchers. Contains only pork meat, bone and organ and nothing else. A fantastic raw base to add your own ingredients.",
+        "crossSells": ["chicken", "turkey", "beef", "gourmet-pork"]
+    },
+    {
+        "title": "Beef",
+        "price": 3.5,
+        "slug": "beef",
+        "category": "Pure Proteins",
+        "images": [
+            { "src": "/images/products/patty.png", "title": "Beef Patty", "alt": "Beef Patty" }
+        ],
+        "image": "/images/products/beef.png",
+        "description": "Pure raw high quality beef, sourced from local butchers. Contains only beef meat, bone and organ and nothing else. A fantastic raw base to add your own ingredients.",
+        "crossSells": ["chicken", "turkey", "pork", "gourmet-beef"]
+    },
+    {
+        "title": "Gourmet Chicken",
+        "price": 2.25,
+        "slug": "gourmet-chicken",
+        "category": "Gourmet Meals",
+        "image": "/images/products/gourmet-chicken.png",
+        "images": [
+            { "src": "/images/products/patty.png", "title": "Chicken Patty", "alt": "Chicken Patty" }
+        ],
+        "description": "Pure raw high quality chicken, sourced from local butchers. Contains chicken meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
+        "crossSells": ["gourmet-turkey", "gourmet-pork", "gourmet-beef"]
+    },
+    {
+        "title": "Gourmet Turkey",
+        "price": 2.85,
+        "slug": "gourmet-turkey",
+        "category": "Gourmet Meals",
+        "image": "/images/products/gourmet-turkey.png",
+        "images": [
+            { "src": "/images/products/patty.png", "title": "Turkey Patty", "alt": "Turkey Patty" }
+        ],
+        "description": "Pure raw high quality turkey, sourced from local butchers. Contains turkey meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
+        "crossSells": ["gourmet-chicken", "gourmet-pork", "gourmet-beef", "gourmet-duck", "gourmet-rabbit"]
+    },
+    {
+        "title": "Gourmet Pork",
+        "price": 2.85,
+        "slug": "gourmet-pork",
+        "category": "Gourmet Meals",
+        "image": "/images/products/gourmet-pork.png",
+        "images": [
+            { "src": "/images/products/patty.png", "title": "Pork Patty", "alt": "Pork Patty" }
+        ],
+        "description": "Pure raw high quality pork, sourced from local butchers. Contains pork meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
+        "crossSells": ["gourmet-chicken", "gourmet-turkey", "gourmet-beef", "gourmet-duck", "gourmet-rabbit"]
+    },
+    {
+        "title": "Gourmet Beef",
+        "price": 3.75,
+        "slug": "gourmet-beef",
+        "category": "Gourmet Meals",
+        "image": "/images/products/gourmet-beef.png",
+        "images": [
+            { "src": "/images/products/patty.png", "title": "Beef Patty", "alt": "Beef Patty" }
+        ],
+        "description": "Pure raw high quality beef, sourced from local butchers. Contains beef meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
+        "crossSells": ["gourmet-chicken", "gourmet-turkey", "gourmet-pork", "gourmet-duck", "gourmet-rabbit"]
+    },
+    {
+        "title": "Gourmet Duck",
+        "price": 3.75,
+        "slug": "gourmet-duck",
+        "category": "Gourmet Meals",
+        "image": "/images/products/gourmet-duck.png",
+        "images": [
+            { "src": "/images/products/patty.png", "title": "Duck Patty", "alt": "Duck Patty" }
+        ],
+        "description": "Pure raw high quality duck, sourced from local butchers. Contains duck meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
+        "crossSells": ["gourmet-chicken", "gourmet-turkey", "gourmet-pork", "gourmet-beef", "gourmet-rabbit"]
+    },
+    {
+        "title": "Gourmet Rabbit",
+        "price": 99.99,
+        "slug": "gourmet-rabbit",
+        "category": "Gourmet Meals",
+        "image": "/images/products/gourmet-rabbit.png",
+        "images": [
+            { "src": "/images/products/patty.png", "title": "Rabbit Patty", "alt": "Rabbit Patty" }
+        ],
+        "description": "Pure raw high quality rabbit, sourced from local butchers. Contains rabbit meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
+        "crossSells": ["gourmet-chicken", "gourmet-turkey", "gourmet-pork", "gourmet-beef", "gourmet-duck"]
+    },
+    {
+        "title": "Chicken Tenders",
+        "price": 10,
+        "slug": "chicken-tenders",
+        "category": "Dog Treats",
+        "image": "/images/products/chicken-tenders-pkg.jpg"
+    },
+    {
+        "title": "Smoked Turkey Neck",
+        "price": 5,
+        "slug": "smoked-turkey-neck",
+        "category": "Dog Treats",
+        "image": "/images/products/smoked-turkey-neck.jpg"
+    },
+    {
+        "title": "Smoked Pig Foot",
+        "price": 4,
+        "slug": "smoked-pig-foot",
+        "category": "Dog Treats",
+        "image": "/images/products/smoked-pig-foot.jpg"
+    },
+    {
+        "title": "Femur Bones",
+        "price": 3,
+        "slug": "femur-bones",
+        "category": "Dog Treats",
+        "image": "/images/products/femur-bones.jpg"
+    },
+    {
+        "title": "Beef Lungs",
+        "price": 10,
+        "slug": "beef-lungs",
+        "category": "Dog Treats",
+        "image": "/images/products/dried-beef-lung-pkg.jpg"
+    },
+    {
+        "title": "Beef Liver",
+        "price": 12,
+        "slug": "beef-liver",
+        "category": "Dog Treats",
+        "image": "/images/products/dried-beef-liver-pkg.jpg"
+    },
+    {
+        "title": "Beef Chews",
+        "price": 3,
+        "slug": "beef-chews",
+        "category": "Dog Treats",
+        "image": "/images/products/dried-beef-chews.jpg"
+    },
+    {
+        "title": "Lamb Trachea",
+        "price": 5,
+        "slug": "lamb-trachea",
+        "category": "Dog Treats",
+        "image": "/images/products/dried-lamb-trachea.jpg"
+    },
+    {
+        "title": "Pig Ears",
+        "price": 5,
+        "slug": "pig-ears",
+        "category": "Dog Treats",
+        "image": "/images/products/dried-pig-ears.jpg"
+    }
+]

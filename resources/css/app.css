@@ -19,7 +19,7 @@ a {
 }
 
 p {
-    @apply leading-7;
+    @apply leading-6;
 }
 
 /* .container {

@@ -3,13 +3,23 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
-use Illuminate\Http\Request;
 
 class MarketingController extends Controller
 {
+    protected $categories;
+
+    public function __construct()
+    {
+        $json = file_get_contents(__DIR__ . '/../../../database/json/categories.json');
+
+        $this->categories = Collect(json_decode($json));
+    }
+
     public function home()
     {
-        return Inertia::render('HomePage');
+        return Inertia::render('HomePage', [
+            'categories' => $this->categories,
+        ]);
     }
 
     public function benefits()

@@ -1,0 +1,6 @@
+[
+    { "title": "Pure Proteins", "image": "/images/products/chicken.png", "route": "catalogue.pure-proteins" },
+    { "title": "Gourmet Meals", "image": "/images/products/gourmet-pork.png", "route": "catalogue.gourmet-meals" },
+    { "title": "Custom Food", "image": "/images/products/gourmet-duck.png", "route": "catalogue.custom-food" },
+    { "title": "Dog Treats", "image": "/images/products/dog-treats.jpg", "route": "catalogue.dog-treats" }
+]

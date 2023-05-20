@@ -30,6 +30,11 @@ Route::controller(MarketingController::class)->group(function() {
 
 Route::controller(CatalogueController::class)->group(function() {
     Route::get('/products', 'index')->name('catalogue.index');
+    Route::get('/products/pure-proteins', 'pureProteins')->name('catalogue.pure-proteins');
+    Route::get('/products/gourmet-meals', 'gourmetMeals')->name('catalogue.gourmet-meals');
+    Route::get('/products/dog-treats', 'dogTreats')->name('catalogue.dog-treats');
+    Route::get('/products/custom-food', 'customFood')->name('catalogue.custom-food');
+    Route::get('/products/{slug}', 'view')->name('catalogue.view-product');
 });
 
 Route::controller(CartController::class)->group(function() {
