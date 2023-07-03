@@ -7,7 +7,7 @@
 
     <div
       class="flex-1"
-      :class="{ 'bg-grey-400' : inverted }"
+      :class="{ 'bg-grey-400' : inverted, 'inverted': inverted }"
     >
       <slot />
     </div>

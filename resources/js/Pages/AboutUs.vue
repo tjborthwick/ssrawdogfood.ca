@@ -7,7 +7,7 @@
     <div class="bg-grey-400 pt-[100px]">
       <div class="relative max-w-7xl mx-auto px-10 bg-hero-about bg-no-repeat bg-right-bottom">
         <div class="h-[420px]">
-          <h1 class="text-5xl text-white font-cubano uppercase tracking-wide absolute top-16">
+          <h1 class="text-5xl  font-cubano uppercase tracking-wide absolute top-16">
             About Us
           </h1>
 
@@ -20,13 +20,13 @@
 
       <div class="bg-orange-100">
         <div class="max-w-7xl px-10 pt-28 pb-10 mx-auto">
-          <h2 class="text-2xl text-white font-cubano uppercase mb-4 tracking-wide">
+          <h2 class="text-2xl  font-cubano uppercase mb-4 tracking-wide">
             Who Is S&S Raw Dod Food?
           </h2>
 
-          <p class="text-white">
+          <p>
             S&S Raw Dog food is a no frills, high quality raw dog food company based in Woodstock, Ontario. Our focus is bringing you the most cost efficient food while maintaining
-            the highest quality. We make our raw dog food twice weekly, so it is never in the freezer long. We offer a range of <Link>products</Link> as well as <Link>custom food</Link>, so if you have a dog with
+            the highest quality. We make our raw dog food twice weekly, so it is never in the freezer long. We offer a range of <Link class="" :href="route('catalogue.index')">Products</Link> as well as <Link class="" :href="route('catalogue.custom-food')">Custom Food</Link>, so if you have a dog with
             special food needs we can help. The proof is in our product, so give us a try
           </p>
         </div>
@@ -36,11 +36,11 @@
         <div class="max-w-7xl mx-auto">
           <div class="flex">
             <div class="w-6/12 px-10 py-10">
-              <h2 class="text-2xl text-white font-cubano uppercase mb-4 tracking-wide">
+              <h2 class="text-2xl font-cubano uppercase mb-4 tracking-wide">
                 Why We Do What We Do
               </h2>
 
-              <p class="text-white mb-4">
+              <p class=" mb-4">
                 Our puppy had allergies when we brought him home,
                 though at first we weren't sure what was going on. We did
                 the normal things; changed food, went to the vet, and after
@@ -48,7 +48,7 @@
                 ever did, as our puppy’s issues cleared up.
               </p>
 
-              <p class="text-white mb-4">
+              <p class=" mb-4">
                 We found buying raw food a little pricey but wanted a
                 healthy happy dog, so we decided to try making our own.
                 From there the rest is history. We thought why not do this
@@ -57,7 +57,7 @@
                 raw diet.
               </p>
 
-              <Link class="text-white">
+              <Link class="">
                 See our Products
               </Link>
             </div>

@@ -7,7 +7,7 @@
     >
       <h2 class="text-2xl text-grey-400 text-left font-cubano">
         <Link
-          :href="category.href"
+          :href="route(category.route)"
           class="no-underline font-normal"
         >
           {{ category.title }}

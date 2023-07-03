@@ -7,26 +7,32 @@
       <template v-if="link.links">
         <main-menu-dropdown>
           <template #trigger>
-            <span
-              class="font-roboto uppercase font-bold outline-0 block"
+            <responsive-nav-link
+              class="no-underline"
               :class="{ 'text-white': isInverted }"
+              :active="route().current('catalogue.*')"
+              :href="route(link.links[0].route)"
             >
               Products
-            </span>
+            </responsive-nav-link>
           </template>
 
           <template #content>
-            <ul class="py-4 px-7">
+            <ul class="py-4 px-7 bg-grey-400" :class="{ 'bg-white': isInverted }">
               <li
                 v-for="(subLink, subIndex) in link.links"
                 :key="subIndex"
                 class="my-1"
               >
                 <Link
-                  :active="route().current(link.route)"
                   :href="route(subLink.route)"
-                  :class="{ 'text-white': isInverted }"
-                  class="no-underline font-roboto text-lg text-tan hover:text-white font-normal"
+                  :class="{
+                    'text-grey-400 hover:text-tan': isInverted,
+                    'text-tan hover:text-white': !isInverted,
+                    'text-tan': isInverted && route().current(subLink.route),
+                    'text-white': !isInverted && route().current(subLink.route)
+                  }"
+                  class="no-underline font-roboto text-lg font-normal active:text-white"
                 >
                   {{ subLink.name }}
                 </Link>
@@ -67,7 +73,7 @@ const textLinks = [
   { name: 'Home', route: 'marketing.home' },
   { name: 'Products', route: 'catalogue.pure-proteins', links: [
     { name: 'Pure Proteins', route: 'catalogue.pure-proteins' },
-    { name: 'Balanced Meals', route: 'catalogue.gourmet-meals' },
+    { name: 'Gourmet Meals', route: 'catalogue.gourmet-meals' },
     { name: 'Custom Food', route: 'catalogue.custom-food' },
     { name: 'Dog Treats', route: 'catalogue.dog-treats' },
   ] },
@@ -80,4 +86,5 @@ const textLinks = [
 </script>
 
 <style scoped>
+
 </style>

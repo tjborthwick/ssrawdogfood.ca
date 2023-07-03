@@ -26,7 +26,7 @@
           style="display: none"
           @click="open = false"
         >
-          <div class="bg-grey-400 text-grey-200 translate-y-4">
+          <div class="translate-y-4">
             <slot name="content" />
           </div>
         </div>
@@ -36,37 +36,37 @@
 </template>
 
 <script setup>
-  import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 
-  const props = defineProps({
-      align: { type: String, default: null },
-      width: { type: String, default: '48' },
-  })
+const props = defineProps({
+    align: { type: String, default: null },
+    width: { type: String, default: '48' },
+})
 
-  const closeOnEscape = (e) => {
-      if (open.value && e.key === 'Escape') {
-          open.value = false;
-      }
-  }
+const closeOnEscape = (e) => {
+    if (open.value && e.key === 'Escape') {
+        open.value = false;
+    }
+}
 
-  onMounted(() => document.addEventListener('keydown', closeOnEscape))
-  onUnmounted(() => document.removeEventListener('keydown', closeOnEscape))
+onMounted(() => document.addEventListener('keydown', closeOnEscape))
+onUnmounted(() => document.removeEventListener('keydown', closeOnEscape))
 
-  const widthClass = computed(() => {
-      return {
-          48: 'w-48',
-      }[props.width.toString()]
-  })
+const widthClass = computed(() => {
+    return {
+        48: 'w-48',
+    }[props.width.toString()]
+})
 
-  const alignmentClasses = computed(() => {
-      if (props.align === 'left') {
-          return 'origin-top-left left-0'
-      } else if (props.align === 'right') {
-          return 'origin-top-right right-0'
-      } else {
-          return 'origin-top'
-      }
-  })
+const alignmentClasses = computed(() => {
+    if (props.align === 'left') {
+        return 'origin-top-left left-0'
+    } else if (props.align === 'right') {
+        return 'origin-top-right right-0'
+    } else {
+        return 'origin-top'
+    }
+})
 
-  const open = ref(false)
-  </script>
+const open = ref(false)
+</script>

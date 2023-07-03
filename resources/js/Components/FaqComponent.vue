@@ -15,12 +15,14 @@
         v-if="!isActive"
         width="32px"
         height="32px"
+        class="text-white"
       />
 
       <minus-icon
         v-if="isActive"
         width="32px"
         height="32px"
+        class="text-white"
       />
     </div>
 

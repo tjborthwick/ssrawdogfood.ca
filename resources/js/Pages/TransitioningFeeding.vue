@@ -17,7 +17,7 @@
           >
         </div>
 
-        <div class="bg-green text-white">
+        <div class="bg-green inverted">
           <div class="max-w-7xl mx-auto px-10 pt-28 pb-10">
             <h2 class="text-2xl uppercase font-cubano tracking-wide mb-4">
               Transitioning Your Dog To Raw Food
@@ -39,7 +39,7 @@
                     <p>
                       Start with the most cost effective protein, which is <Link>Chicken</Link>, then once or
                       twice a week switch to a different protein. <Link>Turkey,</Link>&nbsp;
-                      <Link class="text-white">Duck</Link> and <Link>Rabbit</Link> are
+                      <Link>Duck</Link> and <Link>Rabbit</Link> are
                       also great choices as they are often easy to digest as well.
                     </p>
                   </li>
@@ -62,7 +62,7 @@
         </div>
       </div>
 
-      <div class="bg-blue text-white">
+      <div class="bg-blue inverted">
         <div class="flex max-w-7xl mx-auto">
           <div class="w-[56%] lg:w-1/2  px-10 py-10">
             <h2 class="text-2xl uppercase font-cubano tracking-wide mb-4">

@@ -13,7 +13,7 @@
         </div>
       </div>
 
-      <div class="bg-red text-white flex-1">
+      <div class="bg-red inverted flex-1">
         <div class="max-w-7xl mx-auto px-10 pt-28 2xl:pt-32 pb-10 relative">
           <img
             src="/images/products/gourmet-beef.png"

@@ -13,13 +13,13 @@
         </div>
       </div>
 
-      <div class="bg-purple">
+      <div class="bg-purple inverted">
         <div class="max-w-7xl mx-auto px-10 pt-28 pb-10 relative">
-          <h2 class="text-2xl text-white font-cubano uppercase mb-4 tracking-wide">
+          <h2 class="text-2xl font-cubano uppercase mb-4 tracking-wide">
             Benefits of Feeding Your Dog a Raw Diet
           </h2>
 
-          <p class="text-white">
+          <p>
             There are many benefits to a raw diet. S&S Raw Dog Food products do not contain any additives,
             preservatives or grains. Grains are a major source of allergies in dogs as their system can't digest them.
             Raw food and natural treats are the way nature intended!

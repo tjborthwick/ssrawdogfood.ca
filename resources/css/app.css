@@ -18,8 +18,27 @@ a {
     @apply font-bold underline hover:no-underline;
 }
 
+.inverted a {
+    @apply text-white;
+}
+
 p {
     @apply leading-6;
+}
+
+.inverted span,
+.inverted li,
+.inverted p,
+.inverted label {
+    color: rgba(255, 255, 255, 0.75)
+}
+
+.inverted h1,
+.inverted h2,
+.inverted h3,
+.inverted h4,
+.inverted h5 {
+    @apply text-white;
 }
 
 /* .container {
