@@ -5,7 +5,7 @@
 
   <guest-layout>
     <div class="pt-[100px]">
-      <div class="max-w-7xl mx-auto px-10 pt-6">
+      <div class="container content">
         <product-breadcrumbs
           class="mb-4"
           :crumbs="crumbs"

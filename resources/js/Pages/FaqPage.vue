@@ -6,7 +6,7 @@
   <guest-layout>
     <div class="h-full flex flex-col">
       <div class="bg-no-repeat bg-hero-faq bg-cover bg-center pt-[100px]">
-        <div class="h-[360px] 2xl:h-[460px] 4xl:h-[640px]  max-w-7xl mx-auto px-10 relative">
+        <div class="h-[360px] 2xl:h-[460px] 4xl:h-[640px] container content relative">
           <h1 class="text-5xl 3xl:text-6xl 4xl:text-7xl font-cubano text-grey-400 uppercase tracking-wide absolute top-16 3xl:top-28 5xl:top-48">
             Raw FAQS
           </h1>
@@ -14,7 +14,7 @@
       </div>
 
       <div class="bg-red inverted flex-1">
-        <div class="max-w-7xl mx-auto px-10 pt-28 2xl:pt-32 pb-10 relative">
+        <div class="container content !pt-28 !2xl:pt-32 relative">
           <img
             src="/images/products/gourmet-beef.png"
             class="max-w-[320px] xl:max-w-sm 2xl:max-w-md position absolute top-[-10rem] xl:top-[-12rem] 2xl:top-[-14rem] left-8"

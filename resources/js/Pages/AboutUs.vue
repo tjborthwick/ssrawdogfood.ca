@@ -5,7 +5,7 @@
 
   <guest-layout :inverted="true">
     <div class="bg-grey-400 pt-[100px]">
-      <div class="relative max-w-7xl mx-auto px-10 bg-hero-about bg-no-repeat bg-right-bottom">
+      <div class="container content relative bg-hero-about bg-no-repeat bg-right-bottom">
         <div class="h-[420px]">
           <h1 class="text-5xl  font-cubano uppercase tracking-wide absolute top-16">
             About Us
@@ -19,8 +19,8 @@
       </div>
 
       <div class="bg-orange-100">
-        <div class="max-w-7xl px-10 pt-28 pb-10 mx-auto">
-          <h2 class="text-2xl  font-cubano uppercase mb-4 tracking-wide">
+        <div class="container content !pt-28 !pb-10">
+          <h2 class="text-2xl font-cubano uppercase mb-4 tracking-wide">
             Who Is S&S Raw Dod Food?
           </h2>
 
@@ -33,9 +33,9 @@
       </div>
 
       <div class="bg-orange-200">
-        <div class="max-w-7xl mx-auto">
-          <div class="flex">
-            <div class="w-6/12 px-10 py-10">
+        <div class="container content !py-0">
+          <div class="flex gap-x-10">
+            <div class="w-6/12 px-0 py-10">
               <h2 class="text-2xl font-cubano uppercase mb-4 tracking-wide">
                 Why We Do What We Do
               </h2>

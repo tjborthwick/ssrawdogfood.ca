@@ -5,7 +5,7 @@
 
 <guest-layout :with-footer="false">
     <div class="bg-hero-home bg-cover bg-top bg-no-repeat h-full pt-[100px]">
-        <div class="max-w-7xl h-full px-10 mx-auto flex flex-col justify-center relative">
+        <div class="container px-10 flex flex-col justify-center relative">
             <h1 class="text-4xl font-bold uppercase font-cubano text-grey-400 absolute top-64 tracking-wide">
                 Awesome Food <br> For Awesome <br> Friends
             </h1>
@@ -95,7 +95,7 @@
 
     <div class="xl:hidden">
         <div>
-            <div class="max-w-7xl mx-auto px-10 pt-6">
+            <div class="container content">
                 <h1 class="text-4xl font-cubano text-grey-400 mb-4">Products</h1>
 
                 <p class="text-grey-400">

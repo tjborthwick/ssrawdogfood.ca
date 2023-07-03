@@ -41,22 +41,10 @@ p {
     @apply text-white;
 }
 
-/* .container {
-    @apply max-w-[1280px] p-5;
+.container {
+    @apply w-full max-w-7xl mx-auto;
 }
 
-@screen md {
-    .container {
-        @apply p-10;
-    }
+.content {
+    @apply px-5 md:px-10 py-6 xl:px-20;
 }
-
-@screen xl {
-    .container {
-        @apply px-[60px] py-[80px];
-    }
-}
-
-a {
-    @apply text-grey-400 font-bold underline hover:no-underline;
-} */

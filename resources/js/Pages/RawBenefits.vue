@@ -6,7 +6,7 @@
   <guest-layout>
     <div class="h-full bg-hero-benefits bg-no-repeat bg-cover pt-[100px]">
       <div class="min-h-[400px] 2xl:min-h-[600px] 4xl:min-h-[720px]">
-        <div class="max-w-7xl mx-auto px-10 relative">
+        <div class="container content relative">
           <h1 class="text-5xl 3xl:text-6xl 4xl:text-7xl font-cubano text-grey-400 uppercase tracking-wide absolute top-16 3xl:top-28 5xl:top-48">
             Why Raw?
           </h1>
@@ -14,7 +14,7 @@
       </div>
 
       <div class="bg-purple inverted">
-        <div class="max-w-7xl mx-auto px-10 pt-28 pb-10 relative">
+        <div class="container content !pt-28 !pb-10 relative">
           <h2 class="text-2xl font-cubano uppercase mb-4 tracking-wide">
             Benefits of Feeding Your Dog a Raw Diet
           </h2>
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <div class="max-w-7xl mx-auto px-10 py-10">
+      <div class="container content">
         <ul>
           <li class="text-4xl text-bold font-cubano text-grey-400 mb-4 uppercase tracking-wide">
             Improved Oral Health

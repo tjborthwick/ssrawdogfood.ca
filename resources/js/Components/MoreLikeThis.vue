@@ -1,6 +1,6 @@
 <template>
   <div class="bg-grey-100 ">
-    <div class="max-w-7xl mx-auto px-10 py-5">
+    <div class="container content">
       <h2 class="text-2xl text-grey-400 font-cubano mb-2">
         More Like This
       </h2>

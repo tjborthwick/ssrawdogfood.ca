@@ -5,7 +5,7 @@
 
   <guest-layout :inverted="true">
     <div class="h-full bg-purple pt-[100px] bg-hero-contact bg-cover bg-no-repeat bg-right">
-      <div class="max-w-7xl mx-auto px-10 pt-28">
+      <div class="container content !pt-28">
         <h1 class="text-5xl font-cubano uppercase tracking-wide mb-6">
           Contact
         </h1>

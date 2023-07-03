@@ -5,7 +5,7 @@
 
 <guest-layout>
     <div class="h-full flex flex-col justify-between pt-[100px]">
-        <div class="w-full max-w-7xl mx-auto px-10 py-6">
+        <div class="container content">
             <div>
                 <product-breadcrumbs
                     class="mb-4"
