@@ -4,7 +4,7 @@
   </Head>
 
   <guest-layout>
-    <div class="pt-[100px]">
+    <div class="page">
       <div class="container content">
         <product-breadcrumbs
           class="mb-4"

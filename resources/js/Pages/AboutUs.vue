@@ -4,7 +4,7 @@
   </Head>
 
   <guest-layout :inverted="true">
-    <div class="bg-grey-400 pt-[100px]">
+    <div class="page bg-grey-400">
       <div class="container content relative bg-hero-about bg-no-repeat bg-right-bottom">
         <div class="h-[420px]">
           <h1 class="text-5xl  font-cubano uppercase tracking-wide absolute top-16">

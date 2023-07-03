@@ -4,7 +4,7 @@
 </Head>
 
 <guest-layout :with-footer="false">
-    <div class="bg-hero-home bg-cover bg-top bg-no-repeat h-full pt-[100px]">
+    <div class="bg-hero-home bg-cover bg-top bg-no-repeat page">
         <div class="container px-10 flex flex-col justify-center relative">
             <h1 class="text-4xl font-bold uppercase font-cubano text-grey-400 absolute top-64 tracking-wide">
                 Awesome Food <br> For Awesome <br> Friends

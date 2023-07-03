@@ -4,7 +4,7 @@
 </Head>
 
 <guest-layout>
-    <div class="h-full flex flex-col justify-between pt-[100px]">
+    <div class="page flex flex-col justify-between">
         <div class="container content">
             <div>
                 <product-breadcrumbs

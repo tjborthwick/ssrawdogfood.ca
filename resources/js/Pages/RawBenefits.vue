@@ -4,7 +4,7 @@
   </Head>
 
   <guest-layout>
-    <div class="h-full bg-hero-benefits bg-no-repeat bg-cover pt-[100px]">
+    <div class="page bg-hero-benefits bg-no-repeat bg-cover">
       <div class="min-h-[400px] 2xl:min-h-[600px] 4xl:min-h-[720px]">
         <div class="container content relative">
           <h1 class="text-5xl 3xl:text-6xl 4xl:text-7xl font-cubano text-grey-400 uppercase tracking-wide absolute top-16 3xl:top-28 5xl:top-48">

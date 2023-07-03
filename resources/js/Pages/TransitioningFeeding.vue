@@ -4,7 +4,7 @@
   </Head>
 
   <guest-layout>
-    <div class="h-full bg-no-repeat bg-cover pt-[100px]">
+    <div class="page bg-no-repeat bg-cover">
       <div>
         <div class="h-[400px] 2xl:h-[600px] 4xl:h-[720px] container content relative">
           <h1 class="text-5xl 3xl:text-6xl 4xl:text-7xl font-cubano text-grey-400 uppercase tracking-wide absolute top-16 3xl:top-28 5xl:top-48">

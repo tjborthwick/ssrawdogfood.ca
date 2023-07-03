@@ -41,6 +41,14 @@ p {
     @apply text-white;
 }
 
+.page {
+    @apply h-full pt-[108px];
+}
+
+.page-padding {
+    @apply pt-[108px];
+}
+
 .container {
     @apply w-full max-w-7xl mx-auto;
 }
