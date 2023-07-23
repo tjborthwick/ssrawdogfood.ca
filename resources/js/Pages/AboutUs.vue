@@ -57,7 +57,7 @@
                 raw diet.
               </p>
 
-              <Link class="">
+              <Link :href="route('catalogue.index')">
                 See our Products
               </Link>
             </div>

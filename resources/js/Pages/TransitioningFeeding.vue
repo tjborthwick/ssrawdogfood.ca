@@ -37,9 +37,9 @@
                 <ul class="list-disc pl-7 pt-2">
                   <li class="mb-4">
                     <p>
-                      Start with the most cost effective protein, which is <Link>Chicken</Link>, then once or
-                      twice a week switch to a different protein. <Link>Turkey,</Link>&nbsp;
-                      <Link>Duck</Link> and <Link>Rabbit</Link> are
+                      Start with the most cost effective protein, which is <Link :href="route('catalogue.view-product', 'chicken')">Chicken</Link>, then once or
+                      twice a week switch to a different protein. <Link :href="route('catalogue.view-product', 'turkey')">Turkey,</Link>&nbsp;
+                      <Link :href="route('catalogue.view-product', 'gourmet-duck')">Duck</Link> and <Link :href="route('catalogue.view-product', 'gourmet-rabbit')">Rabbit</Link> are
                       also great choices as they are often easy to digest as well.
                     </p>
                   </li>

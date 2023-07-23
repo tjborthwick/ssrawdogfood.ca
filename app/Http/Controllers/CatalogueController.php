@@ -32,21 +32,21 @@ class CatalogueController extends Controller
     public function pureProteins()
     {
         return Inertia::render('Products/PureProteins', [
-            'products' => $this->products->where('category', 'Pure Proteins'),
+            'products' => $this->products->where('category', 'Pure Proteins')->values(),
         ]);
     }
 
     public function gourmetMeals()
     {
         return Inertia::render('Products/GourmetMeals', [
-            'products' => $this->products->where('category', 'Gourmet Meals'),
+            'products' => $this->products->where('category', 'Gourmet Meals')->values(),
         ]);
     }
 
     public function dogTreats()
     {
         return Inertia::render('Products/DogTreats', [
-            'products' => $this->products->where('category', 'Dog Treats'),
+            'products' => $this->products->where('category', 'Dog Treats')->values(),
         ]);
     }
 

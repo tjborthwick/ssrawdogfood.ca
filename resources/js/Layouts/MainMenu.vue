@@ -1,8 +1,11 @@
 <template>
-  <ul class="hidden xl:flex items-center gap-x-5">
+  <ul class="flex items-center gap-x-4">
+
+    <!-- Desktop links -->
     <li
       v-for="(link, index) in textLinks"
       :key="index"
+      class="hidden xl:block"
     >
       <template v-if="link.links">
         <main-menu-dropdown>
@@ -13,7 +16,7 @@
               :active="route().current('catalogue.*')"
               :href="route(link.links[0].route)"
             >
-              Products
+              {{ link.name }}
             </responsive-nav-link>
           </template>
 
@@ -57,6 +60,10 @@
     <li>
       <user-menu :inverted="isInverted" />
     </li>
+
+    <li class="xl:hidden">
+      <main-menu-mobile />
+    </li>
   </ul>
 </template>
 
@@ -65,6 +72,7 @@ import { Link } from '@inertiajs/vue3'
 import { inject } from 'vue'
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue'
 import UserMenu from '@/Layouts/UserMenu.vue'
+import MainMenuMobile from '@/Layouts/MainMenuMobile.vue'
 import MainMenuDropdown from '@/Components/MainMenuDropdown.vue'
 
 const isInverted = inject('inverted')

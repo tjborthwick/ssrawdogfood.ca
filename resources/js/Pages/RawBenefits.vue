@@ -57,7 +57,7 @@
           </li>
         </ul>
 
-        <Link class="text-grey-400 text-xl">
+        <Link class="text-grey-400 text-xl" :href="route('catalogue.index')">
           See Our Products
         </Link>
       </div>

@@ -1,12 +1,12 @@
 <template>
-  <ul class="flex items-center gap-x-2">
+  <ul class="flex items-center gap-x-4">
     <li>
       <Link
         class="hover:opacity-75"
         :href="route('profile.edit')"
       >
         <img
-          class="inline-block"
+          class="inline-block pb-3"
           :src="accountIconSrc"
           width="32"
           height="auto"
@@ -19,7 +19,7 @@
         :href="route('shop.cart')"
       >
         <img
-          class="inline-block"
+          class="inline-block pb-3"
           :src="cartIconSrc"
           width="32"
           height="auto"
