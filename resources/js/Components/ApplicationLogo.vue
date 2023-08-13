@@ -3,7 +3,7 @@
     :src="imageSrc"
     height="80"
     width="420"
-    class=""
+    class="max-w-[85%] lg:max-w-none"
   >
 </template>
 

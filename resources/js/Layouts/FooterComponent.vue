@@ -1,8 +1,8 @@
 <template>
   <div class="bg-grey-400">
-    <div class="container content !py-2 flex justify-between">
+    <div class="container content !py-2 sm:flex sm:justify-between">
       <div>
-        <p class="text-white font-roboto font-bold">
+        <p class="text-white font-roboto font-bold text-xs xs:text-base">
           Serving Woodstock, Ontario &amp; Surrounding Areas
         </p>
 
@@ -11,7 +11,7 @@
         </p>
       </div>
 
-      <user-menu :footer="true" />
+      <user-menu :footer="true" class="hidden sm:flex" />
     </div>
   </div>
 </template>
