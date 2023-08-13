@@ -6,7 +6,7 @@
     <header-component />
 
     <div
-      class="flex-1"
+      class="h-full"
       :class="{ 'bg-grey-400' : inverted, 'inverted': inverted }"
     >
       <slot />

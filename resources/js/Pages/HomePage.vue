@@ -4,94 +4,17 @@
 </Head>
 
 <guest-layout :with-footer="false">
-    <div class="bg-hero-home bg-cover bg-top bg-no-repeat page">
-        <div class="container px-10 flex flex-col justify-center relative">
-            <h1 class="text-4xl font-bold uppercase font-cubano text-grey-400 absolute top-64 tracking-wide">
+    <div class="bg-hero-home bg-cover md:bg-left-top xl:bg-center bg-no-repeat page">
+        <div class="container h-full px-6 md:px-10 flex flex-col justify-center relative">
+            <h1 class="text-2xl-b md:text-4xl font-bold uppercase font-cubano text-grey-400 absolute -top-3 md:top-20 lg:top-64 tracking-wide">
                 Awesome Food <br> For Awesome <br> Friends
             </h1>
 
-            <div class="flex flex-col absolute top-0 right-0">
-                <div class="bg-purple p-8 max-w-xs">
-                    <h2 class="text-3xl text-white uppercase font-cubano mb-4">
-                        Raw Dog Food
-                    </h2>
-
-                    <p class="text-white mb-2">
-                        Pure Raw Proteins and Gourmet Meals. We do Custom Food too!
-                    </p>
-
-                    <div class="flex gap-x-6 items-center">
-                        <nav-link-button :href="route('catalogue.index')">
-                            <span class="whitespace-nowrap">
-                                Shop Raw
-                            </span>
-                        </nav-link-button>
-
-                        <div>
-                            <img src="/images/products/chicken.png">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-blue p-8 max-w-xs">
-                    <h2 class="text-3xl text-white uppercase font-cubano mb-4">
-                        Dog Treats
-                    </h2>
-
-                    <p class="text-white mb-2">
-                        Tasty &amp; Beneficial All Natural One-Ingredient Dog Treats
-                    </p>
-
-                    <div class="flex gap-x-6 items-center">
-                        <nav-link-button :href="route('catalogue.dog-treats')">
-                            <span class="whitespace-nowrap">
-                                Shop Treats
-                            </span>
-                        </nav-link-button>
-
-                        <div>
-                            <img src="/images/products/chicken.png">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-green p-8 max-w-xs">
-                    <h2 class="text-3xl text-white uppercase font-cubano mb-4">
-                        Learn More:
-                    </h2>
-
-                    <ul class="list-disc pl-4 text-white">
-                        <li class="text-sm font-bold leading-7">
-                            <Link
-                                :href="route('marketing.benefits')"
-                                class="no-underline hover:underline"
-                            >
-                                Benefits of Raw
-                            </Link>
-                        </li>
-
-                        <li class="text-sm font-bold leading-7">
-                            <Link
-                                :href="route('marketing.feeding')"
-                                class="no-underline hover:underline"
-                            >
-                                Transitioning & Feeding
-                            </Link>
-                        </li>
-
-                        <li class="text-sm font-bold leading-7">
-                            <Link
-                                :href="route('marketing.faq')"
-                                class="no-underline hover:underline"
-                            >
-                                Frequently Asked Questions
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <home-call-to-actions class="hidden md:block absolute bottom-0 left-0 xl:top-0 xl:right-0 xl:left-auto" />
         </div>
     </div>
+
+    <home-call-to-actions class="md:hidden" />
 
     <div class="xl:hidden">
         <div>
@@ -115,10 +38,10 @@
 
 <script setup>
 import GuestLayout from '@/Layouts/GuestLayout.vue'
-import { Head, Link } from '@inertiajs/vue3'
-import NavLinkButton from '@/Components/NavLinkButton.vue'
+import { Head } from '@inertiajs/vue3'
 import CategoryGrid from '@/Components/Products/CategoryGrid.vue'
 import FooterComponent from '@/Layouts/FooterComponent.vue'
+import HomeCallToActions from '@/Components/HomeCallToActions.vue'
 
 const props = defineProps({
     categories: { type: Array, required: true },
@@ -126,10 +49,41 @@ const props = defineProps({
 </script>
 
 <style scoped>
+.bg-hero-home {
+    @apply bg-center;
+    background-color: #ecedee;
+    background-position-y: 2rem;
+}
+
+@media screen and (min-width: 340px) {
+    .bg-hero-home {
+        background-position-x: calc(100vw * 0.125 * -1);
+    }
+}
+
+@media screen and (min-height: 740px) {
+    .bg-hero-home {
+        background-position-x: calc(100vw * 0.3 * -1);
+        background-position-y: 2rem;
+    }
+}
+
+@media screen and (min-height: 915px) {
+    .bg-hero-home {
+        background-position-x: calc(100vw * 0.375 * -1);
+        background-position-y: 2rem;
+    }
+}
+
+@screen md {
+    .bg-hero-home {
+        background-position-x: initial;
+    }
+}
+
 @screen xl {
   .bg-hero-home {
     background-position-y: calc(100vw * 0.05 * -1)
-    /* background-position-y: calc(100vw * 0.115 * -1) */
   }
 }
 
