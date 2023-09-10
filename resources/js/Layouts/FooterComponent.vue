@@ -11,7 +11,10 @@
         </p>
       </div>
 
-      <user-menu :footer="true" class="hidden sm:flex" />
+      <user-menu
+        :footer="true"
+        class="hidden sm:flex"
+      />
     </div>
   </div>
 </template>

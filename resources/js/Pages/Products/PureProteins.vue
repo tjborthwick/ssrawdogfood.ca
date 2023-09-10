@@ -21,47 +21,20 @@
           proteins provide a fantastic raw base for DIYers to add their own ingredients for a balanced meal.
         </p>
 
-        <div class="flex flex-wrap my-4">
-          <div
-            v-for="product in products"
-            :key="product.id"
-            class="text-center w-1/2 py-5"
-          >
-            <div class="mb-4 max-w-xs mx-auto">
-              <Link
-                :href="route('catalogue.view-product', product.slug)"
-                class="no-underline"
-              >
-                <img
-                  :src="product.image"
-                  class="mx-auto"
-                >
-              </Link>
-            </div>
-
-            <h2 class="text-2xl text-grey-400 font-cubano">
-              <Link
-                :href="route('catalogue.view-product', product.slug)"
-                class="no-underline font-normal"
-              >
-                {{ product.title }}
-              </Link>
-            </h2>
-
-            <p class="text-grey-400">
-              From: ${{ product.price.toFixed(2) }}
-            </p>
-          </div>
-        </div>
+        <product-grid
+          :products="products"
+          :cols="2"
+        />
       </div>
     </div>
   </guest-layout>
 </template>
 
 <script setup>
+import { Head } from '@inertiajs/vue3'
 import GuestLayout from '@/Layouts/GuestLayout.vue'
-import { Head, Link } from '@inertiajs/vue3'
 import ProductBreadcrumbs from '@/Components/ProductBreadcrumbs.vue'
+import ProductGrid from '@/Components/Products/ProductGrid.vue'
 
 const crumbs = [
   { title: 'Products', url: route('catalogue.index') },

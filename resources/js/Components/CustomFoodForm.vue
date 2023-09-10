@@ -7,7 +7,7 @@
 
       <input
         type="text"
-        class="w-full"
+        class="w-full rounded-sm border-grey-200 focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-400"
       >
     </div>
 
@@ -18,7 +18,7 @@
 
       <input
         type="email"
-        class="w-full"
+        class="w-full rounded-sm border-grey-200 focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-400"
       >
     </div>
 
@@ -29,7 +29,7 @@
 
       <input
         type="text"
-        class="w-full"
+        class="w-full rounded-sm border-grey-200 focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-400"
       >
     </div>
 
@@ -39,7 +39,7 @@
       </label>
 
       <textarea
-        class="w-full resize-y"
+        class="w-full resize-y rounded-sm border-grey-200 focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-400"
         rows="4"
         placeholder="Tell us about your dog's special needs, or what you're looking for."
       />

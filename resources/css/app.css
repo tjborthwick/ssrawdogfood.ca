@@ -42,7 +42,13 @@ p {
 }
 
 .page {
-    @apply h-full pt-[108px];
+    @apply h-full pt-[72px];
+}
+
+@screen md {
+    .page {
+        @apply pt-[108px];
+    }
 }
 
 .page-padding {

@@ -13,12 +13,12 @@
 
           <img
             src="/images/products/patty.png"
-            class="absolute bottom-[-6rem] left-16 max-w-[260px]"
+            class="absolute bottom-[-4rem] left-16 max-w-xxs"
           >
         </div>
 
         <div class="bg-green inverted">
-          <div class="container content !pt-28 !pb-10">
+          <div class="container content !pt-[4.5rem] !pb-10">
             <h2 class="text-2xl uppercase font-cubano tracking-wide mb-4">
               Transitioning Your Dog To Raw Food
             </h2>
@@ -33,7 +33,7 @@
                 A Couple Tips:
               </h3>
 
-              <div class="flex gap-x-8">
+              <div class="md:flex gap-x-8 items-center lg:items-start">
                 <ul class="list-disc pl-7 pt-2">
                   <li class="mb-4">
                     <p>
@@ -54,7 +54,7 @@
 
                 <img
                   src="/images/products/chicken.png"
-                  class="max-w-[260px]"
+                  class="max-w-[260px] mx-auto mt-6 md:mt-0"
                 >
               </div>
             </div>
@@ -63,74 +63,74 @@
       </div>
 
       <div class="bg-blue inverted">
-        <div class="flex gap-x-10 container content !py-0">
-          <div class="w-[56%] lg:w-1/2 px-0 py-10">
-            <h2 class="text-2xl uppercase font-cubano tracking-wide mb-4">
-              Raw Diet Feeding Guidelines
-            </h2>
+        <div class="md:flex container">
+          <div class="md:w-[56%] lg:w-1/2">
+            <div class="content !py-10">
+              <h2 class="text-2xl uppercase font-cubano tracking-wide mb-4">
+                Raw Diet Feeding Guidelines
+              </h2>
 
-            <p class="mb-4">
-              The following recommendations are guidelines
-              only based on an average dog of normal weight
-              and activity. Your breeder may recommend a
-              feeding schedule.
-            </p>
+              <p class="mb-4">
+                The following recommendations are guidelines
+                only based on an average dog of normal weight
+                and activity. Your breeder may recommend a
+                feeding schedule.
+              </p>
 
-            <h3 class="text-xl uppercase font-cubano tracking-wide mb-4">
-              Puppies
-            </h3>
+              <h3 class="text-xl uppercase font-cubano tracking-wide mb-4">
+                Puppies
+              </h3>
 
-            <ul class="list-disc pl-7 mb-4">
-              <li class="">
-                <p>
-                  Up to 4 months: 8-10% of their body weight and
-                  feeding 4x daily
-                </p>
-              </li>
-              <li>
-                <p>
-                  4-6 months: 6-8% of their body weight and
-                  feeding 3x daily
-                </p>
-              </li>
-              <li>
-                <p>
-                  6-8 months: 4-6% of their body weight and
-                  feeding 2x daily
-                </p>
-              </li>
-              <li>
-                <p>
-                  9-12 months 3-4% of their body weight and
-                  feeding 2x daily
-                </p>
-              </li>
-            </ul>
+              <ul class="list-disc pl-6 mb-4">
+                <li class="mb-2">
+                  <p>
+                    Up to 4 months: 8-10% of their body weight and
+                    feeding 4x daily
+                  </p>
+                </li>
+                <li class="mb-2">
+                  <p>
+                    4-6 months: 6-8% of their body weight and
+                    feeding 3x daily
+                  </p>
+                </li>
+                <li class="mb-2">
+                  <p>
+                    6-8 months: 4-6% of their body weight and
+                    feeding 2x daily
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    9-12 months 3-4% of their body weight and
+                    feeding 2x daily
+                  </p>
+                </li>
+              </ul>
 
-            <h3 class="text-xl uppercase font-cubano tracking-wide mb-4">
-              Adult Dogs
-            </h3>
+              <h3 class="text-xl uppercase font-cubano tracking-wide mb-4">
+                Adult Dogs
+              </h3>
 
-            <p class="mb-4">
-              2% of their body weight or 1lb for every 50lbs of
-              the dog. We like to feed twice daily, and
-              recognize this doesn’t work for all families, so
-              feeding once a day is ok as well.
-            </p>
+              <p class="mb-4">
+                2% of their body weight or 1lb for every 50lbs of
+                the dog. We like to feed twice daily, and
+                recognize this doesn’t work for all families, so
+                feeding once a day is ok as well.
+              </p>
 
-            <h3 class="text-xl uppercase font-cubano tracking-wide mb-4">
-              Senior Dogs
-            </h3>
+              <h3 class="text-xl uppercase font-cubano tracking-wide mb-4">
+                Senior Dogs
+              </h3>
 
-            <p>
-              Will vary but an average of 1.5% of the dog's
-              bodyweight
-            </p>
+              <p>
+                Will vary but an average of 1.5% of the dog's
+                bodyweight.
+              </p>
+            </div>
           </div>
 
-          <div class="w-[44%] lg:w-1/2 bg-hero-feeding bg-cover">
-            <!-- <img src="/images/dogs/raw-diet-feeding-guidelines.jpg"> -->
-          </div>
+          <div class="md:w-[44%] lg:w-1/2 bg-hero-feeding bg-cover min-h-[500px]" />
         </div>
       </div>
     </div>

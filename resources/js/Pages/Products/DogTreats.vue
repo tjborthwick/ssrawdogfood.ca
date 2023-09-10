@@ -20,55 +20,31 @@
           removing plaque and tartar through chewing. Great for keeping busy pets occupied!
         </p>
 
-        <div class="flex flex-wrap my-4">
-          <div
-            v-for="product in products"
-            :key="product.id"
-            class="text-center w-1/4 py-5"
-          >
-            <div class="mb-4 max-w-[220px] mx-auto">
-              <Link :href="route('catalogue.view-product', product.slug)">
-                <img
-                  :src="product.image"
-                  class="mx-auto"
-                >
-              </Link>
-            </div>
-
-            <h2 class="text-xl text-grey-400 font-cubano">
-              <Link
-                :href="route('catalogue.view-product', product.slug)"
-                class="no-underline"
-              >
-                {{ product.title }}
-              </Link>
-            </h2>
-
-            <p class="text-grey-400">
-              ${{ product.price.toFixed(2) }}
-            </p>
-          </div>
-        </div>
+        <product-grid
+          :products="products"
+          :cols="3"
+        />
       </div>
     </div>
   </guest-layout>
 </template>
 
 <script setup>
-    import GuestLayout from '@/Layouts/GuestLayout.vue'
-    import { Head, Link } from '@inertiajs/vue3'
-    import ProductBreadcrumbs from '@/Components/ProductBreadcrumbs.vue'
+import GuestLayout from '@/Layouts/GuestLayout.vue'
+import { Head } from '@inertiajs/vue3'
+import ProductBreadcrumbs from '@/Components/ProductBreadcrumbs.vue'
+import ProductGrid from '@/Components/Products/ProductGrid.vue'
 
-    const crumbs = [
-      { title: 'Products', url: route('catalogue.index') },
-      { title: 'Dog Treats', url: null }
-    ]
+const crumbs = [
+  { title: 'Products', url: route('catalogue.index') },
+  { title: 'Dog Treats', url: null }
+]
 
-    const props = defineProps({
-      products: { type: Array, default: () => [] }
-    })
-    </script>
+const props = defineProps({
+  products: { type: Array, default: () => [] }
+})
+</script>
 
 <style scoped>
 
-    </style>
+</style>

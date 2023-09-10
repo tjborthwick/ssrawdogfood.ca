@@ -7,7 +7,7 @@
 
       <input
         type="text"
-        class="w-full bg-purple border-white"
+        class="w-full bg-purple border-white text-white rounded-sm focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-200"
       >
     </div>
 
@@ -18,7 +18,7 @@
 
       <input
         type="email"
-        class="w-full bg-purple border-white"
+        class="w-full bg-purple border-white text-white rounded-sm focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-200"
       >
     </div>
 
@@ -29,7 +29,7 @@
 
       <input
         type="text"
-        class="w-full bg-purple border-white"
+        class="w-full bg-purple border-white text-white rounded-sm focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-200"
       >
     </div>
 
@@ -39,12 +39,14 @@
       </label>
 
       <textarea
-        class="w-full bg-purple border-white resize-y"
+        class="w-full bg-purple border-white text-white rounded-sm focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-200 resize-y"
         rows="4"
       />
     </div>
 
-    <primary-button :inverted="true">Send</primary-button>
+    <primary-button :inverted="true">
+      Send
+    </primary-button>
   </form>
 </template>
 

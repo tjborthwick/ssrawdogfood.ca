@@ -1,72 +1,56 @@
 <template>
-<Head>
+  <Head>
     <title>Chicken</title>
-</Head>
+  </Head>
 
-<guest-layout>
+  <guest-layout>
     <div class="page flex flex-col justify-between">
-        <div class="container content">
-            <div>
-                <product-breadcrumbs
-                    class="mb-4"
-                    :crumbs="breadcrumbs"
-                />
+      <div class="container content">
+        <product-breadcrumbs
+          class="mb-4"
+          :crumbs="breadcrumbs"
+        />
 
-                <div class="flex gap-x-16">
-                    <div class="w-1/2">
-                        <img :src="product.image">
+        <div class="flex flex-col gap-y-4 sm:flex-row sm:gap-x-16">
+          <div class="sm:w-1/2">
+            <product-images :product="product" />
+          </div>
 
-                        <ul
-                            v-if="product.images"
-                            class="flex flex-wrap gap-x-2 my-4"
-                        >
-                            <li
-                                v-for="(image, index) in product.images"
-                                :key="index"
-                                class="w-1/6"
-                            >
-                                <img
-                                    :src="image.src"
-                                    :title="image.title"
-                                    :alt="image.alt"
-                                    class=""
-                                    >
-                            </li>
-                        </ul>
-                    </div>
+          <div class="sm:w-1/2">
+            <h1 class="text-4xl font-cubano text-grey-400 mb-4">
+              {{ product.title }}
+            </h1>
 
-                    <div class="w-1/2">
-                        <h1 class="text-4xl font-cubano text-grey-400 mb-4">
-                            {{ product.title }}
-                        </h1>
+            <p class="text-grey-400 text-2xl mb-4">
+              From: ${{ product.price.toFixed(2) }}
+            </p>
 
-                        <p class="text-grey-400 text-2xl mb-4">
-                            From: ${{ product.price.toFixed(2) }}
-                        </p>
+            <p class="text-grey-400 mb-4">
+              {{ product.description }}
+            </p>
 
-                        <p class="text-grey-400 mb-4">
-                            {{ product.description }}
-                        </p>
-
-                        <p>
-                            Available by the pound or in patties. Comes
-                            freshly frozen.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <p>
+              Available by the pound or in patties. Comes
+              freshly frozen.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <more-like-this :products="crossSells" />
+      <more-like-this
+        v-if="crossSells.length"
+        :products="crossSells"
+      />
     </div>
-</guest-layout>
+  </guest-layout>
 </template>
 
 <script setup>
 import { Head } from '@inertiajs/vue3'
 import GuestLayout from '@/Layouts/GuestLayout.vue'
 import ProductBreadcrumbs from '@/Components/ProductBreadcrumbs.vue'
-import MoreLikeThis from '@/Components/MoreLikeThis.vue'
+import MoreLikeThis from '@/Components/Products/MoreLikeThis.vue'
+import ProductImages from '@/Components/Products/ProductImages.vue'
 
 const props = defineProps({
   product: { type: Object, required: true },

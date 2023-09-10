@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-wrap my-4">
+  <div class="grid grid-cols-1 xs:grid-cols-2 gap-x-6 gap-y-8 xs:gap-y-12 mt-6 mb-3">
     <div
       v-for="category in categories"
       :key="category.id"
-      class="text-center w-1/2 py-5"
+      class="text-center max-w-sm"
     >
-      <h2 class="text-2xl text-grey-400 text-left font-cubano">
+      <h2 class="text-xl sm:text-2xl-b text-grey-400 text-left font-cubano">
         <Link
           :href="route(category.route)"
           class="no-underline font-normal"
@@ -19,7 +19,7 @@
           :href="route(category.route)"
           class="no-underline"
         >
-            <img :src="category.image">
+          <img :src="category.image">
         </Link>
       </div>
     </div>

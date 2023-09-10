@@ -66,7 +66,7 @@ class CatalogueController extends Controller
             ['title' => $product->title, 'url' => null],
         ];
 
-        $crossSells = $this->products->whereIn('slug', $product?->crossSells ?? []);
+        $crossSells = $this->products->whereIn('slug', $product?->crossSells ?? [])->values();
 
         return Inertia::render('Products/View', [
             'product' => $product,

@@ -14,12 +14,12 @@ module.exports = {
         "vue/singleline-html-element-content-newline": ["error", {
             "ignores": ["pre", "Link"]
         }],
-        "vue/html-indent": ["error", 'number', {
-            "attribute": 2,
-            "baseIndent": 2,
-            "closeBracket": 0,
-            "alignAttributesVertically": true,
-            "ignores": []
-        }],
+        // "vue/html-indent": ["error", 'number', {
+        //     "attribute": 2,
+        //     "baseIndent": 2,
+        //     "closeBracket": 0,
+        //     "alignAttributesVertically": true,
+        //     "ignores": []
+        // }],
     }
   }

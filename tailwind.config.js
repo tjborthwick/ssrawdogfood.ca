@@ -31,6 +31,7 @@ module.exports = {
                 '2xl': ['1.5rem', '1.5em'],
                 '2xl-b': ['1.5rem', '1.25em'],
                 'xl': ['1.25rem', '1.5em'],
+                'xl-b': ['1.25rem', '1.25em'],
                 'lg': '1.125rem',
                 'sm': ['0.9rem', '1.25em'],
                 'xs': '0.875rem',
@@ -42,6 +43,10 @@ module.exports = {
                 '4xl': '2304px',
                 '5xl': '2560px',
             },
+
+            maxWidth: {
+                'xxs': '14rem',
+            }
         },
 
         colors: {

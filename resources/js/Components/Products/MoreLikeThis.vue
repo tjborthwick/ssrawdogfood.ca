@@ -5,7 +5,7 @@
         More Like This
       </h2>
 
-      <ul class="w-full flex items-center justify-between gap-x-6">
+      <ul class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         <li
           v-for="product in products"
           :key="product.slug"
@@ -19,7 +19,7 @@
             </Link>
           </div>
 
-          <h3 class="text-xl font-cubano text-grey-400 mb-1">
+          <h3 class="text-lg sm:text-xl-b font-cubano text-grey-400 mb-2">
             <Link
               :href="route('catalogue.view-product', product.slug)"
               class="no-underline font-normal"

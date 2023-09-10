@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex items-center gap-x-1">
+  <ul class="flex flex-wrap items-center gap-x-1 text-xs">
     <li>
       <Link
         :href="route('marketing.home')"
@@ -23,14 +23,14 @@
         <Link
           v-if="crumb.url"
           :href="crumb.url"
-          class="no-underline font-roboto text-tan"
+          class="no-underline font-roboto text-tan whitespace-nowrap"
         >
           {{ crumb.title }}
         </Link>
 
         <span
           v-else
-          class="font-roboto text-grey-200"
+          class="font-roboto text-grey-200 whitespace-nowrap"
         >
           {{ crumb.title }}
         </span>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-[100px] absolute top-0 w-full"
+    class="absolute top-0 w-full"
     :class="{ overlay: !inverted }"
   >
     <div class="container px-5 md:px-10 py-3 flex justify-between items-center">

@@ -6,10 +6,19 @@
         "category": "Pure Proteins",
         "image": "/images/products/chicken.png",
         "images": [
-            { "src": "/images/products/patty.png", "title": "Chicken Patty", "alt": "Chicken Patty" }
+            {
+                "src": "/images/products/patty.png",
+                "title": "Chicken Patty",
+                "alt": "Chicken Patty"
+            }
         ],
         "description": "Pure raw high quality chicken, sourced from local butchers. Contains only chicken meat, bone and organ and nothing else. A fantastic raw base to add your own ingredients.",
-        "crossSells": ["turkey", "pork", "beef", "gourmet-chicken"]
+        "crossSells": [
+            "turkey",
+            "pork",
+            "beef",
+            "gourmet-chicken"
+        ]
     },
     {
         "title": "Turkey",
@@ -17,11 +26,20 @@
         "slug": "turkey",
         "category": "Pure Proteins",
         "images": [
-            { "src": "/images/products/patty.png", "title": "Turkey Patty", "alt": "Turkey Patty" }
+            {
+                "src": "/images/products/patty.png",
+                "title": "Turkey Patty",
+                "alt": "Turkey Patty"
+            }
         ],
         "image": "/images/products/turkey.png",
         "description": "Pure raw high quality turkey, sourced from local butchers. Contains only turkey meat, bone and organ and nothing else. A fantastic raw base to add your own ingredients.",
-        "crossSells": ["chicken", "pork", "beef", "gourmet-turkey"]
+        "crossSells": [
+            "chicken",
+            "pork",
+            "beef",
+            "gourmet-turkey"
+        ]
     },
     {
         "title": "Pork",
@@ -29,11 +47,20 @@
         "slug": "pork",
         "category": "Pure Proteins",
         "images": [
-            { "src": "/images/products/patty.png", "title": "Pork Patty", "alt": "Pork Patty" }
+            {
+                "src": "/images/products/patty.png",
+                "title": "Pork Patty",
+                "alt": "Pork Patty"
+            }
         ],
         "image": "/images/products/pork.png",
         "description": "Pure raw high quality pork, sourced from local butchers. Contains only pork meat, bone and organ and nothing else. A fantastic raw base to add your own ingredients.",
-        "crossSells": ["chicken", "turkey", "beef", "gourmet-pork"]
+        "crossSells": [
+            "chicken",
+            "turkey",
+            "beef",
+            "gourmet-pork"
+        ]
     },
     {
         "title": "Beef",
@@ -41,11 +68,20 @@
         "slug": "beef",
         "category": "Pure Proteins",
         "images": [
-            { "src": "/images/products/patty.png", "title": "Beef Patty", "alt": "Beef Patty" }
+            {
+                "src": "/images/products/patty.png",
+                "title": "Beef Patty",
+                "alt": "Beef Patty"
+            }
         ],
         "image": "/images/products/beef.png",
         "description": "Pure raw high quality beef, sourced from local butchers. Contains only beef meat, bone and organ and nothing else. A fantastic raw base to add your own ingredients.",
-        "crossSells": ["chicken", "turkey", "pork", "gourmet-beef"]
+        "crossSells": [
+            "chicken",
+            "turkey",
+            "pork",
+            "gourmet-beef"
+        ]
     },
     {
         "title": "Gourmet Chicken",
@@ -54,10 +90,19 @@
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-chicken.png",
         "images": [
-            { "src": "/images/products/patty.png", "title": "Chicken Patty", "alt": "Chicken Patty" }
+            {
+                "src": "/images/products/patty.png",
+                "title": "Chicken Patty",
+                "alt": "Chicken Patty"
+            }
         ],
         "description": "Pure raw high quality chicken, sourced from local butchers. Contains chicken meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
-        "crossSells": ["gourmet-turkey", "gourmet-pork", "gourmet-beef"]
+        "crossSells": [
+            "gourmet-turkey",
+            "gourmet-duck",
+            "gourmet-pork",
+            "gourmet-beef"
+        ]
     },
     {
         "title": "Gourmet Turkey",
@@ -66,10 +111,19 @@
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-turkey.png",
         "images": [
-            { "src": "/images/products/patty.png", "title": "Turkey Patty", "alt": "Turkey Patty" }
+            {
+                "src": "/images/products/patty.png",
+                "title": "Turkey Patty",
+                "alt": "Turkey Patty"
+            }
         ],
         "description": "Pure raw high quality turkey, sourced from local butchers. Contains turkey meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
-        "crossSells": ["gourmet-chicken", "gourmet-pork", "gourmet-beef", "gourmet-duck", "gourmet-rabbit"]
+        "crossSells": [
+            "gourmet-chicken",
+            "gourmet-duck",
+            "gourmet-pork",
+            "gourmet-beef"
+        ]
     },
     {
         "title": "Gourmet Pork",
@@ -78,10 +132,19 @@
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-pork.png",
         "images": [
-            { "src": "/images/products/patty.png", "title": "Pork Patty", "alt": "Pork Patty" }
+            {
+                "src": "/images/products/patty.png",
+                "title": "Pork Patty",
+                "alt": "Pork Patty"
+            }
         ],
         "description": "Pure raw high quality pork, sourced from local butchers. Contains pork meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
-        "crossSells": ["gourmet-chicken", "gourmet-turkey", "gourmet-beef", "gourmet-duck", "gourmet-rabbit"]
+        "crossSells": [
+            "gourmet-turkey",
+            "gourmet-beef",
+            "gourmet-duck",
+            "gourmet-rabbit"
+        ]
     },
     {
         "title": "Gourmet Beef",
@@ -90,10 +153,19 @@
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-beef.png",
         "images": [
-            { "src": "/images/products/patty.png", "title": "Beef Patty", "alt": "Beef Patty" }
+            {
+                "src": "/images/products/patty.png",
+                "title": "Beef Patty",
+                "alt": "Beef Patty"
+            }
         ],
         "description": "Pure raw high quality beef, sourced from local butchers. Contains beef meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
-        "crossSells": ["gourmet-chicken", "gourmet-turkey", "gourmet-pork", "gourmet-duck", "gourmet-rabbit"]
+        "crossSells": [
+            "gourmet-turkey",
+            "gourmet-pork",
+            "gourmet-duck",
+            "gourmet-rabbit"
+        ]
     },
     {
         "title": "Gourmet Duck",
@@ -102,10 +174,19 @@
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-duck.png",
         "images": [
-            { "src": "/images/products/patty.png", "title": "Duck Patty", "alt": "Duck Patty" }
+            {
+                "src": "/images/products/patty.png",
+                "title": "Duck Patty",
+                "alt": "Duck Patty"
+            }
         ],
         "description": "Pure raw high quality duck, sourced from local butchers. Contains duck meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
-        "crossSells": ["gourmet-chicken", "gourmet-turkey", "gourmet-pork", "gourmet-beef", "gourmet-rabbit"]
+        "crossSells": [
+            "gourmet-turkey",
+            "gourmet-pork",
+            "gourmet-beef",
+            "gourmet-rabbit"
+        ]
     },
     {
         "title": "Gourmet Rabbit",
@@ -114,10 +195,19 @@
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-rabbit.png",
         "images": [
-            { "src": "/images/products/patty.png", "title": "Rabbit Patty", "alt": "Rabbit Patty" }
+            {
+                "src": "/images/products/patty.png",
+                "title": "Rabbit Patty",
+                "alt": "Rabbit Patty"
+            }
         ],
         "description": "Pure raw high quality rabbit, sourced from local butchers. Contains rabbit meat, bone and organ, plus sweet potatoes, carrots apples and eggs for balanced gourmet meal. Available by the pound or in patties. Comes freshly frozen.",
-        "crossSells": ["gourmet-chicken", "gourmet-turkey", "gourmet-pork", "gourmet-beef", "gourmet-duck"]
+        "crossSells": [
+            "gourmet-turkey",
+            "gourmet-pork",
+            "gourmet-beef",
+            "gourmet-duck"
+        ]
     },
     {
         "title": "Chicken Tenders",
