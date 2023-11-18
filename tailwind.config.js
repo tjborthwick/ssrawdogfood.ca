@@ -61,7 +61,8 @@ module.exports = {
             'tan': '#BEA88B',
             'white': '#FFFFFF',
             'orange-100': '#ee8746',
-            'orange-200': '#a83c24'
+            'orange-200': '#a83c24',
+            'transparent': 'transparent',
         },
 
         fontFamily: {

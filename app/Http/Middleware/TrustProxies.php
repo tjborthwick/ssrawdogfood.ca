@@ -14,6 +14,9 @@ class TrustProxies extends Middleware
      */
     protected $proxies;
 
+    // * For using sail share
+    // protected $proxies = '*';
+
     /**
      * The headers that should be used to detect proxies.
      *

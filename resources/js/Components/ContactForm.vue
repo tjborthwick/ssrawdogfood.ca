@@ -1,14 +1,13 @@
 <template>
-  <form class="max-w-md">
+  <form>
     <div class="mb-4">
       <label class="block font-bold">
         Name
       </label>
 
-      <input
-        type="text"
-        class="w-full bg-purple border-white text-white rounded-sm focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-200"
-      >
+      <text-input
+        class=""
+      />
     </div>
 
     <div class="mb-4">
@@ -16,10 +15,10 @@
         Email
       </label>
 
-      <input
+      <text-input
         type="email"
-        class="w-full bg-purple border-white text-white rounded-sm focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-200"
-      >
+        class=""
+      />
     </div>
 
     <div class="mb-4">
@@ -27,10 +26,9 @@
         Phone
       </label>
 
-      <input
-        type="text"
-        class="w-full bg-purple border-white text-white rounded-sm focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-200"
-      >
+      <text-input
+        class=""
+      />
     </div>
 
     <div class="mb-4">
@@ -38,10 +36,7 @@
         Message
       </label>
 
-      <textarea
-        class="w-full bg-purple border-white text-white rounded-sm focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-200 resize-y"
-        rows="4"
-      />
+      <textarea-input />
     </div>
 
     <primary-button :inverted="true">
@@ -51,6 +46,8 @@
 </template>
 
 <script setup>
+import TextInput from '@/Components/TextInput.vue'
+import TextareaInput from '@/Components/TextareaInput.vue'
 import PrimaryButton from '@/Components/PrimaryButton.vue'
 </script>
 

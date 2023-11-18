@@ -1,6 +1,5 @@
 <template>
   <ul class="flex items-center gap-x-4">
-
     <!-- Desktop links -->
     <li
       v-for="(link, index) in textLinks"
@@ -21,7 +20,10 @@
           </template>
 
           <template #content>
-            <ul class="py-4 px-7 bg-grey-400" :class="{ 'bg-white': isInverted }">
+            <ul
+              class="py-4 px-7 bg-grey-400"
+              :class="{ 'bg-white': isInverted }"
+            >
               <li
                 v-for="(subLink, subIndex) in link.links"
                 :key="subIndex"
@@ -57,7 +59,7 @@
       </template>
     </li>
 
-    <li>
+    <li class="hidden xs:inline">
       <user-menu :inverted="isInverted" />
     </li>
 

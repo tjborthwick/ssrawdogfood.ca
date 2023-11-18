@@ -1,7 +1,7 @@
 <template>
   <input
     ref="input"
-    class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
+    class="w-full py-1 px-2 bg-transparent border border-white text-white rounded-sm focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-200"
     :value="modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
   >
@@ -10,7 +10,9 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 
-defineProps(['modelValue']);
+defineProps({
+  modelValue: { type: String, default: null },
+});
 
 defineEmits(['update:modelValue']);
 

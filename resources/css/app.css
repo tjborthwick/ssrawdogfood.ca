@@ -42,17 +42,17 @@ p {
 }
 
 .page {
-    @apply h-full pt-[72px];
+    @apply h-full pt-[90px];
 }
 
 @screen md {
     .page {
-        @apply pt-[108px];
+        @apply pt-[100px];
     }
 }
 
 .page-padding {
-    @apply pt-[108px];
+    @apply pt-[100px];
 }
 
 .container {
