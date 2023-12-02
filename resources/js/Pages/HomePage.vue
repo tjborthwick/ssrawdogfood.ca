@@ -6,8 +6,8 @@
   <guest-layout :with-footer="false">
     <div class="bg-hero-home max-h-screen">
       <div class="page">
-        <div class="container h-full px-6 md:px-10 flex flex-col justify-center relative">
-          <h1 class="page-title font-bold uppercase font-cubano text-grey-400 tracking-wide">
+        <div class="container h-full px-6 md:px-8 xl:px-[3.25rem] flex flex-col justify-center relative">
+          <h1 class="page-title uppercase font-cubano text-grey-400 tracking-tight">
             Awesome Food <br> For Awesome <br> Friends
           </h1>
 
@@ -54,15 +54,41 @@ const props = defineProps({
 
 <style scoped>
 .page-title {
-  @apply absolute top-0 sm:top-3 md:top-20 xl:top-64 text-xl-b xs:text-2xl-b md:text-4xl;
+  @apply absolute top-0 sm:top-3 md:top-24 text-xl-b xs:text-2xl-b md:text-5xl;
 }
 
-.cta {
-  @apply hidden absolute bottom-0 left-0 xl:top-0 xl:right-0 xl:left-auto;
+@media (orientation: portrait) {
+  @screen lg {
+    .page-title {
+      @apply top-60;
+    }
+  }
 }
 
-.cta-mobile {
-  @apply md:hidden
+@media (orientation: landscape) {
+  @screen xl {
+    .page-title {
+      @apply top-72;
+    }
+  }
+
+  @media (max-height: 389px) {
+    .page-title {
+      @apply top-20;
+    }
+  }
+
+  @media (max-width: 1366px) {
+    .page-title {
+      @apply top-40;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .page-title {
+      @apply top-36;
+    }
+  }
 }
 
 .bg-hero-home {
@@ -74,25 +100,6 @@ const props = defineProps({
 @screen md {
   .bg-hero-home {
     background-position: 0% 0%;
-  }
-}
-
-@screen sm {
-  .cta-mobile {
-    @apply flex;
-  }
-}
-
-/* switching from mobile/desktop versions of cta */
-@screen md {
-  @media (min-height: 680px) {
-    .cta {
-      @apply block;
-    }
-
-    .cta-mobile {
-      @apply hidden;
-    }
   }
 }
 
@@ -127,15 +134,11 @@ const props = defineProps({
 }
 
 @media (orientation: landscape)  {
-
   @media (max-height: 389px) {
-    .page-title {
-      @apply top-20;
-    }
-
     .bg-hero-home {
       background-size: 125%;
       background-position: 0% 10%;
+      max-height: 160vh;
     }
   }
 
@@ -143,19 +146,19 @@ const props = defineProps({
     .bg-hero-home {
       background-size: 130%;
       background-position: 0% 18%;
-    }
-  }
-
-  @screen md {
-    .cta {
-      @apply !right-0 left-auto;
+      max-height: 160vh;
     }
   }
 
   @screen lg {
     .bg-hero-home {
-      @apply bg-top;
       background-position: 50% 25%;
+    }
+  }
+
+  @screen 3xl {
+    .bg-hero-home {
+      /* background-position: 100% 25%; */
     }
   }
 }
