@@ -18,6 +18,6 @@ const props = defineProps({
 })
 
 const sizeClasses = computed(() => {
-  return props.size === 'small' ? 'px-3 py-1.5 h-[36px] text-lg' : 'px-6 py-1 h-[40px] text-xl'
+  return props.size === 'small' ? 'px-3 py-1.5 h-[32px] leading-none text-lg' : 'px-6 py-1 h-[40px] text-xl'
 })
 </script>

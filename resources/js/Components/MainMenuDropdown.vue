@@ -21,12 +21,12 @@
       >
         <div
           v-show="open"
-          class="absolute z-50 rounded-md shadow-lg -translate-x-12 pt-4"
+          class="absolute z-50 rounded-md shadow-lg -translate-x-14 pt-4"
           :class="[widthClass, alignmentClasses]"
           style="display: none"
           @click="open = false"
         >
-          <div class="translate-y-4">
+          <div class="translate-y-5">
             <slot name="content" />
           </div>
         </div>
