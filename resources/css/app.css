@@ -42,7 +42,13 @@ p {
 }
 
 .page {
-    @apply h-full pt-[90px];
+    @apply h-full pt-[80px];
+}
+
+@screen xs {
+    .page {
+        @apply pt-[90px];
+    }
 }
 
 @screen md {

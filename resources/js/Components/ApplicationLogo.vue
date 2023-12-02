@@ -5,7 +5,13 @@
       :srcset="imageSrc"
       width="420"
       height="80"
-      class="max-h-[80px]"
+    >
+
+    <source
+      media="(max-width: 375px)"
+      :srcset="mobileImageSrc"
+      width="183.75"
+      height="61.25"
     >
 
     <source
@@ -13,14 +19,12 @@
       :srcset="mobileImageSrc"
       width="210"
       height="70"
-      class="max-h-[70px]"
     >
 
     <img
       :src="imageSrc"
       width="420"
       height="80"
-      class="max-h-[80px]"
     >
   </picture>
 </template>

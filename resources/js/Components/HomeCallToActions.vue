@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col">
+  <div>
     <div class="bg-purple p-6 pb-3 md:px-10 md:max-w-xs">
       <h2 class="text-3xl text-white uppercase font-cubano mb-4">
         Raw Dog Food

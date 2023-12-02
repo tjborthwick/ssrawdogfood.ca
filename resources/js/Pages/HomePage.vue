@@ -4,17 +4,19 @@
   </Head>
 
   <guest-layout :with-footer="false">
-    <div class="bg-hero-home bg-cover max-h-screen md:bg-left-top xl:bg-center bg-no-repeat page">
-      <div class="container h-full px-6 md:px-10 flex flex-col justify-center relative">
-        <h1 class="text-2xl-b md:text-4xl font-bold uppercase font-cubano text-grey-400 absolute top-3 md:top-20 lg:top-64 tracking-wide">
-          Awesome Food <br> For Awesome <br> Friends
-        </h1>
+    <div class="bg-hero-home max-h-screen">
+      <div class="page">
+        <div class="container h-full px-6 md:px-10 flex flex-col justify-center relative">
+          <h1 class="page-title font-bold uppercase font-cubano text-grey-400 tracking-wide">
+            Awesome Food <br> For Awesome <br> Friends
+          </h1>
 
-        <home-call-to-actions class="hidden md:block absolute bottom-0 left-0 xl:top-0 xl:right-0 xl:left-auto" />
+          <home-call-to-actions class="cta" />
+        </div>
       </div>
     </div>
 
-    <home-call-to-actions class="md:hidden" />
+    <home-call-to-actions class="cta-mobile" />
 
     <div class="xl:hidden">
       <div>
@@ -51,55 +53,110 @@ const props = defineProps({
 </script>
 
 <style scoped>
+.page-title {
+  @apply absolute top-0 sm:top-3 md:top-20 xl:top-64 text-xl-b xs:text-2xl-b md:text-4xl;
+}
+
+.cta {
+  @apply hidden absolute bottom-0 left-0 xl:top-0 xl:right-0 xl:left-auto;
+}
+
+.cta-mobile {
+  @apply md:hidden
+}
+
 .bg-hero-home {
-    @apply bg-center;
-    background-color: #ecedee;
-    background-position-y: 2rem;
-}
-
-@media screen and (min-width: 340px) {
-    .bg-hero-home {
-        background-position-x: calc(100vw * 0.125 * -1);
-        background-position-x: calc(100vw * 0.3 * -1);
-
-    }
-}
-
-@media screen and (min-height: 740px) {
-    .bg-hero-home {
-        background-position-x: calc(100vw * 0.3 * -1);
-        background-position-y: 2rem;
-    }
-}
-
-@media screen and (min-height: 915px) {
-    .bg-hero-home {
-        background-position-x: calc(100vw * 0.375 * -1);
-        background-position-y: 2rem;
-    }
+  @apply bg-cover bg-no-repeat h-full bg-[#c2bebb];
+  /** dog is more or less centred on screen at this 37% */
+  background-position: 40% 0%;
 }
 
 @screen md {
-    .bg-hero-home {
-        background-position-x: initial;
+  .bg-hero-home {
+    background-position: 0% 0%;
+  }
+}
+
+@screen sm {
+  .cta-mobile {
+    @apply flex;
+  }
+}
+
+/* switching from mobile/desktop versions of cta */
+@screen md {
+  @media (min-height: 680px) {
+    .cta {
+      @apply block;
     }
-}
 
-@screen xl {
-  .bg-hero-home {
-    background-position-y: calc(100vw * 0.05 * -1)
+    .cta-mobile {
+      @apply hidden;
+    }
   }
 }
 
-@screen 2xl {
+@media (orientation: portrait) and (max-aspect-ratio: 2400 / 2489) {
   .bg-hero-home {
-    background-position-y: calc(100vw * 0.125 * -1)
+    /** Basically bg-cover + 20% */
+    background-size: calc((100vh * (2400 / 2489)) + 20%);
+  }
+
+  @screen md {
+    .bg-hero-home {
+      /** Basically bg-cover + 26% */
+      background-size: calc((100vh * (2400 / 2489)) + 26%);
+      background-position: 0% 60%;
+    }
+  }
+
+  @screen lg {
+    .bg-hero-home {
+      background-position: 8% 60%;
+    }
   }
 }
 
-@screen 3xl {
-  .bg-hero-home {
-    background-position-y: calc(100vw * 0.1375 * -1)
+/** Targeting odd ball screen sizes like iPad air and Surface Pro 7 */
+@media (orientation: portrait) and (max-aspect-ratio: 820 / 1180) {
+  @screen md {
+    .bg-hero-home {
+      background-position: 10% 60%;
+    }
+  }
+}
+
+@media (orientation: landscape)  {
+
+  @media (max-height: 389px) {
+    .page-title {
+      @apply top-20;
+    }
+
+    .bg-hero-home {
+      background-size: 125%;
+      background-position: 0% 10%;
+    }
+  }
+
+  @media (min-height: 390px) and (max-height: 680px) {
+    .bg-hero-home {
+      background-size: 130%;
+      background-position: 0% 18%;
+    }
+  }
+
+  @screen md {
+    .cta {
+      @apply !right-0 left-auto;
+    }
+  }
+
+  @screen lg {
+    .bg-hero-home {
+      @apply bg-top;
+      background-position: 50% 25%;
+    }
   }
 }
 </style>
