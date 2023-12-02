@@ -3,10 +3,10 @@
     class="absolute top-0 w-full"
     :class="{ overlay: !inverted }"
   >
-    <div class="container px-5 md:px-10 py-2.5 flex justify-between items-center">
+    <div class="container px-6 md:px-8 xl:px-10 py-2.5 flex justify-between items-center">
       <Link
         href="/"
-        class="block -ml-1.5 xs:-ml-3 md:-ml-5 xl:ml-0"
+        class="block -ml-3 xl:-ml-6 2xl:-ml-12"
       >
         <ApplicationLogo />
       </Link>
