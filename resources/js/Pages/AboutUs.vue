@@ -7,7 +7,7 @@
     <div class="bg-grey-400">
       <div class="container bg-no-repeat bg-hero-about bg-[length:260px] xs:bg-[length:300px] sm:bg-[length:400px] md:bg-[length:480px] lg:bg-auto bg-right-bottom page-padding">
         <div class="h-[250px] xs:h-[280px] md:h-[320px] lg:h-[420px] container content relative">
-          <h1 class="text-5xl font-cubano uppercase tracking-wide absolute top-0 md:top-16">
+          <h1 class="text-5xl font-cubano uppercase absolute top-0 md:top-16">
             About Us
           </h1>
 
