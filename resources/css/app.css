@@ -57,10 +57,6 @@ p {
     }
 }
 
-.page-padding {
-    @apply pt-[100px];
-}
-
 .container {
     @apply w-full max-w-7xl mx-auto;
 }
