@@ -41,26 +41,10 @@ p {
     @apply text-white;
 }
 
-.page {
-    @apply h-full pt-[80px];
-}
-
-@screen xs {
-    .page {
-        @apply pt-[90px];
-    }
-}
-
-@screen md {
-    .page {
-        @apply pt-[100px];
-    }
-}
-
 .container {
     @apply w-full max-w-7xl mx-auto;
 }
 
 .content {
-    @apply px-5 md:px-8 lg:px-10 py-6 xl:px-20;
+    @apply px-5 md:px-8 lg:px-10 py-6 xl:px-[60px] 3xl:px-20;
 }

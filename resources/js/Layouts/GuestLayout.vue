@@ -3,7 +3,7 @@
     class="h-full mx-auto flex flex-col"
     @click="handleInlineInertiaLinks"
   >
-    <header-component />
+    <header-component class="header" />
 
     <div
       class="flex-1"
@@ -40,4 +40,31 @@ const handleInlineInertiaLinks = function (e) {
 
 <style scoped>
 
+.header {
+  height: 80px;
+}
+
+:deep(.page) {
+    @apply h-full pt-[80px];
+}
+
+@screen xs {
+  .header {
+    height: 90px;
+  }
+
+  :deep(.page) {
+      @apply pt-[90px];
+  }
+}
+
+@screen sm {
+  .header {
+    height: 100px;
+  }
+
+  :deep(.page) {
+      @apply pt-[100px];
+  }
+}
 </style>

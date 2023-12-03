@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex items-center gap-x-4 pl-2 xl:-mr-3 2xl:-mr-4">
+  <ul class="flex items-center gap-x-4 pl-2 xl:-mr-10 3xl:-mr-14">
     <li>
       <Link
         class="hover:opacity-75"

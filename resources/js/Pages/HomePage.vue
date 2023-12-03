@@ -4,15 +4,13 @@
   </Head>
 
   <guest-layout :with-footer="false">
-    <div class="bg-hero-home max-h-screen">
-      <div class="page">
-        <div class="container h-full px-6 md:px-8 xl:px-[3.25rem] flex flex-col justify-center relative">
-          <h1 class="page-title uppercase font-cubano text-grey-400 tracking-tight">
-            Awesome Food <br> For Awesome <br> Friends
-          </h1>
+    <div class="bg-hero-home page max-h-screen">
+      <div class="container h-full content flex flex-col justify-center relative">
+        <h1 class="page-title uppercase font-cubano text-grey-400 tracking-tight">
+          Awesome Food <br> For Awesome <br> Friends
+        </h1>
 
-          <home-call-to-actions class="cta" />
-        </div>
+        <home-call-to-actions class="cta" />
       </div>
     </div>
 
@@ -88,6 +86,18 @@ const props = defineProps({
     .page-title {
       @apply top-36;
     }
+  }
+}
+
+@screen 3xl {
+  .page-title {
+    @apply top-36 -ml-8;
+  }
+}
+
+@screen 5xl {
+  .page-title {
+    @apply -ml-12;
   }
 }
 

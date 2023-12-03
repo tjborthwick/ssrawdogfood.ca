@@ -6,7 +6,7 @@
   <guest-layout>
     <div class="page bg-hero-benefits bg-no-repeat bg-contain bg-top-center md:bg-cover">
       <div class="min-h-[240px] xs:min-h-[300px] xl:min-h-[500px] 2xl:min-h-[600px] 4xl:min-h-[720px]">
-        <div class="container px-5 md:px-10 xl:px-20 relative">
+        <div class="container content relative">
           <h1 class="text-2xl xs:text-3xl md:text-5xl 3xl:text-6xl 4xl:text-7xl font-cubano text-grey-400 uppercase absolute top-6 sm:top-10 3xl:top-28 5xl:top-48">
             Why Raw?
           </h1>
