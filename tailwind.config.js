@@ -33,8 +33,11 @@ module.exports = {
                 'xl': ['1.25rem', '1.5em'],
                 'xl-b': ['1.25rem', '1.25em'],
                 'lg': '1.125rem',
+                'sm2': ['0.9375rem', '1.5em'],
                 'sm': ['0.9rem', '1.25em'],
                 'xs': '0.875rem',
+                'xxs': '0.825rem',
+                'xxs2': '0.75rem'
             },
 
             screens: {

@@ -53,20 +53,41 @@ import GuestLayout from '@/Layouts/GuestLayout.vue';
 <style scoped>
 .bg-hero-contact {
   @apply bg-cover bg-left;
-  background-position-x: -7rem;
+  background-position-x: -4rem;
 }
 
 @screen md {
   .bg-hero-contact {
-    @apply bg-auto bg-bottom;
-    background-size: 125%;
+    background-size: 138%;
+    background-position: 50% 75%;
   }
 }
 
-@screen lg {
+@media (max-height: 769px) and (min-height: 601px) {
+    .bg-hero-contact {
+      background-size: 118%;
+      background-position: 50% 60%;
+    }
+}
+
+@screen xl {
   .bg-hero-contact {
-    @apply bg-auto bg-bottom;
-    background-size: 132%;
+    @apply bg-cover;
+    background-position: 50% 50%;
+  }
+}
+
+@screen 2xl {
+  .bg-hero-contact {
+    @apply bg-cover;
+    background-position: 50% 45%;
+  }
+}
+
+@screen 3xl {
+  .bg-hero-contact {
+    @apply bg-cover;
+    background-position: 50% 42.5%;
   }
 }
 </style>

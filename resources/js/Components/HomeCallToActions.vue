@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="bg-purple p-6 pb-3 md:px-8 lg:px-10 cta-block">
+  <div class="">
+    <div class="bg-purple cta-block">
       <div class="cta-content">
         <div class="">
           <h2 class="text-3xl text-white uppercase font-cubano mb-4">
@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <div class="bg-blue p-6 pb-3 md:px-8 lg:px-10 cta-block">
+    <div class="bg-blue cta-block">
       <div class="cta-content">
         <div class="">
           <h2 class="text-3xl text-white uppercase font-cubano mb-4">
@@ -72,7 +72,7 @@
       </div>
     </div>
 
-    <div class="bg-green p-6 md:px-8 lg:px-10 cta-block">
+    <div class="bg-green cta-block">
       <div>
         <h2 class="text-3xl text-white uppercase font-cubano mb-4">
           Learn More:
@@ -122,6 +122,10 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
   @apply hidden absolute bottom-0 left-0 xl:top-0 xl:right-0 xl:left-auto;
 }
 
+.cta-block {
+  @apply p-6 pb-3 md:px-8 lg:px-10;
+}
+
 @media (orientation: portrait) {
   @media (min-height: 1024px) {
     .cta-mobile {
@@ -136,6 +140,10 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
 
 @media (orientation: landscape)  {
   @media (min-width: 540px) and (max-height: 540px) {
+    .cta {
+      @apply hidden;
+    }
+
     .cta-mobile {
       @apply flex;
     }
@@ -153,13 +161,27 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
     }
   }
 
-  @media (min-height: 720px) {
+  @media (min-height: 541px) {
     .cta-mobile {
       @apply hidden
     }
 
     .cta {
       @apply flex flex-col;
+    }
+  }
+
+  /**
+   * Call to actions are leaving a very small amount of empty space before the fold. So forcing full height minus 100px header/menu
+   */
+  @media (min-height: 720px) and (max-height: 796px) {
+    .cta {
+      @apply flex;
+      max-height: calc(100vh - 100px);
+    }
+
+    .cta-block img {
+      max-width: 120px;
     }
   }
 
@@ -170,9 +192,18 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
   }
 }
 
-@media (orientation: landscape) (max-height: 679px) {
-  .cta-mobile {
-    @apply flex;
+@media (orientation: landscape) {
+  @media (min-height: 781px) {
+    .cta-block:last-child {
+      @apply pb-10;
+    }
+  }
+}
+
+@media (orientation: portrait) and (min-width: 796px),
+@media (orientation: portrait) and (min-width: 864px) {
+  .cta-block:last-child {
+    @apply pb-10;
   }
 }
 
@@ -185,34 +216,55 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
 }
 
 @media (orientation: portrait) {
-  @screen md {
+  @media (min-width: 720px) {
     .cta-block {
+      @apply pt-6;
       max-width: 305px;
+    }
+  }
+
+  @media (min-width: 796px) {
+    .cta-block {
+      @apply max-w-xs px-10 pt-10;
     }
   }
 
   @screen lg {
     .cta-block {
-      @apply pt-8 max-w-[21rem];
+      @apply max-w-[21rem];
     }
   }
 }
 
-@media (orientation: landscape) and (min-height: 680px) {
-  .cta-block {
-    @apply max-w-xs;
+@media (orientation: landscape) and (min-width: 768px) {
+  @media (min-height: 560px) {
+    .cta-block {
+      max-width: 305px;
+    }
   }
-}
 
-@media (orientation: landscape) and (min-height: 768px) {
-  .cta-block {
-    @apply pt-8;
+  @media (min-height: 680px) {
+    .cta-block {
+      @apply max-w-xs;
+    }
   }
-}
 
-@media (orientation: landscape) and (min-height: 1024px) {
-  .cta-block {
-    @apply pt-8 max-w-[21rem];
+  @media(min-height: 721px) {
+    .cta-block {
+      @apply pt-8;
+    }
+  }
+
+  @media(min-height: 769px) {
+    .cta-block {
+      @apply pt-10;
+    }
+  }
+
+  @media (min-height: 1024px) {
+    .cta-block {
+      @apply max-w-[21rem];
+    }
   }
 }
 </style>

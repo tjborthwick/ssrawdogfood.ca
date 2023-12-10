@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex items-center gap-x-4">
+  <ul class="flex items-center gap-x-4 xl:justify-between xl:w-full">
     <!-- Desktop links -->
     <li
       v-for="(link, index) in textLinks"
@@ -60,7 +60,10 @@
     </li>
 
     <li class="hidden xs:inline">
-      <user-menu :inverted="isInverted" />
+      <user-menu
+        :inverted="isInverted"
+        class="pb-3"
+      />
     </li>
 
     <li class="xl:hidden">

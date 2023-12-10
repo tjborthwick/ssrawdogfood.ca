@@ -5,21 +5,21 @@
 
   <guest-layout :inverted="true">
     <div class="bg-grey-400">
-      <div class="page bg-no-repeat bg-hero-about bg-[length:260px] xs:bg-[length:300px] sm:bg-[length:400px] md:bg-[length:480px] lg:bg-auto bg-right-bottom">
-        <div class="h-[250px] xs:h-[280px] md:h-[320px] lg:h-[420px] container content relative">
-          <h1 class="text-5xl font-cubano uppercase absolute top-0 md:top-16">
+      <div class="page container bg-no-repeat bg-hero-about bg-[length:260px] xs:bg-[length:300px] sm:bg-[length:400px] md:bg-[length:480px] lg:bg-auto">
+        <div class="h-[260px] xs:h-[280px] md:h-[320px] lg:h-[430px] content relative">
+          <h1 class="text-5xl font-cubano uppercase absolute top-3 md:top-12">
             About Us
           </h1>
 
           <img
             src="/images/products/gourmet-duck.png"
-            class="absolute bottom-[-2.5rem] md:bottom-[-5rem] left-2 md:left-10 xl:left-20 max-w-[180px] sm:max-w-[200px] md:max-w-[320px] lg:max-w-md"
+            class="absolute bottom-[-2.5rem] md:bottom-[-4.5rem] left-2 md:left-10 xl:left-[5rem] max-w-[180px] sm:max-w-[200px] md:max-w-[300px] lg:max-w-none"
           >
         </div>
       </div>
 
       <div class="bg-orange-100">
-        <div class="container content !pt-[3rem] md:!pt-[6rem] lg:pb-10">
+        <div class="container content !pt-[3rem] md:!pt-[5rem] lg:pb-16 xl:pb-12">
           <h2 class="text-2xl font-cubano uppercase mb-4 tracking-wide">
             Who Is S&S Raw Dod Food?
           </h2>
@@ -27,12 +27,12 @@
           <p>
             S&S Raw Dog food is a no frills, high quality raw dog food company based in Woodstock, Ontario. Our focus is bringing you the most cost efficient food while maintaining
             the highest quality. We make our raw dog food twice weekly, so it is never in the freezer long. We offer a range of <Link
-              class=""
+              class="inline-block"
               :href="route('catalogue.index')"
             >
               Products
             </Link> as well as <Link
-              class=""
+              class="inline-block"
               :href="route('catalogue.custom-food')"
             >
               Custom Food
@@ -74,7 +74,7 @@
               </div>
             </div>
 
-            <div class="md:w-5/12 flex-1 bg-hero-about-2 bg-no-repeat bg-cover bg-top-center min-h-[520px] md:min-h-0 lg:min-h-[460px]" />
+            <div class="md:w-5/12 flex-1 bg-hero-about-2 bg-no-repeat bg-cover bg-top-center min-h-[520px] md:min-h-0 lg:min-h-[467px]" />
           </div>
         </div>
       </div>
@@ -88,10 +88,13 @@ import { Head, Link } from '@inertiajs/vue3'
 </script>
 
 <style scoped>
+.bg-hero-about {
+  background-position: 105% 100%;
+}
 
-@screen lg {
-  .bg-hero-about-2 {
-    background-position-y: -2rem;
+@screen sm {
+  .bg-hero-about {
+    background-position: 90% 100%;
   }
 }
 </style>

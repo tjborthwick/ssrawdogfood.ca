@@ -25,6 +25,7 @@
       :src="imageSrc"
       width="420"
       height="80"
+      class="logo"
     >
   </picture>
 </template>
@@ -40,5 +41,13 @@ const mobileImageSrc = computed(() => inverted ? '/images/ss-raw-dog-food-small-
 </script>
 
 <style scoped>
+.logo {
+  max-height: 80px;
+}
 
+@screen xl {
+  .logo {
+    max-width: 400px;
+  }
+}
 </style>

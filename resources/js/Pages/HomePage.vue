@@ -63,16 +63,30 @@ const props = defineProps({
   }
 }
 
+@media (orientation: portrait) and (max-aspect-ratio: 720 / 1280) {
+  @media (min-width: 720px) {
+    .page-title {
+      @apply text-4xl top-36;
+    }
+  }
+}
+
 @media (orientation: landscape) {
   @screen xl {
     .page-title {
-      @apply top-72;
+      @apply top-36;
     }
   }
 
-  @media (max-height: 389px) {
+  @media (max-width: 1920px) {
     .page-title {
-      @apply top-20;
+      @apply top-60;
+    }
+  }
+
+  @media (max-width: 1600px) {
+    .page-title {
+      @apply top-44;
     }
   }
 
@@ -81,17 +95,11 @@ const props = defineProps({
       @apply top-40;
     }
   }
-
-  @media (max-width: 1280px) {
-    .page-title {
-      @apply top-36;
-    }
-  }
 }
 
 @screen 3xl {
   .page-title {
-    @apply top-36 -ml-8;
+    @apply top-60 -ml-8;
   }
 }
 
@@ -143,6 +151,42 @@ const props = defineProps({
   }
 }
 
+/** Targeting tall/vertical desktops */
+@media (orientation: portrait) and (max-aspect-ratio: 800 / 1280) {
+  @media (min-width: 720px) {
+    .bg-hero-home {
+      background-position: 20% 60%;
+    }
+  }
+
+  @media (max-height: 1024px) and @screen md {
+    .bg-hero-home {
+      background-position: 15% 60%;
+    }
+  }
+
+  @screen md {
+    .bg-hero-home {
+      background-position: 15% 60%;
+    }
+  }
+}
+
+/** Targeting tall/vertical desktops */
+@media (orientation: portrait) and (max-aspect-ratio: 720 / 1280) {
+  @media (min-width: 720px) {
+    .bg-hero-home {
+      background-position: 20% 100%;
+    }
+  }
+
+  @media (min-width: 864px) {
+    .bg-hero-home {
+      background-position: 25% 100%;
+    }
+  }
+}
+
 @media (orientation: landscape)  {
   @media (max-height: 389px) {
     .bg-hero-home {
@@ -157,6 +201,14 @@ const props = defineProps({
       background-size: 130%;
       background-position: 0% 18%;
       max-height: 160vh;
+    }
+  }
+
+  @media (min-height: 390px) and (max-height: 601px) {
+    .bg-hero-home {
+      background-size: 120%;
+      background-position: 35% 35%;
+      max-height: 150vh;
     }
   }
 

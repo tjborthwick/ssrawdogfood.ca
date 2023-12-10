@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 html, body {
-    @apply min-h-full h-full;
+    @apply min-h-full h-full text-[16px];
 }
 
 body {
-    @apply font-sans font-normal normal-case text-grey-300 text-base;
+    @apply font-sans font-normal normal-case text-grey-300 text-base tracking-normal;
 }
 
 #app {
@@ -22,8 +22,14 @@ a {
     @apply text-white;
 }
 
-p {
-    @apply leading-6;
+p, span, div, a, label, li {
+    @apply text-sm2;
+}
+
+@screen lg {
+    p, span, div, a, label  {
+        @apply text-base;
+    }
 }
 
 .inverted span,
@@ -48,3 +54,4 @@ p {
 .content {
     @apply px-5 md:px-8 lg:px-10 py-6 xl:px-[60px] 3xl:px-20;
 }
+
