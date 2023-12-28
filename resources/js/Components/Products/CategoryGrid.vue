@@ -5,10 +5,10 @@
       :key="category.id"
       class="text-center max-w-sm"
     >
-      <h2 class="text-xl sm:text-2xl-b text-grey-400 text-left font-cubano">
+      <h2 class="text-left">
         <Link
           :href="route(category.route)"
-          class="no-underline font-normal"
+          class="no-underline font-normal text-xl-b md:text-base15-2xl lg:text-2xl-b text-grey-400 font-cubano"
         >
           {{ category.title }}
         </Link>

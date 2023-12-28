@@ -9,10 +9,10 @@
       </Link>
     </div>
 
-    <h2 class="text-xl-b sm:text-2xl-b text-grey-400 font-cubano mb-2">
+    <h2 class="mb-2">
       <Link
         :href="route('catalogue.view-product', product.slug)"
-        class="no-underline font-normal"
+        class="no-underline font-normal text-xl-b md:text-base15-2xl lg:text-2xl-b text-grey-400 font-cubano "
       >
         {{ product.title }}
       </Link>
