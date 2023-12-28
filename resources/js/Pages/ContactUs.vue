@@ -5,7 +5,7 @@
 
   <guest-layout :inverted="true">
     <div class="page bg-purple bg-hero-contact bg-no-repeat">
-      <div class="container content !pt-16">
+      <div class="container content md:!pt-16">
         <div class="max-w-[16rem] lg:max-w-[24rem]">
           <h1 class="page-title mb-4">
             Contact
@@ -53,24 +53,24 @@ import GuestLayout from '@/Layouts/GuestLayout.vue';
 <style scoped>
 .bg-hero-contact {
   @apply bg-cover bg-left;
-  background-position-x: -4rem;
 }
 
-@screen md {
+@media (orientation: portrait) {
   .bg-hero-contact {
-    background-size: 138%;
-    background-position: 50% 75%;
+    background-position-x: -6rem;
   }
 }
 
-@media (max-height: 769px) and (min-height: 601px) {
+@media (min-height: 890px) {
+  @screen md {
     .bg-hero-contact {
-      background-size: 118%;
-      background-position: 50% 60%;
+      background-position: 50% 74%;
+      background-size: calc((100vh * (1920 / 2394)) + (100vh * 0.28));
     }
+  }
 }
 
-@screen xl {
+@screen lg {
   .bg-hero-contact {
     @apply bg-cover;
     background-position: 50% 50%;

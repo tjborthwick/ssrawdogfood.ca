@@ -5,9 +5,7 @@
         Name
       </label>
 
-      <text-input
-        class=""
-      />
+      <text-input />
     </div>
 
     <div class="mb-4">
@@ -15,10 +13,7 @@
         Email
       </label>
 
-      <text-input
-        type="email"
-        class=""
-      />
+      <text-input type="email" />
     </div>
 
     <div class="mb-4">
@@ -26,9 +21,7 @@
         Phone
       </label>
 
-      <text-input
-        class=""
-      />
+      <text-input />
     </div>
 
     <div class="mb-4">
