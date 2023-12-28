@@ -23,13 +23,17 @@ a {
 }
 
 p, span, div, a, label, li {
-    @apply text-sm2;
+    @apply text-base15-sm;
 }
 
 @screen lg {
     p, span, div, a, label  {
         @apply text-base;
     }
+}
+
+.page-title {
+    @apply text-3xl sm:text-base15-5xl lg:text-5xl 3xl:text-6xl 4xl:text-7xl font-cubano uppercase text-grey-400;
 }
 
 .inverted span,

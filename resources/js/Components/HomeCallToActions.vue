@@ -3,7 +3,7 @@
     <div class="bg-purple cta-block">
       <div class="cta-content">
         <div class="">
-          <h2 class="text-3xl text-white uppercase font-cubano mb-4">
+          <h2 class="cta-title mb-3">
             Raw Dog Food
           </h2>
 
@@ -40,12 +40,14 @@
     <div class="bg-blue cta-block">
       <div class="cta-content">
         <div class="">
-          <h2 class="text-3xl text-white uppercase font-cubano mb-4">
+          <h2 class="cta-title mb-3">
             Dog Treats
           </h2>
 
           <p class="text-white mb-2">
-            Tasty &amp; Beneficial All Natural One-Ingredient Dog Treats
+            Tasty &amp; Beneficial All Natural <span class="whitespace-nowrap">
+              One-Ingredient
+            </span> Dog Treats
           </p>
         </div>
 
@@ -61,7 +63,7 @@
 
           <Link
             :href="route('catalogue.dog-treats')"
-            class="min-h-[100px] flex justify-center items-center"
+            class="min-h-[90px] flex justify-center items-center"
           >
             <img
               src="/images/products/chicken.png"
@@ -74,12 +76,12 @@
 
     <div class="bg-green cta-block">
       <div>
-        <h2 class="text-3xl text-white uppercase font-cubano mb-4">
+        <h2 class="cta-title mb-3">
           Learn More:
         </h2>
 
         <ul class="list-disc pl-4 text-white">
-          <li class="leading-snug text-base my-1.5">
+          <li class="text-base mb-2">
             <Link
               :href="route('marketing.benefits')"
               class="no-underline font-bold hover:underline -ml-1.5 block"
@@ -88,7 +90,7 @@
             </Link>
           </li>
 
-          <li class="leading-snug text-base my-1.5">
+          <li class="text-base mb-2">
             <Link
               :href="route('marketing.feeding')"
               class="no-underline font-bold hover:underline -ml-1.5 block"
@@ -97,7 +99,7 @@
             </Link>
           </li>
 
-          <li class="leading-snug text-base my-1.5">
+          <li class="text-base">
             <Link
               :href="route('marketing.faq')"
               class="no-underline font-bold hover:underline -ml-1.5 block"
@@ -117,13 +119,21 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
 
 </script>
 
-<style  scoped>
+<style scoped>
 .cta {
   @apply hidden absolute bottom-0 left-0 xl:top-0 xl:right-0 xl:left-auto;
 }
 
+.cta-title {
+  @apply text-base15-3xl lg:text-3xl text-white uppercase font-cubano;
+}
+
 .cta-block {
   @apply p-6 pb-3 md:px-8 lg:px-10;
+}
+
+.cta-block:last-child {
+  @apply pb-6;
 }
 
 @media (orientation: portrait) {
@@ -218,7 +228,6 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
 @media (orientation: portrait) {
   @media (min-width: 720px) {
     .cta-block {
-      @apply pt-6;
       max-width: 305px;
     }
   }

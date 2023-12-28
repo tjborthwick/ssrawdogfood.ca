@@ -7,7 +7,7 @@
     <div class="page bg-purple bg-hero-contact bg-no-repeat">
       <div class="container content !pt-16">
         <div class="max-w-[16rem] lg:max-w-[24rem]">
-          <h1 class="text-5xl font-cubano uppercase mb-6">
+          <h1 class="page-title mb-6">
             Contact
           </h1>
 

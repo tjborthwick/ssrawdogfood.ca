@@ -7,7 +7,7 @@
     <div class="page bg-hero-benefits bg-no-repeat">
       <div class="">
         <div class="hero-container container content relative">
-          <h1 class="text-2xl xs:text-3xl md:text-5xl 3xl:text-6xl 4xl:text-7xl font-cubano text-grey-400 uppercase absolute top-6 sm:top-16">
+          <h1 class="page-title absolute top-6 sm:top-16">
             Why Raw?
           </h1>
         </div>

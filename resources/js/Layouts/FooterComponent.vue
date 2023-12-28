@@ -2,11 +2,11 @@
   <div class="bg-grey-400">
     <div class="container content !py-2 sm:flex sm:justify-between">
       <div>
-        <p class="text-white font-roboto leading-snug font-bold text-xxs">
+        <p class="text-white font-roboto leading-snug font-bold text-[13.2px]">
           Serving Woodstock, Ontario &amp; Surrounding Areas
         </p>
 
-        <p class="text-white font-roboto text-xxs2">
+        <p class="text-white font-roboto text-[12px]">
           &copy; {{ year }} S&amp;S Raw Dog Food. All Rights Reserved
         </p>
       </div>
@@ -25,8 +25,6 @@ import UserMenu from '@/Layouts/UserMenu.vue';
 const year = new Date().getFullYear();
 </script>
 
-<style  scoped>
-p {
-  /* @apply text-[0.875em]; */
-}
+<style scoped>
+
 </style>

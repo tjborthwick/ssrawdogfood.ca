@@ -7,7 +7,7 @@
     <div class="h-full flex flex-col">
       <div class="bg-no-repeat bg-hero-faq bg-cover bg-center page">
         <div class="h-[360px] 2xl:h-[460px] 4xl:h-[640px] container content relative">
-          <h1 class="text-5xl 3xl:text-6xl 4xl:text-7xl font-cubano text-grey-400 uppercase absolute top-16 3xl:top-28 5xl:top-48">
+          <h1 class="page-title absolute top-16 3xl:top-28 5xl:top-48">
             Raw FAQS
           </h1>
         </div>

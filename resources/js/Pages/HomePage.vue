@@ -6,7 +6,7 @@
   <guest-layout :with-footer="false">
     <div class="bg-hero-home page max-h-screen">
       <div class="container h-full content flex flex-col justify-center relative">
-        <h1 class="page-title uppercase font-cubano text-grey-400 tracking-tight">
+        <h1 class="page-title">
           Awesome Food <br> For Awesome <br> Friends
         </h1>
 
@@ -52,7 +52,7 @@ const props = defineProps({
 
 <style scoped>
 .page-title {
-  @apply absolute top-0 sm:top-3 md:top-24 text-xl-b xs:text-2xl-b md:text-5xl;
+  @apply text-xl leading-tight xs:text-2xl xs:leading-tight md:text-base15-5xl lg:text-5xl absolute top-0 sm:top-3 md:top-24;
 }
 
 @media (orientation: portrait) {

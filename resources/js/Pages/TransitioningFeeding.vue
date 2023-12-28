@@ -7,7 +7,7 @@
     <div class="page bg-no-repeat bg-cover">
       <div>
         <div class="h-[400px] 2xl:h-[600px] 4xl:h-[520px] container content relative">
-          <h1 class="text-5xl 3xl:text-6xl 4xl:text-7xl font-cubano text-grey-400 uppercase absolute top-16 3xl:top-28">
+          <h1 class="page-title absolute top-16 3xl:top-28">
             Transitioning <br> &amp; Feeding
           </h1>
 
