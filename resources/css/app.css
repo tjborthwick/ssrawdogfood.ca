@@ -33,7 +33,7 @@ p, span, div, a, label, li {
 }
 
 .page-title {
-    @apply text-3xl sm:text-base15-5xl lg:text-5xl 3xl:text-6xl 4xl:text-7xl font-cubano uppercase text-grey-400;
+    @apply text-3xl leading-tight sm:text-base15-5xl lg:text-5xl 3xl:text-6xl 4xl:text-7xl font-cubano uppercase text-grey-400;
 }
 
 .inverted span,
