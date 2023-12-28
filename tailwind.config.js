@@ -37,6 +37,8 @@ module.exports = {
                 'base15-sm': ['0.9375rem', '1.5em'],
                 'base15-5xl': ['2.461rem', '1.175'],
                 'base15-3xl': ['1.641rem', '1'],
+                'base15-xl': ['1.172rem', '1.5em'],
+                'base15-lg': ['1.055rem', '1'],
             },
 
             screens: {

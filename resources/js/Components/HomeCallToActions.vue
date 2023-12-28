@@ -17,11 +17,7 @@
             :href="route('catalogue.index')"
             size="small"
           >
-            <span
-              class="whitespace-nowrap"
-            >
-              Shop Raw
-            </span>
+            Shop Raw
           </nav-link-button>
 
           <Link
@@ -56,9 +52,7 @@
             :href="route('catalogue.dog-treats')"
             size="small"
           >
-            <span class="whitespace-nowrap">
-              Shop Treats
-            </span>
+            Shop Treats
           </nav-link-button>
 
           <Link
