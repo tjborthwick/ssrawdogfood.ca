@@ -17,7 +17,7 @@
             start your raw food journey
           </p>
 
-          <h2 class="text-2xl font-cubano uppercase mb-1 tracking-wide">
+          <h2 class="text-base15-2xl lg:text-2xl font-cubano uppercase mb-1 tracking-wide">
             Pick Up Location *
           </h2>
 

@@ -14,7 +14,7 @@
 
         <div class="bg-purple inverted">
           <div class="container content !pt-[3rem] xs:!pt-[5rem] 3xl:!pt-[5.5rem] !pb-10 relative">
-            <h2 class="text-base15-2xl lg:text-2xl font-cubano uppercase mb-4 tracking-wide">
+            <h2 class="text-base15-2xl leading-snug lg:text-2xl font-cubano uppercase mb-4 tracking-wide">
               Benefits of Feeding Your Dog a Raw Diet
             </h2>
 

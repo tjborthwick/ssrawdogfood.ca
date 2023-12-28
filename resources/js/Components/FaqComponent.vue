@@ -5,7 +5,7 @@
       @click="handleToggle"
     >
       <h2
-        class="text-lg font-bold tracking-wide"
+        class="text-base leading-snug md:text-base15-lg lg:text-lg font-bold tracking-wide"
         :class="{ 'mb-2': isActive }"
       >
         <slot name="question" />

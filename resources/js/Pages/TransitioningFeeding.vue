@@ -19,17 +19,17 @@
 
         <div class="bg-green inverted">
           <div class="container content !pt-[4.5rem] !pb-10">
-            <h2 class="text-2xl uppercase font-cubano tracking-wide mb-4">
+            <h2 class="text-base15-2xl leading-snug lg:text-2xl uppercase font-cubano tracking-wide mb-4">
               Transitioning Your Dog To Raw Food
             </h2>
 
             <div>
-              <p class=" mb-4">
+              <p class="mb-4">
                 Making the transition to raw food is easier than you might think. We recommend making the switch by
                 just stopping feeding kibble, and the next day start feeding raw.
               </p>
 
-              <h3 class="text-xl uppercase font-cubano tracking-wide mb-4">
+              <h3 class="text-base15-xl lg:text-xl uppercase font-cubano tracking-wide mb-4">
                 A Couple Tips:
               </h3>
 
@@ -66,7 +66,7 @@
         <div class="md:flex container">
           <div class="md:w-[56%] lg:w-1/2">
             <div class="content !py-10">
-              <h2 class="text-2xl uppercase font-cubano tracking-wide mb-4">
+              <h2 class="text-base15-2xl leading-snug lg:text-2xl uppercase font-cubano tracking-wide mb-4">
                 Raw Diet Feeding Guidelines
               </h2>
 
@@ -77,7 +77,7 @@
                 feeding schedule.
               </p>
 
-              <h3 class="text-xl uppercase font-cubano tracking-wide mb-4">
+              <h3 class="text-base15-xl lg:text-xl uppercase font-cubano tracking-wide mb-4">
                 Puppies
               </h3>
 
@@ -108,7 +108,7 @@
                 </li>
               </ul>
 
-              <h3 class="text-xl uppercase font-cubano tracking-wide mb-4">
+              <h3 class="text-base15-xl lg:text-xl uppercase font-cubano tracking-wide mb-4">
                 Adult Dogs
               </h3>
 
@@ -119,7 +119,7 @@
                 feeding once a day is ok as well.
               </p>
 
-              <h3 class="text-xl uppercase font-cubano tracking-wide mb-4">
+              <h3 class="text-base15-xl lg:text-xl uppercase font-cubano tracking-wide mb-4">
                 Senior Dogs
               </h3>
 

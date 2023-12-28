@@ -20,7 +20,7 @@
 
       <div class="bg-orange-100">
         <div class="container content !pt-[3rem] md:!pt-[5rem] lg:pb-16 xl:pb-12">
-          <h2 class="text-2xl font-cubano uppercase mb-4 tracking-wide">
+          <h2 class="text-base15-2xl leading-snug lg:text-2xl font-cubano uppercase mb-4 tracking-wide">
             Who Is S&S Raw Dod Food?
           </h2>
 
@@ -47,7 +47,7 @@
           <div class="md:flex">
             <div class="md:w-7/12">
               <div class="content !pt-10 lg:pb-10">
-                <h2 class="text-2xl font-cubano uppercase mb-4 tracking-wide">
+                <h2 class="text-base15-2xl leading-snug lg:text-2xl font-cubano uppercase mb-4 tracking-wide">
                   Why We Do What We Do
                 </h2>
 
