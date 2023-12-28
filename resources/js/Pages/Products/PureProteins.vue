@@ -11,7 +11,7 @@
           :crumbs="crumbs"
         />
 
-        <h1 class="text-4xl font-cubano text-grey-400 mb-4">
+        <h1 class="text-4xl font-cubano text-grey-400 mb-2">
           Pure Proteins
         </h1>
 
