@@ -6,7 +6,7 @@
           Serving Woodstock, Ontario &amp; Surrounding Areas
         </p>
 
-        <p class="text-white font-roboto text-[12px]">
+        <p class="text-white font-light font-sans text-[10px] leading-loose">
           &copy; {{ year }} S&amp;S Raw Dog Food. All Rights Reserved
         </p>
       </div>
