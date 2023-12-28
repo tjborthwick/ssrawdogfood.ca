@@ -14,7 +14,7 @@
 
         <div class="bg-purple inverted">
           <div class="container content !pt-[3rem] xs:!pt-[5rem] 3xl:!pt-[5.5rem] !pb-10 relative">
-            <h2 class="text-2xl font-cubano uppercase mb-4 tracking-wide">
+            <h2 class="text-base15-2xl lg:text-2xl font-cubano uppercase mb-4 tracking-wide">
               Benefits of Feeding Your Dog a Raw Diet
             </h2>
 
@@ -32,27 +32,27 @@
         </div>
 
         <div class="container content">
-          <div class="p-6">
+          <div class="md:px-6 md:py-5">
             <ul>
-              <li class="text-3xl leading-none text-bold font-cubano text-grey-400 mb-3.5 uppercase tracking-wide">
+              <li class="text-2xl md:text-base15-3xl lg:text-3xl leading-none text-bold font-cubano text-grey-400 mb-4 uppercase tracking-wide">
                 Improved Oral Health
               </li>
-              <li class="text-3xl leading-none text-bold font-cubano text-grey-400 mb-3.5 uppercase tracking-wide">
+              <li class="text-2xl md:text-base15-3xl lg:text-3xl leading-none text-bold font-cubano text-grey-400 mb-4 uppercase tracking-wide">
                 Better Breath
               </li>
-              <li class="text-3xl leading-none text-bold font-cubano text-grey-400 mb-3.5 uppercase tracking-wide">
+              <li class="text-2xl md:text-base15-3xl lg:text-3xl leading-none text-bold font-cubano text-grey-400 mb-4 uppercase tracking-wide">
                 Healther Skin
               </li>
-              <li class="text-3xl leading-none text-bold font-cubano text-grey-400 mb-3.5 uppercase tracking-wide">
+              <li class="text-2xl md:text-base15-3xl lg:text-3xl leading-none text-bold font-cubano text-grey-400 mb-4 uppercase tracking-wide">
                 Shinier Coat
               </li>
-              <li class="text-3xl leading-none text-bold font-cubano text-grey-400 mb-3.5 uppercase tracking-wide">
+              <li class="text-2xl md:text-base15-3xl lg:text-3xl leading-none text-bold font-cubano text-grey-400 mb-4 uppercase tracking-wide">
                 Relieves Allergies
               </li>
-              <li class="text-3xl leading-none text-bold font-cubano text-grey-400 mb-3.5 uppercase tracking-wide">
+              <li class="text-2xl md:text-base15-3xl lg:text-3xl leading-none text-bold font-cubano text-grey-400 mb-4 uppercase tracking-wide">
                 Smaller Stools
               </li>
-              <li class="text-3xl leading-none text-bold font-cubano text-grey-400 mb-3.5 uppercase tracking-wide">
+              <li class="text-2xl md:text-base15-3xl lg:text-3xl leading-none text-bold font-cubano text-grey-400 mb-4 uppercase tracking-wide">
                 Better Overall Health
               </li>
             </ul>
