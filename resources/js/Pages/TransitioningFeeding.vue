@@ -13,7 +13,7 @@
 
           <img
             src="/images/products/patty.png"
-            class="absolute bottom-[-4rem] left-2 sm:left-10 lg:left-14 3xl:left-20 max-w-[185px]"
+            class="absolute bottom-[-4rem] left-2 sm:left-10 lg:left-14 3xl:left-20 max-w-[160px] sm:max-w-[185px]"
           >
         </div>
 
@@ -142,6 +142,6 @@ import { Head, Link } from '@inertiajs/vue3'
 
 <style scoped>
 .hero-container {
-  @apply min-h-[240px] xs:min-h-[325px] xl:min-h-[440px] 5xl:min-h-[512px];
+  @apply min-h-[200px] sm:min-h-[325px] xl:min-h-[440px] 5xl:min-h-[512px];
 }
 </style>

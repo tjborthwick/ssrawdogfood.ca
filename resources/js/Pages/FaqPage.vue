@@ -7,17 +7,17 @@
     <div class="flex flex-col h-full">
       <div class="page !h-auto bg-no-repeat bg-hero-faq">
         <div class="hero-container container content relative">
-          <h1 class="page-title absolute page-title top-6 sm:top-16">
+          <h1 class="page-title">
             Raw FAQS
           </h1>
         </div>
       </div>
 
       <div class="bg-red inverted flex-1">
-        <div class="container content !pt-[3rem] xs:!pt-[5rem] xl:!pt-[6.5rem] relative">
+        <div class="container content relative hero-content-tmp">
           <img
             src="/images/products/gourmet-beef.png"
-            class="max-w-[200px] xs:max-w-xxs sm:max-w-[285px] lg:max-w-xs xl:max-w-none position absolute top-[-7rem] sm:top-[-9rem] lg:top-[-10rem] xl:top-[-16.25rem] left-2 md:left-10 lg:left-14 3xl:left-20"
+            class="hero-product-img"
           >
 
           <faq-component
@@ -68,12 +68,51 @@ const activeIndex = ref(null)
 </script>
 
 <style scoped>
+.page-title {
+  @apply absolute top-6 sm:top-16;
+}
+
+@media (max-height: 540px) {
+  .page-title {
+    @apply top-0;
+  }
+}
 .hero-container {
-  @apply min-h-[240px] xs:min-h-[325px] xl:min-h-[440px] 5xl:min-h-[500px];
+  @apply min-h-[200px] md:min-h-[325px] xl:min-h-[440px] 5xl:min-h-[500px];
+}
+
+/* !pt-[3rem] xs:!pt-[5rem] xl:!pt-[6.5rem]  */
+
+.hero-content-tmp {
+  @apply !pt-[3rem] xs:!pt-[4rem] md:!pt-[5rem] xl:!pt-[6.5rem];
+}
+
+@media (max-height: 540px) {
+  .hero-container {
+    @apply min-h-[200px];
+  }
+
+  .hero-content-tmp {
+    @apply !pt-[3rem];
+  }
 }
 
 .bg-hero-faq {
-  @apply bg-cover bg-center;
+  /** bg image is quite large, so for small devices this is effectively hiding the dog while still using the background image */
+  @apply bg-auto bg-left;
+}
+
+@screen xs {
+  .bg-hero-faq {
+    background-size: cover;
+    background-position: 45% 0%;
+  }
+}
+
+@screen sm {
+  .bg-hero-faq {
+    @apply bg-cover bg-center;
+  }
 }
 
 @screen md {
@@ -108,6 +147,52 @@ const activeIndex = ref(null)
   .bg-hero-faq {
     background-size: cover;
     background-position: 0% 25%;
+  }
+}
+
+.hero-product-img {
+  @apply max-w-[200px] absolute top-[-7rem] left-2;
+}
+
+@screen xs {
+  .hero-product-img {
+    @apply max-w-xxs;
+  }
+}
+
+@screen sm {
+  .hero-product-img {
+    @apply max-w-[285px] top-[-9rem];
+  }
+}
+
+@screen md {
+  .hero-product-img {
+    @apply left-10;
+  }
+}
+
+@screen lg {
+  .hero-product-img {
+    @apply max-w-xs top-[-10rem] left-14;
+  }
+}
+
+@screen xl {
+  .hero-product-img {
+    @apply max-w-none top-[-16.25rem];
+  }
+}
+
+@screen 3xl {
+  .hero-product-img {
+    @apply left-20;
+  }
+}
+
+@media (max-height: 540px) {
+  .hero-product-img {
+    @apply top-[-7rem] left-auto max-w-[200px] ;
   }
 }
 </style>

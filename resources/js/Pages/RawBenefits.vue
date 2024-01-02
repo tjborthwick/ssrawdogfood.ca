@@ -6,13 +6,13 @@
   <guest-layout>
     <div class="page bg-hero-benefits bg-no-repeat">
       <div class="hero-container container content relative">
-        <h1 class="page-title absolute top-6 sm:top-16">
+        <h1 class="page-title">
           Why Raw?
         </h1>
       </div>
 
       <div class="bg-purple inverted">
-        <div class="container content !pt-[3rem] xs:!pt-[5rem] xl:!pt-[6.5rem] !pb-10 relative">
+        <div class="container content relative">
           <h2 class="text-base15-2xl leading-snug lg:text-2xl font-cubano uppercase mb-4 tracking-wide">
             Benefits of Feeding Your Dog a Raw Diet
           </h2>
@@ -25,7 +25,7 @@
 
           <img
             src="/images/products/gourmet-turkey.png"
-            class="absolute top-[-7rem] sm:top-[-9rem] lg:top-[-10rem] xl:top-[-16.25rem] left-2 sm:left-10 lg:left-14 3xl:left-20 max-w-[200px] xs:max-w-xxs sm:max-w-[285px] lg:max-w-xs xl:max-w-none"
+            class="hero-product-img"
           >
         </div>
       </div>
@@ -74,51 +74,93 @@ import { Head, Link } from '@inertiajs/vue3'
 </script>
 
 <style scoped>
+.page-title {
+  @apply absolute top-6 sm:top-16;
+}
+
+@media (max-height: 540px) {
+  .page-title {
+    @apply top-0;
+  }
+}
+
+/** @screen xs breakpoint (390px) */
+@media (max-width: 389px) {
+  .page-title {
+    @apply text-base15-5xl;
+  }
+}
+
 .hero-container {
-  @apply min-h-[240px] xs:min-h-[325px] xl:min-h-[440px] 3xl:min-h-[570px];
+  @apply min-h-[200px] md:min-h-[325px] xl:min-h-[440px] 3xl:min-h-[570px];
 }
 
-.bg-hero-benefits {
-  background-size: contain;
+.hero-container + div .content {
+  @apply !pt-[3rem] xs:!pt-[4rem] sm:!pt-[5rem] xl:!pt-[6.5rem] !pb-10;
 }
 
-@media (min-width: 560px), (min-height: 1024px) {
-  .bg-hero-benefits {
-    background-size: calc(100vw + (1024px - 100vw));
-    background-position: 40% 100%;
+@media (max-height: 540px) {
+  .hero-container {
+    @apply min-h-[200px];
+  }
+
+  .hero-container + div .content {
+    @apply !pt-[3rem];
   }
 }
 
-@media (min-height: 1280px) and (max-width: 1180px) {
-  .bg-hero-benefits {
-    background-size: calc(100vw + (1180px - 100vw));
-    background-position: 40% 100%;
+@media (orientation: portrait) {
+  @screen xs {
+    .hero-container {
+      @apply min-h-[325px];
+    }
   }
 }
 
-@media (min-height: 1366px) and (max-width: 1290px) {
+@screen xs {
   .bg-hero-benefits {
-    background-size: calc(100vw + (1290px - 100vw));
-    background-position: 40% 100%;
+    background-size: auto 118%;
+    background-position: 50% 100%;
+  }
+
+  @media (max-height: 540px) {
+    .bg-hero-benefits {
+      background-size: auto 112%;
+      background-position: 25% 100%;
+    }
   }
 }
 
-@media (max-aspect-ratio: 1/1) and (min-aspect-ratio: 5/6){
+@screen md {
   .bg-hero-benefits {
-    background-size: cover;
-    background-position: 50% 50%;
+    background-size: auto 113%;
+    background-position: 42% 100%;
+  }
+}
+
+@screen lg {
+  .bg-hero-benefits {
+    background-size: auto 117%;
+    background-position: 42% 100%;
   }
 }
 
 @media (orientation: landscape) {
   .bg-hero-benefits {
-    background-size: cover;
-    background-position: 50% 50%;
+    background-size: auto 130%;
+    background-position: 50% 65%;
   }
 
   @media (min-height: 768px) {
     .bg-hero-benefits {
+      background-size: cover;
       background-position: 50% 100%;
+    }
+  }
+
+  @media (min-height: 820px) {
+    .bg-hero-benefits {
+      background-position: 50% 60%;
     }
   }
 
@@ -162,6 +204,52 @@ import { Head, Link } from '@inertiajs/vue3'
     .bg-hero-benefits {
       background-position: 50% 32%;
     }
+  }
+}
+
+@media (min-aspect-ratio: 7 / 8) and (max-aspect-ratio: 1) {
+  .bg-hero-benefits {
+    @apply bg-cover;
+  }
+}
+
+.hero-product-img {
+  @apply absolute top-[-7rem] left-2 max-w-[200px];
+}
+
+@screen xs {
+  .hero-product-img {
+    @apply top-[-7rem] max-w-xxs;
+  }
+}
+
+@screen sm {
+  .hero-product-img {
+    @apply top-[-9rem] left-10 max-w-[285px];
+  }
+}
+
+@screen lg {
+  .hero-product-img {
+    @apply top-[-10rem] left-14 max-w-xs;
+  }
+}
+
+@screen xl {
+  .hero-product-img {
+    @apply top-[-16.25rem] max-w-none;
+  }
+}
+
+@screen 3xl {
+  .hero-product-img {
+    @apply left-20;
+  }
+}
+
+@media (max-height: 540px) {
+  .hero-product-img {
+    @apply top-[-7rem] left-auto max-w-[200px] ;
   }
 }
 </style>

@@ -5,7 +5,7 @@
 
   <guest-layout :inverted="true">
     <div class="bg-grey-400">
-      <div class="page bg-no-repeat bg-hero-about container bg-[length:260px] xs:bg-[length:300px] sm:bg-[length:400px] md:bg-[length:480px] xl:bg-auto">
+      <div class="page bg-no-repeat bg-hero-about container bg-[length:0px] xs:bg-[length:280px] sm:bg-[length:400px] md:bg-[length:480px] xl:bg-auto">
         <div class="hero-container content relative">
           <h1 class="page-title absolute top-6 sm:top-16">
             About Us
@@ -14,7 +14,7 @@
       </div>
 
       <div class="bg-orange-100">
-        <div class="container content !pt-[3rem] xs:!pt-[5rem] 3xl:!pt-[5.5rem]  lg:pb-16 xl:pb-12 relative">
+        <div class="container content !pt-[3rem] xs:!pt-[4rem] md:!pt-[5rem] 3xl:!pt-[5.5rem]  lg:pb-16 xl:pb-12 relative">
           <img
             src="/images/products/gourmet-duck.png"
             class="absolute top-[-7rem] sm:top-[-9rem] lg:top-[-10rem] xl:top-[-18.25rem] left-2 md:left-10 xl:left-14 3xl:left-20 max-w-[200px] xs:max-w-xxs sm:max-w-[285px] lg:max-w-xs xl:max-w-none"
@@ -89,7 +89,7 @@ import { Head, Link } from '@inertiajs/vue3'
 
 <style scoped>
 .hero-container {
-  @apply min-h-[240px] xs:min-h-[325px] xl:min-h-[440px];
+  @apply min-h-[200px] sm:min-h-[325px] xl:min-h-[440px];
 }
 
 .bg-hero-about {
