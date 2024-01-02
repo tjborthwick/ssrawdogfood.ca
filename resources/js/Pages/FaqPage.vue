@@ -77,11 +77,10 @@ const activeIndex = ref(null)
     @apply top-0;
   }
 }
+
 .hero-container {
   @apply min-h-[200px] md:min-h-[325px] xl:min-h-[440px] 5xl:min-h-[500px];
 }
-
-/* !pt-[3rem] xs:!pt-[5rem] xl:!pt-[6.5rem]  */
 
 .hero-content-tmp {
   @apply !pt-[3rem] xs:!pt-[4rem] md:!pt-[5rem] xl:!pt-[6.5rem];
@@ -147,6 +146,19 @@ const activeIndex = ref(null)
   .bg-hero-faq {
     background-size: cover;
     background-position: 0% 25%;
+  }
+}
+
+@media (max-height: 540px) {
+  .bg-hero-faq {
+    background-size: cover;
+    background-position: 0% 0%;
+  }
+
+  @screen md {
+    .bg-hero-faq {
+      background-size: 125%;
+    }
   }
 }
 
