@@ -142,6 +142,6 @@ import { Head, Link } from '@inertiajs/vue3'
 
 <style scoped>
 .hero-container {
-  @apply min-h-[240px] xs:min-h-[325px] lg:min-h-[400px] xl:min-h-[440px] 5xl:min-h-[512px];
+  @apply min-h-[240px] xs:min-h-[325px] xl:min-h-[440px] 5xl:min-h-[512px];
 }
 </style>

@@ -14,10 +14,10 @@
       </div>
 
       <div class="bg-red inverted flex-1">
-        <div class="container content !pt-[3rem] xs:!pt-[5rem] 3xl:!pt-[5.5rem] relative">
+        <div class="container content !pt-[3rem] xs:!pt-[5rem] xl:!pt-[6.5rem] relative">
           <img
             src="/images/products/gourmet-beef.png"
-            class="max-w-[200px] xs:max-w-xxs sm:max-w-[285px] lg:max-w-xs xl:max-w-none position absolute top-[-7rem] sm:top-[-9rem] lg:top-[-10rem] xl:top-[-18.25rem] left-2 md:left-10 lg:left-14 3xl:left-20"
+            class="max-w-[200px] xs:max-w-xxs sm:max-w-[285px] lg:max-w-xs xl:max-w-none position absolute top-[-7rem] sm:top-[-9rem] lg:top-[-10rem] xl:top-[-16.25rem] left-2 md:left-10 lg:left-14 3xl:left-20"
           >
 
           <faq-component
@@ -69,7 +69,7 @@ const activeIndex = ref(null)
 
 <style scoped>
 .hero-container {
-  @apply min-h-[240px] xs:min-h-[325px] lg:min-h-[400px] xl:min-h-[440px];
+  @apply min-h-[240px] xs:min-h-[325px] xl:min-h-[440px] 5xl:min-h-[500px];
 }
 
 .bg-hero-faq {
@@ -78,9 +78,7 @@ const activeIndex = ref(null)
 
 @screen md {
   .bg-hero-faq {
-    /* background-size: calc((100vh * (2400 / 2489)) + 20%); */
-    /* background-size: calc((100vh * (4800 / 1600))); */
-    background-size: 187%;
+    background-size: 180%;
     background-position: 35% 0%;
   }
 }
@@ -90,21 +88,26 @@ const activeIndex = ref(null)
     @apply bg-cover;
     background-position: 35% 0%;
   }
+}
 
+@screen xl {
   .bg-hero-faq {
-  /* background-position-y: calc(100vw * 0.05 * -1); */
+    background-size: 140%;
+    background-position: 20% 20%;
   }
 }
 
-@screen 2xl {
+@screen 3xl {
   .bg-hero-faq {
-  /* background-position-y: calc(100vw * 0.07 * -1) */
+    background-size: 110%;
+    background-position: 0% 15%;
   }
 }
 
 @screen 5xl {
   .bg-hero-faq {
-  /* background-position-y: calc(100vw * 0.2 * -1) */
+    background-size: cover;
+    background-position: 0% 25%;
   }
 }
 </style>

@@ -5,7 +5,7 @@
 
   <guest-layout :inverted="true">
     <div class="bg-grey-400">
-      <div class="page bg-no-repeat bg-hero-about container bg-[length:260px] xs:bg-[length:300px] sm:bg-[length:400px] md:bg-[length:480px] lg:bg-auto">
+      <div class="page bg-no-repeat bg-hero-about container bg-[length:260px] xs:bg-[length:300px] sm:bg-[length:400px] md:bg-[length:480px] xl:bg-auto">
         <div class="hero-container content relative">
           <h1 class="page-title absolute top-6 sm:top-16">
             About Us
@@ -89,7 +89,7 @@ import { Head, Link } from '@inertiajs/vue3'
 
 <style scoped>
 .hero-container {
-  @apply min-h-[240px] xs:min-h-[325px] lg:min-h-[400px] xl:min-h-[440px];
+  @apply min-h-[240px] xs:min-h-[325px] xl:min-h-[440px];
 }
 
 .bg-hero-about {
