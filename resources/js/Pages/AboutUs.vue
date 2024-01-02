@@ -5,9 +5,9 @@
 
   <guest-layout :inverted="true">
     <div class="bg-grey-400">
-      <div class="page bg-no-repeat bg-hero-about container bg-[length:0px] xs:bg-[length:280px] sm:bg-[length:400px] md:bg-[length:480px] xl:bg-auto">
+      <div class="page bg-no-repeat bg-hero-about container">
         <div class="hero-container content relative">
-          <h1 class="page-title absolute top-6 sm:top-16">
+          <h1 class="page-title">
             About Us
           </h1>
         </div>
@@ -17,7 +17,7 @@
         <div class="container content !pt-[3rem] xs:!pt-[4rem] md:!pt-[5rem] 3xl:!pt-[5.5rem]  lg:pb-16 xl:pb-12 relative">
           <img
             src="/images/products/gourmet-duck.png"
-            class="absolute top-[-7rem] sm:top-[-9rem] lg:top-[-10rem] xl:top-[-18.25rem] left-2 md:left-10 xl:left-14 3xl:left-20 max-w-[200px] xs:max-w-xxs sm:max-w-[285px] lg:max-w-xs xl:max-w-none"
+            class="hero-product-img"
           >
 
           <h2 class="text-base15-2xl leading-snug lg:text-2xl font-cubano uppercase mb-4 tracking-wide">
@@ -88,23 +88,125 @@ import { Head, Link } from '@inertiajs/vue3'
 </script>
 
 <style scoped>
+.page-title {
+  @apply absolute top-6 sm:top-16;
+}
+
 .hero-container {
   @apply min-h-[200px] sm:min-h-[325px] xl:min-h-[440px];
 }
 
+@media (max-height: 540px) {
+  .hero-container {
+    @apply min-h-[200px];
+  }
+
+  @screen md {
+    .hero-container {
+      @apply min-h-[210px];
+    }
+  }
+
+  .page-title {
+    @apply top-0;
+  }
+}
+
 .bg-hero-about {
+  @apply bg-[length:0px];
   background-position: 105% 100%;
+}
+
+@screen xs {
+  .bg-hero-about {
+    @apply bg-[length:280px];
+  }
 }
 
 @screen sm {
   .bg-hero-about {
+    @apply bg-[length:400px];
     background-position: 90% 100%;
+  }
+}
+
+@screen md {
+  .bg-hero-about {
+    @apply bg-[length:480px];
   }
 }
 
 @screen xl {
   .bg-hero-about {
+    @apply bg-auto;
     background-position: 100% 100%;
+  }
+}
+
+@media (max-height: 540px) {
+  .bg-hero-about {
+    background-size: auto 70%;
+    background-position: 80% 100%;
+  }
+
+  @screen md {
+
+    .bg-hero-about {
+      background-size: auto 85%;
+      background-position: 80% 100%;
+    }
+  }
+}
+
+.hero-product-img {
+  @apply absolute top-[-7rem] left-2 max-w-[200px];
+}
+
+@screen xs {
+  .hero-product-img {
+    @apply max-w-xxs;
+  }
+}
+
+@screen sm {
+  .hero-product-img {
+    @apply top-[-9rem] max-w-[285px];
+  }
+}
+
+@screen md {
+  .hero-product-img {
+    @apply left-10;
+  }
+}
+
+@screen lg {
+  .hero-product-img {
+    @apply max-w-xs top-[-10rem];
+  }
+}
+
+@screen xl {
+  .hero-product-img {
+    @apply max-w-none top-[-18.25rem] left-14;
+  }
+}
+
+@screen 3xl {
+  .hero-product-img {
+    @apply left-20;
+  }
+}
+
+@media (max-height: 540px) {
+  .hero-product-img {
+    @apply top-[-7rem] left-auto max-w-[200px];
+  }
+
+  @screen md {
+    .hero-product-img {
+        @apply top-[-9rem] max-w-[285px];
+    }
   }
 }
 </style>
