@@ -14,6 +14,7 @@ module.exports = {
         "vue/singleline-html-element-content-newline": ["error", {
             "ignores": ["pre", "Link"]
         }],
+        "vue/no-v-html": false,
         // "vue/html-indent": ["error", 'number', {
         //     "attribute": 2,
         //     "baseIndent": 2,
