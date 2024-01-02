@@ -5,21 +5,21 @@
 
   <guest-layout :inverted="true">
     <div class="bg-grey-400">
-      <div class="page container bg-no-repeat bg-hero-about bg-[length:260px] xs:bg-[length:300px] sm:bg-[length:400px] md:bg-[length:480px] lg:bg-auto">
-        <div class="h-[260px] xs:h-[280px] md:h-[320px] lg:h-[430px] content relative">
-          <h1 class="page-title absolute top-3 md:top-12">
+      <div class="page bg-no-repeat bg-hero-about container bg-[length:260px] xs:bg-[length:300px] sm:bg-[length:400px] md:bg-[length:480px] lg:bg-auto">
+        <div class="hero-container content relative">
+          <h1 class="page-title absolute top-6 sm:top-16">
             About Us
           </h1>
-
-          <img
-            src="/images/products/gourmet-duck.png"
-            class="absolute bottom-[-2.5rem] md:bottom-[-4.5rem] left-2 md:left-10 xl:left-[5rem] max-w-[180px] sm:max-w-[200px] md:max-w-[300px] lg:max-w-none"
-          >
         </div>
       </div>
 
       <div class="bg-orange-100">
-        <div class="container content !pt-[3rem] md:!pt-[5rem] lg:pb-16 xl:pb-12">
+        <div class="container content !pt-[3rem] xs:!pt-[5rem] 3xl:!pt-[5.5rem]  lg:pb-16 xl:pb-12 relative">
+          <img
+            src="/images/products/gourmet-duck.png"
+            class="absolute top-[-7rem] sm:top-[-9rem] lg:top-[-10rem] xl:top-[-18.25rem] left-2 md:left-10 xl:left-14 3xl:left-20 max-w-[200px] xs:max-w-xxs sm:max-w-[285px] lg:max-w-xs xl:max-w-none"
+          >
+
           <h2 class="text-base15-2xl leading-snug lg:text-2xl font-cubano uppercase mb-4 tracking-wide">
             Who Is S&S Raw Dod Food?
           </h2>
@@ -88,6 +88,10 @@ import { Head, Link } from '@inertiajs/vue3'
 </script>
 
 <style scoped>
+.hero-container {
+  @apply min-h-[240px] xs:min-h-[325px] lg:min-h-[400px] xl:min-h-[440px];
+}
+
 .bg-hero-about {
   background-position: 105% 100%;
 }
@@ -95,6 +99,12 @@ import { Head, Link } from '@inertiajs/vue3'
 @screen sm {
   .bg-hero-about {
     background-position: 90% 100%;
+  }
+}
+
+@screen xl {
+  .bg-hero-about {
+    background-position: 100% 100%;
   }
 }
 </style>

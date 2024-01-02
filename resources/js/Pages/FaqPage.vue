@@ -4,20 +4,20 @@
   </Head>
 
   <guest-layout>
-    <div class="h-full flex flex-col">
-      <div class="bg-no-repeat bg-hero-faq bg-cover bg-center page">
-        <div class="h-[360px] 2xl:h-[460px] 4xl:h-[640px] container content relative">
-          <h1 class="page-title absolute top-16 3xl:top-28 5xl:top-48">
+    <div class="flex flex-col h-full">
+      <div class="page !h-auto bg-no-repeat bg-hero-faq">
+        <div class="hero-container container content relative">
+          <h1 class="page-title absolute page-title top-6 sm:top-16">
             Raw FAQS
           </h1>
         </div>
       </div>
 
       <div class="bg-red inverted flex-1">
-        <div class="container content !pt-28 !2xl:pt-32 relative">
+        <div class="container content !pt-[3rem] xs:!pt-[5rem] 3xl:!pt-[5.5rem] relative">
           <img
             src="/images/products/gourmet-beef.png"
-            class="max-w-[320px] xl:max-w-sm 2xl:max-w-md position absolute top-[-10rem] xl:top-[-12rem] 2xl:top-[-14rem] left-8"
+            class="max-w-[200px] xs:max-w-xxs sm:max-w-[285px] lg:max-w-xs xl:max-w-none position absolute top-[-7rem] sm:top-[-9rem] lg:top-[-10rem] xl:top-[-18.25rem] left-2 md:left-10 lg:left-14 3xl:left-20"
           >
 
           <faq-component
@@ -44,7 +44,7 @@
 <script setup>
 import { ref } from 'vue';
 import GuestLayout from '@/Layouts/GuestLayout.vue'
-import { Head, Link } from '@inertiajs/vue3'
+import { Head } from '@inertiajs/vue3'
 import FaqComponent from '@/Components/FaqComponent.vue'
 
 const faqs = [
@@ -68,11 +68,29 @@ const activeIndex = ref(null)
 </script>
 
 <style scoped>
-.bg-hero-faq {
-/* background-position-x: calc(100vw * 0.275 * -1); */
+.hero-container {
+  @apply min-h-[240px] xs:min-h-[325px] lg:min-h-[400px] xl:min-h-[440px];
 }
 
-@screen xl {
+.bg-hero-faq {
+  @apply bg-cover bg-center;
+}
+
+@screen md {
+  .bg-hero-faq {
+    /* background-size: calc((100vh * (2400 / 2489)) + 20%); */
+    /* background-size: calc((100vh * (4800 / 1600))); */
+    background-size: 187%;
+    background-position: 35% 0%;
+  }
+}
+
+@screen lg {
+  .bg-hero-faq {
+    @apply bg-cover;
+    background-position: 35% 0%;
+  }
+
   .bg-hero-faq {
   /* background-position-y: calc(100vw * 0.05 * -1); */
   }
