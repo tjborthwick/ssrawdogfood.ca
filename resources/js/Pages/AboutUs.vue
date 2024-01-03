@@ -4,8 +4,8 @@
   </Head>
 
   <guest-layout :inverted="true">
-    <div class="bg-grey-400">
-      <div class="page bg-no-repeat bg-hero-about container">
+    <div class="h-full">
+      <div class="page !h-auto bg-no-repeat bg-hero-about container">
         <div class="hero-container content relative">
           <h1 class="page-title">
             About Us
@@ -26,18 +26,8 @@
 
           <p>
             S&S Raw Dog food is a no frills, high quality raw dog food company based in Woodstock, Ontario. Our focus is bringing you the most cost efficient food while maintaining
-            the highest quality. We make our raw dog food twice weekly, so it is never in the freezer long. We offer a range of <Link
-              class="inline-block"
-              :href="route('catalogue.index')"
-            >
-              Products
-            </Link> as well as <Link
-              class="inline-block"
-              :href="route('catalogue.custom-food')"
-            >
-              Custom Food
-            </Link>, so if you have a dog with
-            special food needs we can help. The proof is in our product, so give us a try!
+            the highest quality. We make our raw dog food twice weekly, so it is never in the freezer long. We offer a range of <Link class="inline-block" :href="route('catalogue.index')">Products</Link> as well as
+            <Link class="inline-block" :href="route('catalogue.custom-food')">Custom Food</Link>, so if you have a dog with special food needs we can help. The proof is in our product, so give us a try!
           </p>
         </div>
       </div>
