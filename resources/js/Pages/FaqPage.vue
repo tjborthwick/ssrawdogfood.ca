@@ -21,18 +21,184 @@
           >
 
           <faq-component
-            v-for="(faq, index) in faqs"
-            :key="index"
-            :is-active="index === activeIndex"
-            class="mb-4"
-            @toggle="handleToggle(index)"
+            :is-active="activeIndex === 0"
+            @toggle="handleToggle(0)"
           >
             <template #question>
-              {{ faq.q }}
+              What are the benefits of feeding a raw?
             </template>
 
             <template #answer>
-              <span v-html="faq.a" />
+              There are many health benefits to feeding your dog a raw diet including alleviating or eliminating allergies. See our <Link :href="route('marketing.benefits')">Why Raw?</Link> page for more information.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 1"
+            @toggle="handleToggle(1)"
+          >
+            <template #question>
+              Is feeding a raw diet expensive?
+            </template>
+
+            <template #answer>
+              Feeding raw food is cheaper than you think. A bigger dog of 50lbs eating our <Link :href="route('catalogue.gourmet-meals')">Gourmet</Link> Meals is approximately $2.50 a day. A small dog is approximately $20 a month.
+            </template>
+          </faq-component>
+
+         <faq-component
+            :is-active="activeIndex === 2"
+            @toggle="handleToggle(2)"
+          >
+            <template #question>
+              How much raw food should I feed my dog?
+            </template>
+
+            <template #answer>
+              How much food depends mostly on your dogs age and size. See our <Link :href="route('marketing.feeding')">Feeding Guidelines</Link> for more information.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 3"
+            @toggle="handleToggle(3)"
+          >
+            <template #question>
+              How should I transition my dog to a raw diet?
+            </template>
+
+            <template #answer>
+              See our <Link :href="route('marketing.feeding')">Transitioning Your Dog to Raw Food</Link> for more information.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 4"
+            @toggle="handleToggle(4)"
+          >
+            <template #question>
+              Do I need to add anything to raw food?
+            </template>
+
+            <template #answer>
+              You don't need to add anything to our <Link :href="route('catalogue.gourmet-meals')">Gourmet Meals</Link> which are a complete balanced meal with protein, fruits, veggies and eggs. Our <Link :href="route('catalogue.pure-proteins')">Pure Proteins</Link> provide a great raw base to add your own ingredients.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 5"
+            @toggle="handleToggle(5)"
+          >
+            <template #question>
+              My dog has special food requirements, do you offer custom food?
+            </template>
+
+            <template #answer>
+              Yes, we do! See our <Link :href="route('catalogue.custom-food')">Custom Food</Link> page for more information.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 6"
+            @toggle="handleToggle(6)"
+          >
+            <template #question>
+              How long does raw dog food last?
+            </template>
+
+            <template #answer>
+              Raw dog food lasts 2-3 days in the fridge.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 7"
+            @toggle="handleToggle(7)"
+          >
+            <template #question>
+              Aren’t chicken and turkey bones dangerous for pets?
+            </template>
+
+            <template #answer>
+              Only when cooked. Raw chicken and turkey bones are soft, easily digestible and very good for your dog. Cooked bone can be hard and brittle and pose a safety concern. Never feed your dog cooked chicken bones. We also don't suggest cooking our raw food as it contains bone.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 8"
+            @toggle="handleToggle(8)"
+          >
+            <template #question>
+              Is your raw dog food human-grade?
+            </template>
+
+            <template #answer>
+              Yes. All our food is sourced from local licensed facilities. Only pure raw high quality proteins with no chemicals, fillers or things you have never heard of.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 9"
+            @toggle="handleToggle(9)"
+          >
+            <template #question>
+              Why does my dog's poop look different?
+            </template>
+
+            <template #answer>
+              Raw poops definitely look different than kibble poops. Raw poops are smaller, firmer, not as stinky and sometimes have a chalky white consistency. This is because your raw fed dog is digesting and absorbing what they eat, rather than pooping out all the indigestible fillers that are in kibble.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 10"
+            @toggle="handleToggle(10)"
+          >
+            <template #question>
+              Why is my dog drinking less water?
+            </template>
+
+            <template #answer>
+              This is completely normal. Raw food contains way more moisture than kibble, and your dog's digestive system extracts the water in the food, so they are less thirsty.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 11"
+            @toggle="handleToggle(11)"
+          >
+            <template #question>
+              What methods of payment do you accept?
+            </template>
+
+            <template #answer>
+              We accept Interac, VISA, Mastercard and cash.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 12"
+            @toggle="handleToggle(12)"
+          >
+            <template #question>
+              When and where do I pick up my order?
+            </template>
+
+            <template #answer>
+              Orders are usually ready for pick up in a day or two. We will contact you to let you know when your order is ready and provide our Kensington Street address in Woodstock.
+            </template>
+          </faq-component>
+
+          <faq-component
+            :is-active="activeIndex === 13"
+            @toggle="handleToggle(13)"
+          >
+            <template #question>
+              What if I have more questions?
+            </template>
+
+            <template #answer>
+              Don't hesitate to <Link :href="route('marketing.contact')">contact us</Link>. We're here to help!
             </template>
           </faq-component>
         </div>
@@ -42,27 +208,10 @@
 </template>
 
 <script setup>
+import { Head, Link } from '@inertiajs/vue3'
 import { ref } from 'vue';
-import GuestLayout from '@/Layouts/GuestLayout.vue'
-import { Head } from '@inertiajs/vue3'
 import FaqComponent from '@/Components/FaqComponent.vue'
-
-const faqs = [
-  { q: 'What are the benefits of feeding a raw?', a: `There are many health benefits to feeding your dog a raw diet including alleviating or eliminating allergies. See our <a href="" class="inertia-link">Why Raw?</a> page for more information.` },
-  { q: 'Is feeding a raw diet expensive?', a: `Feeding raw food is cheaper than you think. A bigger dog of 50lbs eating our <a href="" class="inertia-inline">Gourmet</a> Meals is approximately $2.50 a day. A small dog is approximately $20 a month.` },
-  { q: 'How much raw food should I feed my dog?', a: `How much food depends mostly on your dogs age and size. See our <a href="" class="inertia-link">Feeding Guidelines</a> for more information.` },
-  { q: 'How should I transition my dog to a raw diet?', a: `See our <a href="" class="inertia-link">Transitioning Your Dog to Raw Food</a> for more information.` },
-  { q: 'Do I need to add anything to raw food?', a: `You don't need to add anything to our <a href="" class="inertia-link">Gourmet Meals</a> which are a complete balanced meal with protein, fruits, veggies and eggs. Our <a href="" class="inertia-link">Pure Proteins</a> provide a great raw base to add your own ingredients.` },
-  { q: 'My dog has special food requirements, do you offer custom food?', a: `Yes, we do! See our <a href="" class="inertia-link">Custom Food</a> page for more information.` },
-  { q: 'How long does raw dog food last?', a: `Raw dog food lasts 2-3 days in the fridge.` },
-  { q: 'Aren’t chicken and turkey bones dangerous for pets?', a: `Only when cooked. Raw chicken and turkey bones are soft, easily digestible and very good for your dog. Cooked bone can be hard and brittle and pose a safety concern. Never feed your dog cooked chicken bones. We also don’t suggest cooking our raw food as it contains bone.` },
-  { q: 'Is your raw dog food human-grade?', a: `Yes. All our food is sourced from local licensed facilities. Only pure raw high quality proteins with no chemicals, fillers or things you have never heard of.` },
-  { q: 'Why does my dog\'s poop look different?', a: `Raw poops definitely look different than kibble poops. Raw poops are smaller, firmer, not as stinky and sometimes have a chalky white consistency. This is because your raw fed dog is digesting and absorbing what they eat, rather than pooping out all the indigestible fillers that are in kibble.` },
-  { q: 'Why is my dog drinking less water?', a: `This is completely normal. Raw food contains way more moisture than kibble, and your dog's digestive system extracts the water in the food, so they are less thirsty.` },
-  { q: 'What methods of payment do you accept?', a: `We accept Interac, VISA, Mastercard and cash.` },
-  { q: 'When and where do I pick up my order?', a: `Orders are usually ready for pick up in a day or two. We will contact you to let you know when your order is ready and provide our Kensington Street address in Woodstock.` },
-  { q: 'What if I have more questions?', a: `Don't hesitate to <a href="${route('marketing.contact')}" class="inertia-inline">contact us</a>. We're here to help!` },
-]
+import GuestLayout from '@/Layouts/GuestLayout.vue'
 
 const activeIndex = ref(null)
 
