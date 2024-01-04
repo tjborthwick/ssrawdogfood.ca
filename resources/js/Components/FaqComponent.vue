@@ -5,7 +5,7 @@
       @click="handleToggle"
     >
       <h2
-        class="text-base leading-snug md:text-base15-lg lg:text-lg font-bold tracking-wide"
+        class="text-sm sm:text-base leading-snug md:text-base15-lg lg:text-lg font-bold tracking-wide"
         :class="{ 'mb-2': isActive }"
       >
         <slot name="question" />
@@ -15,14 +15,14 @@
         v-if="!isActive"
         width="32px"
         height="32px"
-        class="text-white"
+        class="text-white min-w-min"
       />
 
       <minus-icon
         v-if="isActive"
         width="32px"
         height="32px"
-        class="text-white"
+        class="text-white min-w-min"
       />
     </div>
 
