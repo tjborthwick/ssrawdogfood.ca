@@ -202,7 +202,8 @@ const props = defineProps({
     }
   }
 
-  @media (min-height: 390px) and (max-height: 601px) {
+  /** odd tablet sizes like surface duo */
+  @media (min-height: 500px) and (max-height: 601px) {
     .bg-hero-home {
       background-size: 120%;
       background-position: 35% 35%;
