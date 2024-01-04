@@ -111,7 +111,7 @@ const props = defineProps({
 
 .bg-hero-home {
   @apply bg-cover bg-no-repeat h-full bg-[#c2bebb];
-  /** dog is more or less centred on screen at this 37% */
+  /** dog is more or less centred on screen */
   background-position: 40% 0%;
 }
 
@@ -123,14 +123,12 @@ const props = defineProps({
 
 @media (orientation: portrait) and (max-aspect-ratio: 2400 / 2489) {
   .bg-hero-home {
-    /** Basically bg-cover + 20% */
-    background-size: calc((100vh * (2400 / 2489)) + 20%);
+    background-size: auto 115.5%;
   }
 
   @screen md {
     .bg-hero-home {
-      /** Basically bg-cover + 26% */
-      background-size: calc((100vh * (2400 / 2489)) + 26%);
+      background-size: auto 120.25%;
       background-position: 0% 60%;
     }
   }
