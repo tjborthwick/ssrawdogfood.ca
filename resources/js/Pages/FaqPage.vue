@@ -25,7 +25,7 @@
             :key="index"
             :is-active="index === activeIndex"
             class="mb-4"
-            @toggle="activeIndex = index"
+            @toggle="handleToggle(index)"
           >
             <template #question>
               {{ faq.q }}
@@ -65,6 +65,16 @@ const faqs = [
 ]
 
 const activeIndex = ref(null)
+
+const handleToggle = function (index) {
+  if (activeIndex.value === index) {
+    activeIndex.value = null
+
+    return
+  }
+
+  activeIndex.value = index
+}
 </script>
 
 <style scoped>
