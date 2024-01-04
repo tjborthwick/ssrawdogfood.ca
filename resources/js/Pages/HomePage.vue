@@ -52,10 +52,40 @@ const props = defineProps({
 
 <style scoped>
 .page-title {
-  @apply text-xl leading-tight xs:text-2xl xs:leading-tight md:text-base15-5xl lg:text-5xl absolute top-0 sm:top-3 md:top-24;
+  @apply text-xl leading-tight absolute top-0 sm:top-3 md:top-24;
+}
+
+@screen xs {
+  .page-title {
+    @apply text-2xl leading-tight;
+  }
+}
+
+@screen md {
+  .page-title {
+    @apply text-base15-5xl;
+  }
+}
+
+@screen lg {
+  .page-title {
+    @apply text-5xl;
+  }
+}
+
+@media  (orientation: landscape) and (max-height: 540px) {
+  .page-title {
+    @apply text-3xl leading-tight;
+  }
 }
 
 @media (orientation: portrait) {
+  @media (min-width: 601px) {
+    .page-title {
+      @apply top-12;
+    }
+  }
+
   @screen lg {
     .page-title {
       @apply top-60;
@@ -93,6 +123,12 @@ const props = defineProps({
   @media (max-width: 1366px) {
     .page-title {
       @apply top-40;
+    }
+  }
+
+  @media (max-height: 540px) {
+    .page-title {
+      @apply top-16;
     }
   }
 }
