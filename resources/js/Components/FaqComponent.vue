@@ -4,10 +4,7 @@
       class="flex justify-between items-center cursor-pointer"
       @click="handleToggle"
     >
-      <h2
-        class="text-sm sm:text-base leading-snug md:text-base15-lg lg:text-lg font-bold tracking-wide"
-        :class="{ 'mb-2': isActive }"
-      >
+      <h2 class="text-sm sm:text-base leading-snug md:text-base15-lg lg:text-lg font-bold tracking-wide">
         <slot name="question" />
       </h2>
 
@@ -29,7 +26,7 @@
     <transition name="accordion">
       <p
         v-show="isActive"
-        class="mb-8"
+        class="mt-1 mb-8"
       >
         <slot name="answer" />
       </p>
@@ -56,7 +53,7 @@ const handleToggle = function () {
 <style scoped>
 .accordion-enter-active,
 .accordion-leave-active {
-    transition: all 0.2s;
+    transition: all 0.2s ease;
     max-height: 230px;
 }
 
