@@ -146,20 +146,42 @@ const props = defineProps({
 }
 
 .bg-hero-home {
-  @apply bg-cover bg-no-repeat h-full bg-[#c2bebb];
-  /** dog is more or less centred on screen */
-  background-position: 40% 0%;
+  @apply bg-cover bg-center bg-no-repeat h-full bg-[#c2bebb];
 }
 
-@screen md {
+/** extend passed the full screen 1.5 times to give the background image a bit of room */
+@media (orientation: landscape) and (max-height: 680px) {
   .bg-hero-home {
-    background-position: 0% 0%;
+    max-height: 150vh;
+  }
+}
+
+@media (orientation: landscape)  {
+  @media (max-height: 389px) {
+    .bg-hero-home {
+      background-size: 125%;
+      background-position: 0% 25%;
+    }
+  }
+
+  @media (min-height: 390px) and (max-height: 680px) {
+    .bg-hero-home {
+      background-size: 130%;
+      background-position: 32% 25%;
+    }
+  }
+
+  @screen lg {
+    .bg-hero-home {
+      background-position: 50% 25%;
+    }
   }
 }
 
 @media (orientation: portrait) and (max-aspect-ratio: 2400 / 2489) {
   .bg-hero-home {
     background-size: auto 115.5%;
+    background-position: 40% 0%;
   }
 
   @screen md {
@@ -169,93 +191,36 @@ const props = defineProps({
     }
   }
 
-  @screen lg {
+  /** nudging into place for iPad Pro & Air sizes  */
+  @media (min-width: 820px) {
     .bg-hero-home {
       background-position: 8% 60%;
     }
   }
-}
 
-/** Targeting odd ball screen sizes like iPad air and Surface Pro 7 */
-@media (orientation: portrait) and (max-aspect-ratio: 820 / 1180) {
-  @screen md {
-    .bg-hero-home {
-      background-position: 10% 60%;
+  @media (min-width: 720px) and (min-height: 1280px) {
+    @media (max-aspect-ratio: 0.695) {
+      .bg-hero-home {
+        background-position: 10% 60%;
+      }
     }
-  }
-}
 
-/** Targeting tall/vertical desktops */
-@media (orientation: portrait) and (max-aspect-ratio: 800 / 1280) {
-  @media (min-width: 720px) {
-    .bg-hero-home {
-      background-position: 20% 60%;
+    @media (max-aspect-ratio: 0.67) {
+      .bg-hero-home {
+        background-position: 14% 60%;
+      }
     }
-  }
 
-  @media (max-height: 1024px) and @screen md {
-    .bg-hero-home {
-      background-position: 15% 60%;
+    @media (max-aspect-ratio: 0.625) {
+      .bg-hero-home {
+        background-position: 18% 60%;
+      }
     }
-  }
 
-  @screen md {
-    .bg-hero-home {
-      background-position: 15% 60%;
-    }
-  }
-}
-
-/** Targeting tall/vertical desktops */
-@media (orientation: portrait) and (max-aspect-ratio: 720 / 1280) {
-  @media (min-width: 720px) {
-    .bg-hero-home {
-      background-position: 20% 100%;
-    }
-  }
-
-  @media (min-width: 864px) {
-    .bg-hero-home {
-      background-position: 25% 100%;
-    }
-  }
-}
-
-@media (orientation: landscape)  {
-  @media (max-height: 389px) {
-    .bg-hero-home {
-      background-size: 125%;
-      background-position: 0% 10%;
-      max-height: 160vh;
-    }
-  }
-
-  @media (min-height: 390px) and (max-height: 680px) {
-    .bg-hero-home {
-      background-size: 130%;
-      background-position: 0% 18%;
-      max-height: 160vh;
-    }
-  }
-
-  /** odd tablet sizes like surface duo */
-  @media (min-height: 500px) and (max-height: 601px) {
-    .bg-hero-home {
-      background-size: 120%;
-      background-position: 35% 35%;
-      max-height: 150vh;
-    }
-  }
-
-  @screen lg {
-    .bg-hero-home {
-      background-position: 50% 25%;
-    }
-  }
-
-  @screen 3xl {
-    .bg-hero-home {
-      /* background-position: 100% 25%; */
+    @media (max-aspect-ratio: 0.5625) {
+      .bg-hero-home {
+        background-position: 30% 60%;
+      }
     }
   }
 }
