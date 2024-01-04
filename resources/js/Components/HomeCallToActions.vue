@@ -240,7 +240,7 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
 }
 
 @media (orientation: landscape) and (min-width: 768px) {
-  @media (min-height: 560px) {
+  @media (min-height: 541px) {
     .cta-block {
       max-width: 305px;
     }
