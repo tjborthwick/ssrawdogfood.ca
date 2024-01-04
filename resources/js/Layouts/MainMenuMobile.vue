@@ -120,7 +120,7 @@ const userMenuLinks = [
 
 <style>
 .slide-leave-active, .slide-enter-active {
-   transition: transform .5s ease;
+   transition: transform .375s ease;
  }
 
  .slide-enter-from,
