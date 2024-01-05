@@ -1,7 +1,7 @@
 <template>
   <Link
     :href="href"
-    class="font-cubano font-normal leading-none bg-grey-400 text-tan uppercase py-1 rounded-sm focus:outline-none transition ease-in-out duration-150 no-underline whitespace-nowrap flex items-center"
+    class="font-cubano font-normal leading-snug bg-grey-400 text-tan uppercase py-1 rounded-sm focus:outline-none transition ease-in-out duration-150 no-underline whitespace-nowrap inline-block"
     :class="sizeClasses"
   >
     <slot />

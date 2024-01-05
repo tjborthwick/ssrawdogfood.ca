@@ -1,28 +1,28 @@
 <template>
-  <div class="">
+  <div>
     <div class="bg-purple cta-block">
       <div class="cta-content">
-        <div class="">
-          <h2 class="cta-title mb-3">
-            Raw Dog Food
-          </h2>
+        <h2 class="cta-title mb-3">
+          Raw Dog Food
+        </h2>
 
-          <p class="text-white mb-2">
-            Pure Raw Proteins and Gourmet Meals. We do Custom Food too!
-          </p>
-        </div>
+        <p class="text-white mb-2">
+          Pure Raw Proteins and Gourmet Meals. We do Custom Food too!
+        </p>
+      </div>
 
-        <div class="cta-links flex gap-x-20 md:gap-x-6 items-center">
+      <div class="cta-links gap-x-4">
+        <div>
           <nav-link-button
             :href="route('catalogue.index')"
             size="small"
           >
             Shop Raw
           </nav-link-button>
+        </div>
 
-          <Link
-            :href="route('catalogue.index')"
-            class="flex justify-center items-center"
+        <div>
+          <Link :href="route('catalogue.index')"
           >
             <img
               src="/images/products/chicken.png"
@@ -35,36 +35,34 @@
 
     <div class="bg-blue cta-block">
       <div class="cta-content">
-        <div class="">
-          <h2 class="cta-title mb-3">
-            Dog Treats
-          </h2>
+        <h2 class="cta-title mb-3">
+          Dog Treats
+        </h2>
 
-          <p class="text-white mb-2">
-            Tasty &amp; Beneficial All Natural <span class="whitespace-nowrap">
-              One-Ingredient
-            </span> Dog Treats
-          </p>
-        </div>
+        <p class="text-white mb-2">
+          Tasty &amp; Beneficial All Natural <span class="whitespace-nowrap">One-Ingredient</span> Dog Treats
+        </p>
+      </div>
 
-        <div class="cta-links flex gap-x-20 md:gap-x-6 items-center">
+      <div class="cta-links gap-x-4">
+        <div>
           <nav-link-button
             :href="route('catalogue.dog-treats')"
             size="small"
-            class="mt-4"
           >
             Shop Treats
           </nav-link-button>
+        </div>
 
-          <!-- <Link
+        <div>
+          <Link
             :href="route('catalogue.dog-treats')"
-            class="min-h-[90px] flex justify-center items-center"
           >
             <img
               src="/images/products/chicken.png"
               class="image"
             >
-          </Link> -->
+          </Link>
         </div>
       </div>
     </div>
@@ -120,34 +118,37 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
 }
 
 .cta-block {
-  @apply p-6 pb-3 md:px-8 lg:px-10;
+  @apply p-5 pb-3 md:px-[30px] lg:px-10;
 }
 
 .cta-block:last-child {
   @apply pb-6;
 }
 
+.cta-links {
+  @apply flex justify-evenly items-center;
+}
+
+.cta-links > div {
+  @apply w-1/2 text-center;
+}
+
+.image {
+  @apply mx-auto max-h-[100px];
+}
+
 @media (orientation: landscape)  {
   @media (max-height: 540px) {
     .cta-block {
-      @apply w-1/3 p-6;
-    }
-
-    .image {
-      @apply w-1/2;
+      @apply p-5 flex flex-col justify-between gap-y-4;
     }
 
     .cta-links {
       @apply flex gap-y-4 flex-col-reverse;
     }
-  }
 
-  /**
-   * Call to actions are leaving a very small amount of empty space before the fold. So forcing full height minus 100px header/menu
-   */
-  @media (min-height: 720px) and (max-height: 796px) {
-    .cta-block img {
-      max-width: 120px;
+    .cta-links > div {
+      @apply w-auto;
     }
   }
 }
@@ -199,15 +200,9 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
     }
   }
 
-  @media(min-height: 721px) {
+  @media(min-height: 796px) {
     .cta-block {
       @apply pt-8;
-    }
-  }
-
-  @media(min-height: 769px) {
-    .cta-block {
-      @apply pt-10;
     }
   }
 

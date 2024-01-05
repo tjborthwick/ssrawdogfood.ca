@@ -243,12 +243,16 @@ const props = defineProps({
   .cta-mobile {
     @apply flex;
   }
+
+  .cta-mobile :deep(.cta-block) {
+    @apply w-1/3;
+  }
 }
 
 /**
   CTA visibility
 */
-@media screen(lg) and (min-height: 681px) {
+@media screen(lg) and (min-height: 541px) {
   .cta-mobile {
     @apply hidden;
   }
@@ -279,7 +283,7 @@ const props = defineProps({
 
   @media screen(md) {
     :deep(.cta-block) {
-      @apply flex-1 flex flex-col justify-start;
+      @apply flex-1 flex flex-col justify-start pt-8;
     }
   }
 }
