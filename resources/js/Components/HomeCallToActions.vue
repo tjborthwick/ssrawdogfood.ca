@@ -51,11 +51,12 @@
           <nav-link-button
             :href="route('catalogue.dog-treats')"
             size="small"
+            class="mt-4"
           >
             Shop Treats
           </nav-link-button>
 
-          <Link
+          <!-- <Link
             :href="route('catalogue.dog-treats')"
             class="min-h-[90px] flex justify-center items-center"
           >
@@ -63,7 +64,7 @@
               src="/images/products/chicken.png"
               class="image"
             >
-          </Link>
+          </Link> -->
         </div>
       </div>
     </div>
@@ -114,10 +115,6 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
 </script>
 
 <style scoped>
-.cta {
-  @apply hidden absolute bottom-0 left-0 xl:top-0 xl:right-0 xl:left-auto;
-}
-
 .cta-title {
   @apply text-base15-3xl lg:text-3xl text-white uppercase font-cubano;
 }
@@ -130,28 +127,8 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
   @apply pb-6;
 }
 
-@media (orientation: portrait) {
-  @media (min-height: 1024px) {
-    .cta-mobile {
-      @apply hidden
-    }
-
-    .cta {
-      @apply flex flex-col;
-    }
-  }
-}
-
 @media (orientation: landscape)  {
   @media (max-height: 540px) {
-    .cta {
-      @apply hidden;
-    }
-
-    .cta-mobile {
-      @apply flex;
-    }
-
     .cta-block {
       @apply w-1/3 p-6;
     }
@@ -165,33 +142,12 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
     }
   }
 
-  @media (min-height: 541px) {
-    .cta-mobile {
-      @apply hidden
-    }
-
-    .cta {
-      @apply flex flex-col;
-    }
-  }
-
   /**
    * Call to actions are leaving a very small amount of empty space before the fold. So forcing full height minus 100px header/menu
    */
   @media (min-height: 720px) and (max-height: 796px) {
-    .cta {
-      @apply flex;
-      max-height: calc(100vh - 100px);
-    }
-
     .cta-block img {
       max-width: 120px;
-    }
-  }
-
-  @screen md {
-    .cta {
-      @apply !right-0 top-0 left-auto;
     }
   }
 }
@@ -207,14 +163,6 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
 @media (orientation: portrait) and (min-width: 796px) {
   .cta-block:last-child {
     @apply pb-10;
-  }
-}
-
-@media (min-height: 680px) and (max-height: 768px) {
-  @screen md {
-    .cta-block {
-      @apply flex-1 flex flex-col justify-start;
-    }
   }
 }
 

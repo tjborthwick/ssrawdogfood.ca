@@ -5,7 +5,7 @@
 
   <guest-layout :with-footer="false">
     <div class="bg-hero-home page max-h-screen">
-      <div class="container h-full content flex flex-col justify-center relative">
+      <div class="container h-full content relative">
         <h1 class="page-title">
           Awesome Food <br> For Awesome <br> Friends
         </h1>
@@ -221,6 +221,65 @@ const props = defineProps({
       .bg-hero-home {
         background-position: 30% 60%;
       }
+    }
+  }
+}
+
+/**
+  CTA positioning
+*/
+.cta {
+  @apply hidden flex-col absolute bottom-0 left-0 xl:top-0 xl:right-0 xl:left-auto;
+}
+
+@media (orientation: landscape) and screen(md) {
+  .cta {
+    @apply right-0 top-0 left-auto;
+  }
+}
+
+/** switch to horizontal columns */
+@media screen(sm) {
+  .cta-mobile {
+    @apply flex;
+  }
+}
+
+/**
+  CTA visibility
+*/
+@media screen(lg) and (min-height: 681px) {
+  .cta-mobile {
+    @apply hidden;
+  }
+
+  .cta {
+    @apply flex;
+  }
+}
+
+/** 890px is roughly where the CTAs would start colliding with the title */
+@media screen(md) and (min-height: 890px) {
+  .cta-mobile {
+    @apply hidden;
+  }
+
+  .cta {
+    @apply flex;
+  }
+}
+
+/**
+  * Call to actions are leaving a very small amount of empty space before the fold. So forcing full height minus 100px header/menu
+  */
+@media (orientation: landscape) and (min-height: 681px) and (max-height: 796px) {
+  .cta {
+    max-height: calc(100vh - 100px);
+  }
+
+  @media screen(md) {
+    :deep(.cta-block) {
+      @apply flex-1 flex flex-col justify-start;
     }
   }
 }
