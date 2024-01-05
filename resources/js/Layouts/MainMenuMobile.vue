@@ -12,10 +12,10 @@
       >
     </a>
 
-    <Transition name="slide">
+    <transition name="slide">
       <div
         v-show="showMenu"
-        class="fixed top-0 bottom-0 right-0 z-30 xl:hidden py-8 px-10 h-screen w-96 max-w-[95vw] bg-grey-400 text-tan"
+        class="fixed overflow-auto top-0 bottom-0 right-0 z-30 xl:hidden py-8 px-10 h-screen w-96 max-w-[95vw] bg-grey-400 text-tan"
       >
         <div class="text-right">
           <a
@@ -81,12 +81,12 @@
           </li>
         </ul>
       </div>
-    </Transition>
+    </transition>
   </div>
 </template>
 
 <script setup>
-import { computed, inject, ref } from 'vue'
+import { computed, inject, ref, watch, onUnmounted } from 'vue'
 import { Link } from '@inertiajs/vue3'
 import CloseSvg from '@/SVG/CloseSvg.vue'
 
@@ -116,6 +116,22 @@ const userMenuLinks = [
   { name: 'Cart', route: 'marketing.home' },
   { name: 'Checkout', route: 'marketing.home' },
 ]
+
+const removeBodyClass = function () {
+  document.body.classList.remove('overflow-hidden')
+}
+
+watch(showMenu, (newValue) => {
+  if (newValue) {
+    document.body.classList.add('overflow-hidden')
+  } else {
+    removeBodyClass()
+  }
+})
+
+onUnmounted(() => {
+  removeBodyClass()
+})
 </script>
 
 <style>
