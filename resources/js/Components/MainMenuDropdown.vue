@@ -4,12 +4,17 @@
       @mouseover="open = true"
       @mouseleave="open = false"
     >
-      <a
-        href="#"
-        class="block no-underline"
+      <responsive-nav-link
+        class="no-underline"
+        :class="{ 'text-white': isInverted }"
+        :active="triggerRouteActive"
+        :href="triggerRoute ? route(triggerRoute) : '#'"
+        @touchstart.self="open = !open"
+        @touchend.stop.prevent.self
       >
         <slot name="trigger" />
-      </a>
+      </responsive-nav-link>
+
 
       <transition
         enter-active-class="transition ease-out duration-200"
@@ -37,10 +42,14 @@
 
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
+import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue'
 
 const props = defineProps({
     align: { type: String, default: null },
     width: { type: String, default: '48' },
+    triggerRoute: { type: String, default: null },
+    triggerRouteActive: { type: Boolean, default: false },
+    isInverted: { type: Boolean, default: false },
 })
 
 const closeOnEscape = (e) => {

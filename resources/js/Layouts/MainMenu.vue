@@ -7,8 +7,12 @@
       class="hidden xl:block"
     >
       <template v-if="link.links">
-        <main-menu-dropdown>
+        <main-menu-dropdown :trigger-route="link.links[0].route" :trigger-route-active="route().current('catalogue.*')" :is-inverted="isInverted">
           <template #trigger>
+            {{ link.name }}
+          </template>
+
+          <!-- <template #trigger>
             <responsive-nav-link
               class="no-underline"
               :class="{ 'text-white': isInverted }"
@@ -17,7 +21,7 @@
             >
               {{ link.name }}
             </responsive-nav-link>
-          </template>
+          </template> -->
 
           <template #content>
             <ul
