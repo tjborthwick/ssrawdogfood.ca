@@ -143,7 +143,7 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
 }
 
 @media (orientation: landscape)  {
-  @media (min-width: 540px) and (max-height: 540px) {
+  @media (max-height: 540px) {
     .cta {
       @apply hidden;
     }
@@ -204,8 +204,7 @@ import NavLinkButton from '@/Components/NavLinkButton.vue'
   }
 }
 
-@media (orientation: portrait) and (min-width: 796px),
-@media (orientation: portrait) and (min-width: 864px) {
+@media (orientation: portrait) and (min-width: 796px) {
   .cta-block:last-child {
     @apply pb-10;
   }
