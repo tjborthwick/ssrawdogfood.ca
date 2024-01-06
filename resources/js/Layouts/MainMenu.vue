@@ -52,7 +52,7 @@
       </template>
     </li>
 
-    <li class="hidden xs:inline">
+    <li>
       <user-menu
         :inverted="isInverted"
         class="pb-3"

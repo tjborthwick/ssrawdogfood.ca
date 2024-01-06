@@ -1,6 +1,6 @@
 <template>
   <ul class="flex items-center gap-x-3 pl-2 xl:-mr-[1.9rem] 3xl:-mr-14">
-    <li>
+    <li class="hidden xs:inline">
       <Link
         class="hover:opacity-75"
         :href="route('profile.edit')"
@@ -13,7 +13,7 @@
         >
       </Link>
     </li>
-    <li>
+    <li class="hidden xs:inline">
       <Link
         class="hover:opacity-75"
         :href="route('shop.cart')"
