@@ -2,17 +2,17 @@
   <transition name="slide">
     <div
       v-show="show"
-      class="fixed overflow-auto top-0 bottom-0 right-0 z-30 xl:hidden py-8 px-10 h-screen w-96 max-w-[95vw] bg-grey-400 text-tan"
+      class="mobile-menu fixed overflow-auto top-0 bottom-0 right-0 z-30 xl:hidden py-8 px-10 h-screen w-96 max-w-[95vw] bg-grey-400 text-tan"
     >
-      <div class="text-right">
+      <div class="text-right mb-2">
         <a
           href="#"
           class="no-underline text-4xl font-normal"
           @click.prevent="handleClose"
         >
           <close-svg
-            :width="32"
-            :height="32"
+            :width="38"
+            :height="38"
             class="ml-auto fill-tan hover:fill-white"
           />
         </a>
@@ -22,29 +22,29 @@
         <li
           v-for="link in mainMenuLinks"
           :key="link.route"
-          class="text-lg font-bold uppercase py-2"
+          class="py-1.5"
         >
           <Link
             :href="route(link.route)"
             :class="{ 'text-white': route().current(link.route) }"
-            class="no-underline font-roboto hover:text-white"
+            class="no-underline font-roboto hover:text-white text-base font-bold uppercase tracking-wide"
           >
             {{ link.name }}
           </Link>
 
           <ul
             v-if="link.links"
-            class="pl-8 pt-6 "
+            class="pl-8 pt-3 pb-0.5"
           >
             <li
               v-for="subLink in link.links"
               :key="subLink.route"
-              class="capitalize text-lg py-0.5"
+              class="my-0.5"
             >
               <Link
                 :href="route(subLink.route)"
                 :class="{ 'text-white': route().current(subLink.route) }"
-                class="no-underline font-roboto capitalize hover:text-white"
+                class="no-underline font-roboto capitalize hover:text-white text-base font-semibold tracking-wide"
               >
                 {{ subLink.name }}
               </Link>
@@ -57,11 +57,11 @@
         <li
           v-for="link in userMenuLinks"
           :key="link.route"
-          class="text-lg font-bold uppercase py-2"
+          class="py-1"
         >
           <Link
             :href="route(link.route)"
-            class="no-underline font-roboto hover:text-white"
+            class="no-underline font-roboto hover:text-white text-base font-bold uppercase tracking-wide"
           >
             {{ link.name }}
           </Link>
