@@ -14,13 +14,20 @@
       <user-menu
         :footer="true"
         class="hidden sm:flex pb-1"
+        @update:show-mobile-menu="payload => emit('update:showMobileMenu', payload)"
       />
     </div>
   </div>
 </template>
 
 <script setup>
-import UserMenu from '@/Layouts/UserMenu.vue';
+import UserMenu from '@/Layouts/UserMenu.vue'
+
+const props = defineProps({
+  showMobileMenu: { type: Boolean, default: false },
+})
+
+const emit = defineEmits(['update:showMobileMenu'])
 
 const year = new Date().getFullYear();
 </script>

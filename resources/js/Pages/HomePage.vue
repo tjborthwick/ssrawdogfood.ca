@@ -3,8 +3,8 @@
     <title>Home</title>
   </Head>
 
-  <guest-layout :with-footer="false">
-    <div class="bg-hero-home page max-h-screen">
+  <guest-layout>
+    <div class="bg-hero-home page min-h-screen max-h-screen">
       <div class="container h-full content relative">
         <h1 class="page-title">
           Awesome Food <br> For Awesome <br> Friends
@@ -16,33 +16,26 @@
 
     <home-call-to-actions class="cta-mobile" />
 
-    <div class="xl:hidden">
-      <div>
-        <div class="container content">
-          <h1 class="text-4xl font-cubano text-grey-400 mb-2">
-            Products
-          </h1>
+    <div class="xl:hidden container content">
+      <h1 class="text-4xl font-cubano text-grey-400 mb-2">
+        Products
+      </h1>
 
-          <p class="text-grey-400">
-            S&S Raw Dog Food offers high quality cost effective Raw Dog Food and All Natural Dog Treats.
-            Whether you’re looking for a pure protein base to add your own ingredients, a balanced meal, or need
-            custom food for your dog with special food needs, give us a try!
-          </p>
+      <p class="text-grey-400">
+        S&S Raw Dog Food offers high quality cost effective Raw Dog Food and All Natural Dog Treats.
+        Whether you’re looking for a pure protein base to add your own ingredients, a balanced meal, or need
+        custom food for your dog with special food needs, give us a try!
+      </p>
 
-          <category-grid :categories="categories" />
-        </div>
-
-        <footer-component />
-      </div>
+      <category-grid :categories="categories" />
     </div>
   </guest-layout>
 </template>
 
 <script setup>
-import GuestLayout from '@/Layouts/GuestLayout.vue'
 import { Head } from '@inertiajs/vue3'
 import CategoryGrid from '@/Components/Products/CategoryGrid.vue'
-import FooterComponent from '@/Layouts/FooterComponent.vue'
+import GuestLayout from '@/Layouts/GuestLayout.vue'
 import HomeCallToActions from '@/Components/HomeCallToActions.vue'
 
 const props = defineProps({

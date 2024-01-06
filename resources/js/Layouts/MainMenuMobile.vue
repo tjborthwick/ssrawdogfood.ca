@@ -1,100 +1,86 @@
 <template>
-  <div>
-    <a
-      href="#"
-      @click="showMenu = true"
+  <transition name="slide">
+    <div
+      v-show="show"
+      class="fixed overflow-auto top-0 bottom-0 right-0 z-30 xl:hidden py-8 px-10 h-screen w-96 max-w-[95vw] bg-grey-400 text-tan"
     >
-      <img
-        :src="mobileMenuSrc"
-        width="32"
-        height="auto"
-        class="inline-block pb-3"
-      >
-    </a>
-
-    <transition name="slide">
-      <div
-        v-show="showMenu"
-        class="fixed overflow-auto top-0 bottom-0 right-0 z-30 xl:hidden py-8 px-10 h-screen w-96 max-w-[95vw] bg-grey-400 text-tan"
-      >
-        <div class="text-right">
-          <a
-            href="#"
-            class="no-underline text-4xl font-normal"
-            @click="showMenu = false"
-          >
-            <close-svg
-              :width="32"
-              :height="32"
-              class="ml-auto fill-tan hover:fill-white"
-            />
-          </a>
-        </div>
-
-        <ul>
-          <li
-            v-for="link in mainMenuLinks"
-            :key="link.route"
-            class="text-lg font-bold uppercase py-2"
-          >
-            <Link
-              :href="route(link.route)"
-              :class="{ 'text-white': route().current(link.route) }"
-              class="no-underline font-roboto hover:text-white"
-            >
-              {{ link.name }}
-            </Link>
-
-            <ul
-              v-if="link.links"
-              class="pl-8 pt-6 "
-            >
-              <li
-                v-for="subLink in link.links"
-                :key="subLink.route"
-                class="capitalize text-lg py-0.5"
-              >
-                <Link
-                  :href="route(subLink.route)"
-                  :class="{ 'text-white': route().current(subLink.route) }"
-                  class="no-underline font-roboto capitalize hover:text-white"
-                >
-                  {{ subLink.name }}
-                </Link>
-              </li>
-            </ul>
-          </li>
-
-          <li class="my-12" />
-
-          <li
-            v-for="link in userMenuLinks"
-            :key="link.route"
-            class="text-lg font-bold uppercase py-2"
-          >
-            <Link
-              :href="route(link.route)"
-              class="no-underline font-roboto hover:text-white"
-            >
-              {{ link.name }}
-            </Link>
-          </li>
-        </ul>
+      <div class="text-right">
+        <a
+          href="#"
+          class="no-underline text-4xl font-normal"
+          @click.prevent="handleClose"
+        >
+          <close-svg
+            :width="32"
+            :height="32"
+            class="ml-auto fill-tan hover:fill-white"
+          />
+        </a>
       </div>
-    </transition>
-  </div>
+
+      <ul>
+        <li
+          v-for="link in mainMenuLinks"
+          :key="link.route"
+          class="text-lg font-bold uppercase py-2"
+        >
+          <Link
+            :href="route(link.route)"
+            :class="{ 'text-white': route().current(link.route) }"
+            class="no-underline font-roboto hover:text-white"
+          >
+            {{ link.name }}
+          </Link>
+
+          <ul
+            v-if="link.links"
+            class="pl-8 pt-6 "
+          >
+            <li
+              v-for="subLink in link.links"
+              :key="subLink.route"
+              class="capitalize text-lg py-0.5"
+            >
+              <Link
+                :href="route(subLink.route)"
+                :class="{ 'text-white': route().current(subLink.route) }"
+                class="no-underline font-roboto capitalize hover:text-white"
+              >
+                {{ subLink.name }}
+              </Link>
+            </li>
+          </ul>
+        </li>
+
+        <li class="my-12" />
+
+        <li
+          v-for="link in userMenuLinks"
+          :key="link.route"
+          class="text-lg font-bold uppercase py-2"
+        >
+          <Link
+            :href="route(link.route)"
+            class="no-underline font-roboto hover:text-white"
+          >
+            {{ link.name }}
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </transition>
 </template>
 
 <script setup>
-import { computed, inject, ref, watch, onUnmounted } from 'vue'
+import { watch, onUnmounted } from 'vue'
 import { Link } from '@inertiajs/vue3'
 import CloseSvg from '@/SVG/CloseSvg.vue'
 
-const isInverted = inject('inverted')
+const props = defineProps({
+  show: { type: Boolean, default: false }
+})
 
-const showMenu = ref(false)
-
-const mobileMenuSrc = computed(() => isInverted ? '/images/icons/icon-menu-inverse.png' : '/images/icons/icon-menu.png')
+const emit = defineEmits(['update:show'])
 
 const mainMenuLinks = [
   { name: 'Home', route: 'marketing.home' },
@@ -117,11 +103,15 @@ const userMenuLinks = [
   { name: 'Checkout', route: 'marketing.home' },
 ]
 
+const handleClose = function () {
+  emit('update:show', false)
+}
+
 const removeBodyClass = function () {
   document.body.classList.remove('overflow-hidden')
 }
 
-watch(showMenu, (newValue) => {
+watch(() => props.show, (newValue) => {
   if (newValue) {
     document.body.classList.add('overflow-hidden')
   } else {

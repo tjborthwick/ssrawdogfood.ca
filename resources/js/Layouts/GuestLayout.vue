@@ -3,7 +3,7 @@
     class="h-full mx-auto flex flex-col"
     @click="handleInlineInertiaLinks"
   >
-    <header-component class="header" />
+    <header-component class="header" v-model:show-mobile-menu="showMobileMenu" />
 
     <div
       class="flex-1"
@@ -12,20 +12,25 @@
       <slot />
     </div>
 
-    <footer-component v-if="withFooter" />
+    <footer-component v-if="withFooter" v-model:show-mobile-menu="showMobileMenu" />
+
+    <main-menu-mobile v-model:show="showMobileMenu" />
   </div>
 </template>
 
 <script setup>
-import { provide } from 'vue';
+import { provide, ref } from 'vue';
 import HeaderComponent from "@/Layouts/HeaderComponent.vue";
 import FooterComponent from "@/Layouts/FooterComponent.vue";
+import MainMenuMobile from '@/Layouts/MainMenuMobile.vue'
 import { router } from '@inertiajs/vue3'
 
 const props = defineProps({
   inverted: { type: Boolean, default: false },
   withFooter: { type: Boolean, default: true },
 })
+
+const showMobileMenu = ref(false)
 
 provide('inverted', props.inverted)
 

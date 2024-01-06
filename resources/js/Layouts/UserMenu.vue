@@ -26,6 +26,19 @@
         >
       </Link>
     </li>
+    <li class="xl:hidden">
+      <a
+        href="#"
+        @click.prevent="emit('update:showMobileMenu', true)"
+      >
+        <img
+          :src="mobileMenuSrc"
+          width="32"
+          height="auto"
+          class="inline-block"
+        >
+      </a>
+    </li>
   </ul>
 </template>
 
@@ -37,6 +50,8 @@ const props = defineProps({
   inverted: { type: Boolean, default: false },
   footer: { type: Boolean, default: false },
 })
+
+const emit = defineEmits(['update:showMobileMenu'])
 
 const accountIconSrc = computed(() => {
   if (props.footer) {
@@ -52,6 +67,14 @@ const cartIconSrc = computed(() => {
   }
 
   return props.inverted ? '/images/icons/icon-cart-inverse.png' : '/images/icons/icon-cart.png'
+})
+
+const mobileMenuSrc = computed(() => {
+  if (props.footer) {
+    return '/images/icons/icon-menu-var-3.png'
+  }
+
+  return props.inverted ? '/images/icons/icon-menu-inverse.png' : '/images/icons/icon-menu.png'
 })
 </script>
 

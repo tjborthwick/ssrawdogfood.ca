@@ -12,17 +12,6 @@
             {{ link.name }}
           </template>
 
-          <!-- <template #trigger>
-            <responsive-nav-link
-              class="no-underline"
-              :class="{ 'text-white': isInverted }"
-              :active="route().current('catalogue.*')"
-              :href="route(link.links[0].route)"
-            >
-              {{ link.name }}
-            </responsive-nav-link>
-          </template> -->
-
           <template #content>
             <ul
               class="py-4 px-7 bg-grey-400"
@@ -67,11 +56,8 @@
       <user-menu
         :inverted="isInverted"
         class="pb-3"
+        @update:show-mobile-menu="payload => emit('update:showMobileMenu', payload)"
       />
-    </li>
-
-    <li class="xl:hidden">
-      <main-menu-mobile />
     </li>
   </ul>
 </template>
@@ -81,7 +67,6 @@ import { Link } from '@inertiajs/vue3'
 import { inject } from 'vue'
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue'
 import UserMenu from '@/Layouts/UserMenu.vue'
-import MainMenuMobile from '@/Layouts/MainMenuMobile.vue'
 import MainMenuDropdown from '@/Components/MainMenuDropdown.vue'
 
 const isInverted = inject('inverted')
@@ -100,6 +85,8 @@ const textLinks = [
   { name: 'About', route: 'marketing.about' },
   { name: 'Contact', route: 'marketing.contact' },
 ]
+
+const emit = defineEmits(['update:showMobileMenu'])
 </script>
 
 <style scoped>

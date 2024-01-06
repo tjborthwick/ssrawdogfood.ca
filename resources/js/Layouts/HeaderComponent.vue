@@ -11,7 +11,7 @@
         <ApplicationLogo />
       </Link>
 
-      <main-menu />
+      <main-menu  @update:show-mobile-menu="payload => emit('update:showMobileMenu', payload)"/>
     </div>
   </div>
 </template>
@@ -23,6 +23,12 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue'
 import MainMenu from '@/Layouts/MainMenu.vue'
 
 const inverted = inject('inverted')
+
+const props = defineProps({
+  showMobileMenu: { type: Boolean, default: false },
+})
+
+const emit = defineEmits(['update:showMobileMenu'])
 </script>
 
 <style scoped>
@@ -30,14 +36,6 @@ const inverted = inject('inverted')
     background: rgba(255,255,255,0.5);
     background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
-
-/** make the header less transparent at really wide sizes so background images don't interfere with readability */
-/* @screen 5xl {
-  .overlay {
-    background: rgba(255,255,255,0.5);
-    background: linear-gradient(rgba(255,255,255,1) 35%, rgba(255,255,255,0) 100%);
-  }
-} */
 
 .content {
   @apply py-2.5;
