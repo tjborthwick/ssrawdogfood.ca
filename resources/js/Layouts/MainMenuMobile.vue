@@ -69,6 +69,10 @@
       </ul>
     </div>
   </transition>
+
+  <transition name="fade">
+    <div v-if="show" class="bg-overlay fixed top-0 left-0 right-0 bottom-0 z-10"></div>
+  </transition>
 </template>
 
 <script setup>
@@ -125,12 +129,5 @@ onUnmounted(() => {
 </script>
 
 <style>
-.slide-leave-active, .slide-enter-active {
-   transition: transform .375s ease;
- }
 
- .slide-enter-from,
- .slide-leave-to {
-   transform: translateX(100%);
- }
 </style>

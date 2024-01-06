@@ -1,7 +1,7 @@
 <template>
   <div
     class="absolute top-0 w-full"
-    :class="{ overlay: !inverted }"
+    :class="{ 'bg-overlay': !inverted }"
   >
     <div class="container content flex justify-between xl:gap-x-16 items-center">
       <Link
@@ -32,12 +32,12 @@ const emit = defineEmits(['update:showMobileMenu'])
 </script>
 
 <style scoped>
-.overlay {
-    background: rgba(255,255,255,0.5);
-    background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-}
-
 .content {
   @apply py-2.5;
+}
+
+.bg-overlay {
+    background: rgba(255,255,255,0.5);
+    background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
 </style>

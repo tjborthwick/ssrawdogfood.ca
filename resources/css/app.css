@@ -59,3 +59,25 @@ p, span, div, a, label, li {
     @apply px-5 md:px-[30px] lg:px-10 py-6 xl:px-[60px] 3xl:px-20;
 }
 
+.bg-overlay {
+    background: rgba(255,255,255,0.5);
+}
+
+.slide-leave-active, .slide-enter-active {
+    transition: transform .375s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+    transform: translateX(100%);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
