@@ -1,9 +1,8 @@
 <?php
 
-use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Foundation\Application;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CatalogueController;
 use App\Http\Controllers\MarketingController;
@@ -38,7 +37,7 @@ Route::controller(CatalogueController::class)->group(function() {
 });
 
 Route::controller(CartController::class)->group(function() {
-    Route::get('/cart', 'index')->name('shop.cart');
+    Route::get('/cart', 'index')->name('shop.cart')->middleware(['auth']);
 });
 
 Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth', 'verified'])->name('admin');

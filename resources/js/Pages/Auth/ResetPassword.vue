@@ -2,80 +2,86 @@
   <GuestLayout>
     <Head title="Reset Password" />
 
-    <form @submit.prevent="submit">
-      <div>
-        <InputLabel
-          for="email"
-          value="Email"
-        />
+    <div class="page container content mt-16">
+      <form @submit.prevent="submit" class="max-w-2xl">
+        <h1 class="page-title">Reset Password</h1>
 
-        <TextInput
-          id="email"
-          v-model="form.email"
-          type="email"
-          class="mt-1 block w-full"
-          required
-          autofocus
-          autocomplete="username"
-        />
+        <div class="p-4 border rounded-sm">
+          <div>
+            <InputLabel
+              for="email"
+              value="Email"
+            />
 
-        <InputError
-          class="mt-2"
-          :message="form.errors.email"
-        />
-      </div>
+            <TextInput
+              id="email"
+              v-model="form.email"
+              type="email"
+              class="mt-1 block w-full"
+              required
+              autofocus
+              autocomplete="username"
+            />
 
-      <div class="mt-4">
-        <InputLabel
-          for="password"
-          value="Password"
-        />
+            <InputError
+              class="mt-2"
+              :message="form.errors.email"
+            />
+          </div>
 
-        <TextInput
-          id="password"
-          v-model="form.password"
-          type="password"
-          class="mt-1 block w-full"
-          required
-          autocomplete="new-password"
-        />
+          <div class="mt-4">
+            <InputLabel
+              for="password"
+              value="Password"
+            />
 
-        <InputError
-          class="mt-2"
-          :message="form.errors.password"
-        />
-      </div>
+            <TextInput
+              id="password"
+              v-model="form.password"
+              type="password"
+              class="mt-1 block w-full"
+              required
+              autocomplete="new-password"
+            />
 
-      <div class="mt-4">
-        <InputLabel
-          for="password_confirmation"
-          value="Confirm Password"
-        />
+            <InputError
+              class="mt-2"
+              :message="form.errors.password"
+            />
+          </div>
 
-        <TextInput
-          id="password_confirmation"
-          v-model="form.password_confirmation"
-          type="password"
-          class="mt-1 block w-full"
-          required
-          autocomplete="new-password"
-        />
+          <div class="mt-4">
+            <InputLabel
+              for="password_confirmation"
+              value="Confirm Password"
+            />
 
-        <InputError
-          class="mt-2"
-          :message="form.errors.password_confirmation"
-        />
-      </div>
+            <TextInput
+              id="password_confirmation"
+              v-model="form.password_confirmation"
+              type="password"
+              class="mt-1 block w-full"
+              required
+              autocomplete="new-password"
+            />
 
-      <div class="flex items-center justify-end mt-4">
-        <PrimaryButton
-          :class="{ 'opacity-25': form.processing }"
-          :disabled="form.processing"
-        >
-          Reset Password
-        </PrimaryButton>
-      </div>
-    </form>
+            <InputError
+              class="mt-2"
+              :message="form.errors.password_confirmation"
+            />
+          </div>
+
+          <div class="flex items-center justify-end mt-4">
+            <PrimaryButton
+              :class="{ 'opacity-25': form.processing }"
+              :disabled="form.processing"
+            >
+              Reset Password
+            </PrimaryButton>
+          </div>
+        </div>
+      </form>
+    </div>
   </GuestLayout>
 </template>
 
