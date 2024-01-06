@@ -79,9 +79,15 @@ const props = defineProps({
     }
   }
 
+  @screen md {
+    .page-title {
+      @apply top-24;
+    }
+  }
+
   @screen lg {
     .page-title {
-      @apply top-60;
+      @apply top-48;
     }
   }
 }
