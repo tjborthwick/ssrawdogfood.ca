@@ -92,7 +92,7 @@ import { Head, Link } from '@inertiajs/vue3'
 }
 
 .hero-container {
-  @apply min-h-[200px] md:min-h-[325px] xl:min-h-[440px] 3xl:min-h-[570px];
+  @apply min-h-[200px] md:min-h-[325px];
 }
 
 .hero-container + div .content {
@@ -117,6 +117,20 @@ import { Head, Link } from '@inertiajs/vue3'
   }
 }
 
+@media screen(xl),
+(min-height: 1440px) {
+  .hero-container {
+    @apply min-h-[440px];
+  }
+}
+
+@media screen(3xl),
+(min-height: 1920px) {
+  .hero-container {
+    @apply min-h-[570px];
+  }
+}
+
 @screen xs {
   .bg-hero-benefits {
     background-size: auto 118%;
@@ -133,15 +147,15 @@ import { Head, Link } from '@inertiajs/vue3'
 
 @screen md {
   .bg-hero-benefits {
-    background-size: auto 113%;
-    background-position: 42% 100%;
+    background-size: auto 116%;
+    background-position: 42% 90%;
   }
 }
 
 @screen lg {
   .bg-hero-benefits {
-    background-size: auto 117%;
-    background-position: 42% 100%;
+    background-size: auto 126%;
+    background-position: 42% 78%;
   }
 }
 
@@ -151,52 +165,31 @@ import { Head, Link } from '@inertiajs/vue3'
     background-position: 50% 65%;
   }
 
-  @media (min-height: 768px) {
+  @media (min-width: 1120px) {
     .bg-hero-benefits {
-      background-size: cover;
-      background-position: 50% 100%;
-    }
-  }
-
-  @media (min-height: 820px) {
-    .bg-hero-benefits {
-      background-position: 50% 60%;
-    }
-  }
-
-  @media (min-height: 900px) {
-    .bg-hero-benefits {
-      background-position: 50% 40%;
-    }
-  }
-
-  @media (min-height: 1080px) {
-    .bg-hero-benefits {
-      background-position: 50% 35%;
-    }
-  }
-
-  @screen xl {
-    .bg-hero-benefits {
-      background-position: 50% 65%;
-    }
-  }
-
-  @media (min-width: 1360px) {
-    .bg-hero-benefits {
+      background-size: auto 145%;
       background-position: 50% 50%;
     }
   }
 
-  @screen 2xl {
+  @media (min-width: 1440px) {
     .bg-hero-benefits {
+      background-size: auto 160%;
       background-position: 50% 45%;
     }
   }
 
-  @screen 3xl {
+  @media (min-width: 1601px) {
     .bg-hero-benefits {
-      background-position: 50% 40%;
+      background-size: auto 175%;
+      background-position: 50% 39%;
+    }
+  }
+
+  @media (min-width: 1750px) {
+    .bg-hero-benefits {
+      background-size: cover;
+      background-position: 50% 39%;
     }
   }
 
@@ -204,12 +197,6 @@ import { Head, Link } from '@inertiajs/vue3'
     .bg-hero-benefits {
       background-position: 50% 32%;
     }
-  }
-}
-
-@media (min-aspect-ratio: 7 / 8) and (max-aspect-ratio: 1) {
-  .bg-hero-benefits {
-    @apply bg-cover;
   }
 }
 
