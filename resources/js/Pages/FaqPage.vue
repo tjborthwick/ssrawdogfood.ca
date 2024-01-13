@@ -228,7 +228,7 @@ const handleToggle = function (index) {
 
 <style scoped>
 .page-title {
-  @apply absolute top-6 sm:top-16;
+  @apply absolute top-6 md:top-16;
 }
 
 @media (max-height: 540px) {
@@ -237,12 +237,14 @@ const handleToggle = function (index) {
   }
 }
 
+
+
 .hero-container {
   @apply min-h-[200px] md:min-h-[325px] xl:min-h-[440px] 5xl:min-h-[500px];
 }
 
 .hero-content-tmp {
-  @apply !pt-[3rem] xs:!pt-[4rem] md:!pt-[5rem] xl:!pt-[6.5rem];
+  @apply !pt-[3rem] xs:!pt-[4rem] md:!pt-[5.5rem] xl:!pt-[6.5rem];
 }
 
 @media (max-height: 540px) {
@@ -276,7 +278,7 @@ const handleToggle = function (index) {
 @screen md {
   .bg-hero-faq {
     background-size: 180%;
-    background-position: 40% 50%;
+    background-position: 40% 30%;
   }
 }
 
@@ -341,7 +343,7 @@ const handleToggle = function (index) {
 
 @screen sm {
   .hero-product-img {
-    @apply max-w-[285px] top-[-9rem];
+    @apply max-w-[285px] top-[-9.125rem];
   }
 }
 
@@ -353,19 +355,25 @@ const handleToggle = function (index) {
 
 @screen lg {
   .hero-product-img {
-    @apply max-w-xs top-[-10rem] left-14;
+    @apply max-w-xs top-[-10rem] left-8;
   }
 }
 
 @screen xl {
   .hero-product-img {
-    @apply max-w-none top-[-16.25rem];
+    @apply max-w-none top-[-17rem];
+  }
+}
+
+@screen xl {
+  .hero-product-img {
+    @apply left-12;
   }
 }
 
 @screen 3xl {
   .hero-product-img {
-    @apply left-20;
+    @apply left-16;
   }
 }
 
