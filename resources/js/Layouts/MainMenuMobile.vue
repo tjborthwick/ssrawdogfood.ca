@@ -102,9 +102,9 @@ const mainMenuLinks = [
 ]
 
 const userMenuLinks = [
-  { name: 'Account', route: 'marketing.home' },
-  { name: 'Cart', route: 'marketing.home' },
-  { name: 'Checkout', route: 'marketing.home' },
+  { name: 'Account', route: 'profile.edit' },
+  { name: 'Cart', route: 'shop.cart' },
+  { name: 'Checkout', route: 'shop.cart' },
 ]
 
 const handleClose = function () {
