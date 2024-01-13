@@ -260,7 +260,7 @@ const handleToggle = function (index) {
   @apply bg-auto bg-left;
 }
 
-@screen xs {
+@media (min-width: 360px) {
   .bg-hero-faq {
     background-size: cover;
     background-position: 45% 0%;
@@ -276,35 +276,42 @@ const handleToggle = function (index) {
 @screen md {
   .bg-hero-faq {
     background-size: 180%;
-    background-position: 35% 0%;
+    background-position: 40% 50%;
   }
 }
 
 @screen lg {
   .bg-hero-faq {
-    @apply bg-cover;
-    background-position: 35% 0%;
+    background-size: 170%;
+    background-position: 45% 45%;
   }
 }
 
 @screen xl {
   .bg-hero-faq {
     background-size: 140%;
-    background-position: 20% 20%;
+    background-position: 30% 50%;
+  }
+}
+
+@screen 2xl {
+  .bg-hero-faq {
+    background-size: 140%;
+    background-position: 30% 40%;
   }
 }
 
 @screen 3xl {
   .bg-hero-faq {
-    background-size: 110%;
-    background-position: 0% 15%;
+    background-size: 115%;
+    background-position: 25% 40%;
   }
 }
 
 @screen 5xl {
   .bg-hero-faq {
     background-size: cover;
-    background-position: 0% 25%;
+    background-position: 50% 40%;
   }
 }
 
@@ -317,6 +324,7 @@ const handleToggle = function (index) {
   @screen md {
     .bg-hero-faq {
       background-size: 125%;
+      background-position: 25% 25%;
     }
   }
 }
@@ -339,7 +347,7 @@ const handleToggle = function (index) {
 
 @screen md {
   .hero-product-img {
-    @apply left-10;
+    @apply left-5;
   }
 }
 

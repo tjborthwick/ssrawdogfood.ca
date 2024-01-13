@@ -59,7 +59,7 @@
             :href="route('catalogue.dog-treats')"
           >
             <img
-              src="/images/products/chicken.png"
+              src="/images/products/dried-beef-lung-pkg.png"
               class="image"
             >
           </Link>

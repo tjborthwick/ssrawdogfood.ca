@@ -13,7 +13,7 @@
 
         <div class="flex flex-col gap-y-4 sm:flex-row sm:gap-x-16">
           <div class="sm:w-1/2">
-            <img src="/images/products/gourmet-duck.png">
+            <img src="/images/products/custom-raw-dog-food.png">
           </div>
 
           <div class="sm:w-1/2">

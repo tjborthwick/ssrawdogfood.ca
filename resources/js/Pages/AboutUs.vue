@@ -35,7 +35,7 @@
       <div class="bg-orange-200">
         <div class="container">
           <div class="md:flex">
-            <div class="md:w-7/12">
+            <div class="flex-1">
               <div class="content !pt-10 lg:pb-10">
                 <h2 class="text-base15-2xl leading-snug lg:text-2xl font-cubano uppercase mb-4 tracking-wide">
                   Why We Do What We Do
@@ -64,7 +64,7 @@
               </div>
             </div>
 
-            <div class="md:w-5/12 flex-1 bg-hero-about-2 bg-no-repeat bg-cover bg-top-center min-h-[520px] md:min-h-0 lg:min-h-[467px]" />
+            <div class="flex-1 md:max-w-[290px] lg:max-w-[32%] bg-hero-about-2 bg-no-repeat bg-cover bg-top-center min-h-[520px] md:min-h-0 lg:min-h-[467px]" />
           </div>
         </div>
       </div>

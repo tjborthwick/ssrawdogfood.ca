@@ -4,10 +4,10 @@
   </Head>
 
   <guest-layout>
-    <div class="page bg-no-repeat bg-cover">
-      <div>
-        <div class="hero-container container content relative">
-          <h1 class="page-title absolute page-title top-6 sm:top-16">
+    <div class="bg-green h-full">
+      <div class="page !h-auto bg-no-repeat bg-hero-feeding">
+        <div class="hero-container container content relative inverted">
+          <h1 class="page-title absolute top-6 sm:top-16">
             Transitioning <br> &amp; Feeding
           </h1>
 
@@ -16,7 +16,9 @@
             class="absolute bottom-[-4rem] left-2 sm:left-10 lg:left-14 3xl:left-20 max-w-[160px] sm:max-w-[185px]"
           >
         </div>
+      </div>
 
+      <div>
         <div class="bg-green inverted">
           <div class="container content !pt-[4.5rem] !pb-10">
             <h2 class="text-base15-2xl leading-snug lg:text-2xl uppercase font-cubano tracking-wide mb-4">
@@ -128,7 +130,7 @@
             </div>
           </div>
 
-          <div class="md:w-[50%] lg:w-1/2 bg-hero-feeding bg-cover min-h-[500px]" />
+          <div class="md:w-[50%] lg:w-1/2 bg-hero-feeding-2 bg-cover min-h-[500px]" />
         </div>
       </div>
     </div>
@@ -143,5 +145,44 @@ import { Head, Link } from '@inertiajs/vue3'
 <style scoped>
 .hero-container {
   @apply min-h-[200px] sm:min-h-[325px] xl:min-h-[440px] 5xl:min-h-[512px];
+}
+
+.bg-hero-feeding {
+    @apply bg-cover;
+    background-position: 50% 50%;
+  }
+
+@media screen(xs) {
+  .bg-hero-feeding {
+    background-position: 40% 50%;
+  }
+}
+
+@media screen(xsp) {
+  .bg-hero-feeding {
+    background-size: 165%;
+    background-position: 54% 8%;
+  }
+}
+
+@media screen(lg) {
+  .bg-hero-feeding {
+    background-size: 145%;
+    background-position: 50% 15%;
+  }
+}
+
+@media screen(xl) {
+  .bg-hero-feeding {
+    @apply bg-cover;
+    background-position: 50% 0%;
+  }
+}
+
+@media screen(3xl) {
+  .bg-hero-feeding {
+    @apply bg-cover;
+    background-position: 50% 12%;
+  }
 }
 </style>

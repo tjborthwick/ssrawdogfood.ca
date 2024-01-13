@@ -14,9 +14,10 @@ module.exports = {
             backgroundImage: {
                 'hero-home': "url('/images/dogs/awesome-food-awesome-friends.jpg')",
                 'hero-about': "url('/images/dogs/about.png')",
-                'hero-about-2': "url('/images/dogs/about-2.jpg')",
+                'hero-about-2': "url('/images/dogs/about-2-alt.jpg')",
                 'hero-benefits': "url('/images/dogs/benefits-of-raw-dog-food.jpg')",
-                'hero-feeding': "url('/images/dogs/raw-diet-feeding-guidelines.jpg')",
+                'hero-feeding': "url('/images/dogs/feeding-transition.jpg')",
+                'hero-feeding-2': "url('/images/dogs/raw-diet-feeding-guidelines.jpg')",
                 'hero-faq': "url('/images/dogs/raw-dog-food-faq.jpg')",
                 'hero-contact': "url(/images/dogs/contact.jpg)",
             },
@@ -44,6 +45,7 @@ module.exports = {
 
             screens: {
                 'xs': '390px',
+                'xsp': '540px',
                 '3xl': '1920px',
                 '4xl': '2304px',
                 '5xl': '2560px',

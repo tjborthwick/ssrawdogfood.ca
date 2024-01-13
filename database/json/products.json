@@ -154,7 +154,7 @@
         "price": 10,
         "slug": "chicken-tenders",
         "category": "Dog Treats",
-        "image": "/images/products/chicken-tenders-pkg.jpg",
+        "image": "/images/products/chicken-tenders-pkg.png",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
@@ -167,7 +167,7 @@
         "price": 5,
         "slug": "smoked-turkey-neck",
         "category": "Dog Treats",
-        "image": "/images/products/smoked-turkey-neck.jpg",
+        "image": "/images/products/smoked-turkey-neck.png",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
@@ -180,7 +180,7 @@
         "price": 4,
         "slug": "smoked-pig-foot",
         "category": "Dog Treats",
-        "image": "/images/products/smoked-pig-foot.jpg",
+        "image": "/images/products/smoked-pig-foot.png",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
@@ -193,7 +193,7 @@
         "price": 3,
         "slug": "femur-bones",
         "category": "Dog Treats",
-        "image": "/images/products/femur-bones.jpg",
+        "image": "/images/products/femur-bones.png",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
@@ -206,7 +206,7 @@
         "price": 10,
         "slug": "beef-lungs",
         "category": "Dog Treats",
-        "image": "/images/products/dried-beef-lung-pkg.jpg",
+        "image": "/images/products/dried-beef-lung-pkg.png",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
@@ -219,7 +219,7 @@
         "price": 12,
         "slug": "beef-liver",
         "category": "Dog Treats",
-        "image": "/images/products/dried-beef-liver-pkg.jpg",
+        "image": "/images/products/dried-beef-liver-pkg.png",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
@@ -232,7 +232,7 @@
         "price": 3,
         "slug": "beef-chews",
         "category": "Dog Treats",
-        "image": "/images/products/dried-beef-chews.jpg",
+        "image": "/images/products/dried-beef-chews.png",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
@@ -245,7 +245,7 @@
         "price": 5,
         "slug": "lamb-trachea",
         "category": "Dog Treats",
-        "image": "/images/products/dried-lamb-trachea.jpg",
+        "image": "/images/products/dried-lamb-trachea.png",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
@@ -258,7 +258,20 @@
         "price": 5,
         "slug": "pig-ears",
         "category": "Dog Treats",
-        "image": "/images/products/dried-pig-ears.jpg",
+        "image": "/images/products/dried-pig-ears.png",
+        "crossSells": [
+            "pig-ears",
+            "smoked-turkey-neck",
+            "femur-bones",
+            "lamb-trachea"
+        ]
+    },
+    {
+        "title": "Pig Chew",
+        "price": 5,
+        "slug": "pig-chew",
+        "category": "Dog Treats",
+        "image": "/images/products/pig-chew.png",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
