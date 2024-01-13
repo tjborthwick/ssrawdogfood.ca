@@ -13,7 +13,7 @@
 
           <img
             src="/images/products/patty.png"
-            class="absolute bottom-[-4rem] left-2 sm:left-10 lg:left-14 3xl:left-20 max-w-[160px] sm:max-w-[185px]"
+            class="absolute bottom-[-4rem] left-2 sm:left-10 lg:left-14 3xl:left-20 max-w-[160px] sm:max-w-[185px] xl:max-w-[280px]"
           >
         </div>
       </div>
