@@ -5,10 +5,7 @@
         Name
       </label>
 
-      <input
-        type="text"
-        class="w-full rounded-sm border-grey-200 focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-400"
-      >
+      <text-input />
     </div>
 
     <div class="mb-4">
@@ -16,10 +13,7 @@
         Email
       </label>
 
-      <input
-        type="email"
-        class="w-full rounded-sm border-grey-200 focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-400"
-      >
+     <text-input type="email" />
     </div>
 
     <div class="mb-4">
@@ -27,10 +21,7 @@
         Phone
       </label>
 
-      <input
-        type="text"
-        class="w-full rounded-sm border-grey-200 focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-400"
-      >
+      <text-input />
     </div>
 
     <div class="mb-4">
@@ -38,11 +29,7 @@
         Details
       </label>
 
-      <textarea
-        class="w-full resize-y rounded-sm border-grey-200 focus:outline-none focus:shadow-none focus:ring-0 focus:border-grey-400"
-        rows="4"
-        placeholder="Tell us about your dog's special needs, or what you're looking for."
-      />
+      <textarea-input row="4" placeholder="Tell us about your dog's special needs, or what you're looking for." />
     </div>
 
     <primary-button>Send</primary-button>
@@ -51,6 +38,8 @@
 
 <script setup>
 import PrimaryButton from '@/Components/PrimaryButton.vue'
+import TextInput from '@/Components/TextInput.vue'
+import TextareaInput from '@/Components/TextareaInput.vue'
 
 </script>
 
