@@ -36,7 +36,7 @@
             * By appointment only.
           </p>
 
-          <contact-form class="mt-10" />
+          <contact-form class="mt-10" :errors="errors"/>
         </div>
       </div>
     </div>
@@ -47,7 +47,6 @@
 import { Head } from '@inertiajs/vue3'
 import ContactForm from '@/Components/ContactForm.vue';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
-
 </script>
 
 <style scoped>

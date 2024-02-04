@@ -5,6 +5,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CatalogueController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\MarketingController;
 
 /*
@@ -24,7 +25,11 @@ Route::controller(MarketingController::class)->group(function() {
     Route::get('/transitioning-feeding', 'feeding')->name('marketing.feeding');
     Route::get('/faq', 'faq')->name('marketing.faq');
     Route::get('/about-us', 'about')->name('marketing.about');
-    Route::get('/contact-us', 'contact')->name('marketing.contact');
+});
+
+Route::controller(ContactUsController::class)->group(function() {
+    Route::get('/contact-us', 'index')->name('marketing.contact');
+    Route::post('/contact-us', 'send')->name('marketing.contact.send');
 });
 
 Route::controller(CatalogueController::class)->group(function() {

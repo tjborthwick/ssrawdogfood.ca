@@ -3,6 +3,8 @@
     class="h-full mx-auto flex flex-col"
     @click="handleInlineInertiaLinks"
   >
+    <flash-messages />
+
     <header-component class="header" v-model:show-mobile-menu="showMobileMenu" />
 
     <div
@@ -19,10 +21,11 @@
 </template>
 
 <script setup>
-import { provide, ref } from 'vue';
-import HeaderComponent from "@/Layouts/HeaderComponent.vue";
-import FooterComponent from "@/Layouts/FooterComponent.vue";
+import { provide, ref } from 'vue'
+import HeaderComponent from "@/Layouts/HeaderComponent.vue"
+import FooterComponent from "@/Layouts/FooterComponent.vue"
 import MainMenuMobile from '@/Layouts/MainMenuMobile.vue'
+import FlashMessages from '@/Layouts/FlashMessages.vue'
 import { router } from '@inertiajs/vue3'
 
 const props = defineProps({

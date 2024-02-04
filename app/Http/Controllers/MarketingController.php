@@ -41,9 +41,4 @@ class MarketingController extends Controller
     {
         return Inertia::render('AboutUs');
     }
-
-    public function contact()
-    {
-        return Inertia::render('ContactUs');
-    }
 }
