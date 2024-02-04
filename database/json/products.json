@@ -2,6 +2,7 @@
     {
         "title": "Chicken",
         "price": 2,
+        "uom": "each",
         "slug": "chicken",
         "category": "Pure Proteins",
         "image": "/images/products/chicken.png",
@@ -17,6 +18,7 @@
     {
         "title": "Turkey",
         "price": 2.5,
+        "uom": "each",
         "slug": "turkey",
         "category": "Pure Proteins",
         "images": [],
@@ -32,6 +34,7 @@
     {
         "title": "Pork",
         "price": 2.5,
+        "uom": "each",
         "slug": "pork",
         "category": "Pure Proteins",
         "images": [],
@@ -47,6 +50,7 @@
     {
         "title": "Beef",
         "price": 3.5,
+        "uom": "each",
         "slug": "beef",
         "category": "Pure Proteins",
         "images": [],
@@ -62,6 +66,7 @@
     {
         "title": "Gourmet Chicken",
         "price": 2.25,
+        "uom": "each",
         "slug": "gourmet-chicken",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-chicken.png",
@@ -77,6 +82,7 @@
     {
         "title": "Gourmet Turkey",
         "price": 2.85,
+        "uom": "each",
         "slug": "gourmet-turkey",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-turkey.png",
@@ -92,6 +98,7 @@
     {
         "title": "Gourmet Pork",
         "price": 2.85,
+        "uom": "each",
         "slug": "gourmet-pork",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-pork.png",
@@ -107,6 +114,7 @@
     {
         "title": "Gourmet Beef",
         "price": 3.75,
+        "uom": "each",
         "slug": "gourmet-beef",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-beef.png",
@@ -121,7 +129,8 @@
     },
     {
         "title": "Gourmet Duck",
-        "price": 3.75,
+        "price": 4.00,
+        "uom": "each",
         "slug": "gourmet-duck",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-duck.png",
@@ -136,7 +145,8 @@
     },
     {
         "title": "Gourmet Rabbit",
-        "price": 99.99,
+        "price": null,
+        "uom": "each",
         "slug": "gourmet-rabbit",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-rabbit.png",
@@ -152,6 +162,7 @@
     {
         "title": "Chicken Tenders",
         "price": 10,
+        "uom": "each",
         "slug": "chicken-tenders",
         "category": "Dog Treats",
         "image": "/images/products/chicken-tenders-pkg.png",
@@ -165,6 +176,7 @@
     {
         "title": "Smoked Turkey Neck",
         "price": 5,
+        "uom": "each",
         "slug": "smoked-turkey-neck",
         "category": "Dog Treats",
         "image": "/images/products/smoked-turkey-neck.png",
@@ -178,6 +190,7 @@
     {
         "title": "Smoked Pig Foot",
         "price": 4,
+        "uom": "each",
         "slug": "smoked-pig-foot",
         "category": "Dog Treats",
         "image": "/images/products/smoked-pig-foot.png",
@@ -190,7 +203,8 @@
     },
     {
         "title": "Femur Bones",
-        "price": 3,
+        "price": 5,
+        "uom": "each",
         "slug": "femur-bones",
         "category": "Dog Treats",
         "image": "/images/products/femur-bones.png",
@@ -204,6 +218,7 @@
     {
         "title": "Beef Lungs",
         "price": 10,
+        "uom": "each",
         "slug": "beef-lungs",
         "category": "Dog Treats",
         "image": "/images/products/dried-beef-lung-pkg.png",
@@ -217,6 +232,7 @@
     {
         "title": "Beef Liver",
         "price": 12,
+        "uom": "each",
         "slug": "beef-liver",
         "category": "Dog Treats",
         "image": "/images/products/dried-beef-liver-pkg.png",
@@ -230,6 +246,7 @@
     {
         "title": "Beef Chews",
         "price": 3,
+        "uom": "each",
         "slug": "beef-chews",
         "category": "Dog Treats",
         "image": "/images/products/dried-beef-chews.png",
@@ -243,6 +260,7 @@
     {
         "title": "Lamb Trachea",
         "price": 5,
+        "uom": "each",
         "slug": "lamb-trachea",
         "category": "Dog Treats",
         "image": "/images/products/dried-lamb-trachea.png",
@@ -255,7 +273,8 @@
     },
     {
         "title": "Pig Ears",
-        "price": 5,
+        "price": 12,
+        "uom": "3",
         "slug": "pig-ears",
         "category": "Dog Treats",
         "image": "/images/products/dried-pig-ears.png",
@@ -269,6 +288,7 @@
     {
         "title": "Pig Chew",
         "price": 5,
+        "uom": "each",
         "slug": "pig-chew",
         "category": "Dog Treats",
         "image": "/images/products/pig-chew.png",

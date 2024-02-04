@@ -22,7 +22,8 @@
             </h1>
 
             <p class="text-grey-400 text-2xl mb-4">
-              From: ${{ product.price.toFixed(2) }}
+              <template v-if="product.uom === 'each'">${{ product.price.toFixed(2) }}</template>
+              <template v-else>{{ product.uom }} for ${{ product.price.toFixed(2) }}</template>
             </p>
 
             <p class="text-grey-400 mb-4">

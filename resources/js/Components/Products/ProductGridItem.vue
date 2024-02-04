@@ -12,14 +12,15 @@
     <h2 class="mb-2">
       <Link
         :href="route('catalogue.view-product', product.slug)"
-        class="no-underline font-normal text-xl-b md:text-base15-2xl lg:text-2xl-b text-grey-400 font-cubano "
+        class="no-underline font-normal text-xl-b md:text-base15-2xl !leading-tight lg:text-2xl-b text-grey-400 font-cubano "
       >
         {{ product.title }}
       </Link>
     </h2>
 
     <p class="text-grey-400">
-      From: ${{ product.price.toFixed(2) }}
+      <span v-if="product.uom === 'each'">${{ product.price.toFixed(2) }}</span>
+      <span v-else>{{ product.uom }} for ${{ product.price.toFixed(2) }}</span>
     </p>
   </div>
 </template>
