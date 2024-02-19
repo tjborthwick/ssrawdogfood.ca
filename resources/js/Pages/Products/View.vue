@@ -21,10 +21,7 @@
               {{ product.title }}
             </h1>
 
-            <p class="text-grey-400 text-2xl mb-4">
-              <template v-if="product.uom === 'each'">${{ product.price.toFixed(2) }}</template>
-              <template v-else>{{ product.uom }} for ${{ product.price.toFixed(2) }}</template>
-            </p>
+            <product-price :product="product" class="text-2xl mb-4" />
 
             <p class="text-grey-400 mb-4">
               {{ product.description }}
@@ -52,6 +49,7 @@ import GuestLayout from '@/Layouts/GuestLayout.vue'
 import ProductBreadcrumbs from '@/Components/ProductBreadcrumbs.vue'
 import MoreLikeThis from '@/Components/Products/MoreLikeThis.vue'
 import ProductImages from '@/Components/Products/ProductImages.vue'
+import ProductPrice from '@/Components/ProductPrice.vue'
 
 const props = defineProps({
   product: { type: Object, required: true },

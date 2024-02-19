@@ -2,7 +2,7 @@
     {
         "title": "Chicken",
         "price": 2,
-        "uom": "each",
+        "uom": "lbs",
         "slug": "chicken",
         "category": "Pure Proteins",
         "image": "/images/products/chicken.png",
@@ -18,7 +18,7 @@
     {
         "title": "Turkey",
         "price": 2.5,
-        "uom": "each",
+        "uom": "lbs",
         "slug": "turkey",
         "category": "Pure Proteins",
         "images": [],
@@ -34,7 +34,7 @@
     {
         "title": "Pork",
         "price": 2.5,
-        "uom": "each",
+        "uom": "lbs",
         "slug": "pork",
         "category": "Pure Proteins",
         "images": [],
@@ -50,7 +50,7 @@
     {
         "title": "Beef",
         "price": 3.5,
-        "uom": "each",
+        "uom": "lbs",
         "slug": "beef",
         "category": "Pure Proteins",
         "images": [],
@@ -66,7 +66,7 @@
     {
         "title": "Gourmet Chicken",
         "price": 2.25,
-        "uom": "each",
+        "uom": "lbs",
         "slug": "gourmet-chicken",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-chicken.png",
@@ -82,7 +82,7 @@
     {
         "title": "Gourmet Turkey",
         "price": 2.85,
-        "uom": "each",
+        "uom": "lbs",
         "slug": "gourmet-turkey",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-turkey.png",
@@ -98,7 +98,7 @@
     {
         "title": "Gourmet Pork",
         "price": 2.85,
-        "uom": "each",
+        "uom": "lbs",
         "slug": "gourmet-pork",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-pork.png",
@@ -114,7 +114,7 @@
     {
         "title": "Gourmet Beef",
         "price": 3.75,
-        "uom": "each",
+        "uom": "lbs",
         "slug": "gourmet-beef",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-beef.png",
@@ -130,7 +130,7 @@
     {
         "title": "Gourmet Duck",
         "price": 4.00,
-        "uom": "each",
+        "uom": "lbs",
         "slug": "gourmet-duck",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-duck.png",
@@ -146,7 +146,7 @@
     {
         "title": "Gourmet Rabbit",
         "price": null,
-        "uom": "each",
+        "uom": "lbs",
         "slug": "gourmet-rabbit",
         "category": "Gourmet Meals",
         "image": "/images/products/gourmet-rabbit.png",

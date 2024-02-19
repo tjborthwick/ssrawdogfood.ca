@@ -32,7 +32,7 @@
             :href="route('catalogue.view-product', product.slug)"
             class="no-underline font-normal"
           >
-            From: ${{ product.price.toFixed(2) }}
+            <product-price :product="product" :href="route('catalogue.view-product', product.slug)" />
           </Link>
         </li>
       </ul>
@@ -42,6 +42,7 @@
 
 <script setup>
 import { Link } from '@inertiajs/vue3'
+import ProductPrice from '@/Components/ProductPrice.vue'
 
 const props = defineProps({
   products: { type: Object, required: true }

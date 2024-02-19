@@ -18,16 +18,13 @@
       </Link>
     </h2>
 
-    <p class="text-grey-400">
-      <span v-if="product.uom === 'each'">${{ product.price.toFixed(2) }}</span>
-      <span v-else>{{ product.uom }} for ${{ product.price.toFixed(2) }}</span>
-    </p>
+    <product-price :product="product" />
   </div>
 </template>
 
 <script setup>
 import { Link } from '@inertiajs/vue3'
-
+import ProductPrice from '@/Components/ProductPrice.vue'
 const props = defineProps({
     product: { type: Object, required: true },
 })
