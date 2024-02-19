@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title>Products</title>
+    <title>Product Categories</title>
   </Head>
 
   <guest-layout>

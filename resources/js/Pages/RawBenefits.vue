@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title>Benefits of Raw</title>
+    <title>Benefits of Raw Dog Food</title>
   </Head>
 
   <guest-layout>

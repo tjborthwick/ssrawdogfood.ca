@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title>FAQ</title>
+    <title>Frequently Asked Questions</title>
   </Head>
 
   <guest-layout>

@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title>Home</title>
+    <title>Food and Treats for Dogs</title>
   </Head>
 
   <guest-layout>

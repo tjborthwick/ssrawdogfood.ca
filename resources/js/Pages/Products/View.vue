@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title>Chicken</title>
+    <title>{{ product.title }}</title>
   </Head>
 
   <guest-layout>
@@ -27,7 +27,7 @@
               {{ product.description }}
             </p>
 
-            <p>
+            <p v-if="product.category !== 'Dog Treats'">
               Available by the pound or in patties. Comes
               freshly frozen.
             </p>

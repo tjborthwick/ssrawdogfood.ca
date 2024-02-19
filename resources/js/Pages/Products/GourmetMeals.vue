@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title>Pure Proteins</title>
+    <title>Gourmet Meals</title>
   </Head>
 
   <guest-layout>
