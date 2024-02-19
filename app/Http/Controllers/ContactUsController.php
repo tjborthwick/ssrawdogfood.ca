@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Inertia\Inertia;
 use App\Mail\ContactUsMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\ContactUsRequest;
 
@@ -22,7 +23,7 @@ class ContactUsController extends Controller
         try {
             Mail::to('tjborthwick@gmail.com')->send(new ContactUsMail($validated));
         } catch (\Exception $e) {
-            dd($e);
+            Log::info('Contact Us Mail error: ' . $e?->getMessage());
         }
 
         return redirect()->back()->with('success', 'Message sent successfully');

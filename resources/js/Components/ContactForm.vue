@@ -44,11 +44,10 @@
 
 <script setup>
 import { useForm } from '@inertiajs/vue3'
-import TextInput from '@/Components/TextInput.vue'
-import TextareaInput from '@/Components/TextareaInput.vue'
-import PrimaryButton from '@/Components/PrimaryButton.vue'
 import InputError from '@/Components/InputError.vue'
-import { watch } from 'vue'
+import PrimaryButton from '@/Components/PrimaryButton.vue'
+import TextareaInput from '@/Components/TextareaInput.vue'
+import TextInput from '@/Components/TextInput.vue'
 
 const form = useForm({
   name: '',
@@ -63,11 +62,6 @@ const handleSubmit = function () {
     preserveScroll: true,
   })
 }
-
-watch(() => form.errors, (newValue) => {
-  console.log('watcher', newValue?.name)
-}, { immediate: true })
-
 </script>
 
 <style scoped>

@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CatalogueController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\CustomFoodController;
 use App\Http\Controllers\MarketingController;
 
 /*
@@ -32,12 +33,16 @@ Route::controller(ContactUsController::class)->group(function() {
     Route::post('/contact-us', 'send')->name('marketing.contact.send');
 });
 
+Route::controller(CustomFoodController::class)->group(function() {
+    Route::get('/products/custom-food', 'index')->name('catalogue.custom-food');
+    Route::post('/products/custom-food', 'send')->name('catalogue.custom-food.send');
+});
+
 Route::controller(CatalogueController::class)->group(function() {
     Route::get('/products', 'index')->name('catalogue.index');
     Route::get('/products/pure-proteins', 'pureProteins')->name('catalogue.pure-proteins');
     Route::get('/products/gourmet-meals', 'gourmetMeals')->name('catalogue.gourmet-meals');
     Route::get('/products/dog-treats', 'dogTreats')->name('catalogue.dog-treats');
-    Route::get('/products/custom-food', 'customFood')->name('catalogue.custom-food');
     Route::get('/products/{slug}', 'view')->name('catalogue.view-product');
 });
 
