@@ -27,6 +27,7 @@
             <img
               src="/images/products/chicken.png"
               class="image"
+              alt="Container of Chicken Dog Food"
             >
           </Link>
         </div>
@@ -61,6 +62,7 @@
             <img
               src="/images/products/dried-beef-lung-pkg.png"
               class="image"
+              alt="Package of Beef Lung Dog Treats"
             >
           </Link>
         </div>

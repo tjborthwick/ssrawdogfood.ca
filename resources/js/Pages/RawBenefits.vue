@@ -26,6 +26,7 @@
           <img
             src="/images/products/gourmet-turkey.png"
             class="hero-product-img"
+            alt="Container of Gourmet Turkey Dog Food"
           >
         </div>
       </div>

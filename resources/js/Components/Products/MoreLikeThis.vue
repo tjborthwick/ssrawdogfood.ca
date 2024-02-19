@@ -15,7 +15,7 @@
               :href="route('catalogue.view-product', product.slug)"
               class="no-underline"
             >
-              <img :src="product.image">
+              <img :src="product.image" :alt="product.title">
             </Link>
           </div>
 

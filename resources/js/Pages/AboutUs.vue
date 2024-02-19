@@ -18,6 +18,7 @@
           <img
             src="/images/products/gourmet-duck.png"
             class="hero-product-img"
+            alt="Container of Gourmet Duck Dog Food"
           >
 
           <h2 class="text-base15-2xl leading-snug lg:text-2xl font-cubano uppercase mb-4 tracking-wide">

@@ -4,6 +4,7 @@
       <Link :href="route('catalogue.view-product', product.slug)">
         <img
           :src="product.image"
+          :alt="product.title"
           class="mx-auto"
         >
       </Link>

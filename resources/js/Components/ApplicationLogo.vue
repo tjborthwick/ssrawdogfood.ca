@@ -26,6 +26,7 @@
       width="420"
       height="80"
       class="logo"
+      alt="S&S Raw Dog Food"
     >
   </picture>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="product.image">
+    <img :src="product.image" :alt="product.title">
 
     <ul
       v-if="product.images"

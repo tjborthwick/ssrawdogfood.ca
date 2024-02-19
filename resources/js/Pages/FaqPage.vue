@@ -18,6 +18,7 @@
           <img
             src="/images/products/gourmet-beef.png"
             class="hero-product-img"
+            alt="Container of Gourmet Beef Dog Food"
           >
 
           <faq-component

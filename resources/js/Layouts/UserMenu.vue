@@ -8,6 +8,7 @@
         <img
           class="inline-block"
           :src="accountIconSrc"
+          alt="User Account"
           width="32"
           height="auto"
         >
@@ -21,6 +22,7 @@
         <img
           class="inline-block"
           :src="cartIconSrc"
+          alt="Cart"
           width="32"
           height="auto"
         >
@@ -33,6 +35,7 @@
       >
         <img
           :src="mobileMenuSrc"
+          alt="Mobile Menu"
           width="32"
           height="auto"
           class="inline-block"

@@ -19,7 +19,7 @@
           :href="route(category.route)"
           class="no-underline"
         >
-          <img :src="category.image">
+          <img :src="category.image" :alt="category.title">
         </Link>
       </div>
     </div>
