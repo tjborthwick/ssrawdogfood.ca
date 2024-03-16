@@ -9,6 +9,7 @@
         <li
           v-for="product in products"
           :key="product.slug"
+          class="flex flex-col justify-between"
         >
           <div class="max-w-[200px]">
             <Link
@@ -19,21 +20,23 @@
             </Link>
           </div>
 
-          <h3 class="text-lg sm:text-xl-b font-cubano text-grey-400 mb-2">
+          <div>
+            <h3 class="text-lg sm:text-xl-b font-cubano text-grey-400 mb-2">
+              <Link
+                :href="route('catalogue.view-product', product.slug)"
+                class="no-underline font-normal"
+              >
+                {{ product.title }}
+              </Link>
+            </h3>
+
             <Link
               :href="route('catalogue.view-product', product.slug)"
               class="no-underline font-normal"
             >
-              {{ product.title }}
+              <product-price :product="product" :href="route('catalogue.view-product', product.slug)" />
             </Link>
-          </h3>
-
-          <Link
-            :href="route('catalogue.view-product', product.slug)"
-            class="no-underline font-normal"
-          >
-            <product-price :product="product" :href="route('catalogue.view-product', product.slug)" />
-          </Link>
+          </div>
         </li>
       </ul>
     </div>

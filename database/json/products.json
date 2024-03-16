@@ -161,16 +161,17 @@
     },
     {
         "title": "Chicken Tenders",
-        "price": 10,
+        "price": 12,
         "uom": "each",
         "slug": "chicken-tenders",
         "category": "Dog Treats",
         "image": "/images/products/chicken-tenders-pkg.png",
+        "description": "All-natural, single-ingredient dehydrated dog treats – the perfect blend of health and flavour for your furry companion!",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
             "femur-bones",
-            "lamb-trachea"
+            "smoked-pork-rind"
         ]
     },
     {
@@ -180,25 +181,27 @@
         "slug": "smoked-turkey-neck",
         "category": "Dog Treats",
         "image": "/images/products/smoked-turkey-neck.png",
+        "description": "All-natural, single-ingredient dehydrated dog treats – the perfect blend of health and flavour for your furry companion!",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
             "femur-bones",
-            "lamb-trachea"
+            "smoked-pork-rind"
         ]
     },
     {
         "title": "Smoked Pig Foot",
-        "price": 4,
+        "price": 5,
         "uom": "each",
         "slug": "smoked-pig-foot",
         "category": "Dog Treats",
         "image": "/images/products/smoked-pig-foot.png",
+        "description": "All-natural, single-ingredient dehydrated dog treats – the perfect blend of health and flavour for your furry companion!",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
             "femur-bones",
-            "lamb-trachea"
+            "smoked-pork-rind"
         ]
     },
     {
@@ -208,11 +211,12 @@
         "slug": "femur-bones",
         "category": "Dog Treats",
         "image": "/images/products/femur-bones.png",
+        "description": "All-natural, single-ingredient dehydrated dog treats – the perfect blend of health and flavour for your furry companion!",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
             "femur-bones",
-            "lamb-trachea"
+            "smoked-pork-rind"
         ]
     },
     {
@@ -222,11 +226,12 @@
         "slug": "beef-lungs",
         "category": "Dog Treats",
         "image": "/images/products/dried-beef-lung-pkg.png",
+        "description": "All-natural, single-ingredient dehydrated dog treats – the perfect blend of health and flavour for your furry companion!",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
             "femur-bones",
-            "lamb-trachea"
+            "smoked-pork-rind"
         ]
     },
     {
@@ -236,11 +241,12 @@
         "slug": "beef-liver",
         "category": "Dog Treats",
         "image": "/images/products/dried-beef-liver-pkg.png",
+        "description": "All-natural, single-ingredient dehydrated dog treats – the perfect blend of health and flavour for your furry companion!",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
             "femur-bones",
-            "lamb-trachea"
+            "smoked-pork-rind"
         ]
     },
     {
@@ -250,25 +256,12 @@
         "slug": "beef-chews",
         "category": "Dog Treats",
         "image": "/images/products/dried-beef-chews.png",
+        "description": "All-natural, single-ingredient dehydrated dog treats – the perfect blend of health and flavour for your furry companion!",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
             "femur-bones",
-            "lamb-trachea"
-        ]
-    },
-    {
-        "title": "Lamb Trachea",
-        "price": 5,
-        "uom": "each",
-        "slug": "lamb-trachea",
-        "category": "Dog Treats",
-        "image": "/images/products/dried-lamb-trachea.png",
-        "crossSells": [
-            "pig-ears",
-            "smoked-turkey-neck",
-            "femur-bones",
-            "lamb-trachea"
+            "smoked-pork-rind"
         ]
     },
     {
@@ -278,25 +271,27 @@
         "slug": "pig-ears",
         "category": "Dog Treats",
         "image": "/images/products/dried-pig-ears.png",
+        "description": "All-natural, single-ingredient dehydrated dog treats – the perfect blend of health and flavour for your furry companion!",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
             "femur-bones",
-            "lamb-trachea"
+            "smoked-pork-rind"
         ]
     },
     {
-        "title": "Pig Chew",
-        "price": 5,
-        "uom": "each",
-        "slug": "pig-chew",
+        "title": "Smoked Pork Rind",
+        "price": 12,
+        "uom": "2",
+        "slug": "smoked-pork-rind",
         "category": "Dog Treats",
-        "image": "/images/products/pig-chew.png",
+        "image": "/images/product-placeholder.jpg",
+        "description": "All-natural, single-ingredient dehydrated dog treats – the perfect blend of health and flavour for your furry companion!",
         "crossSells": [
             "pig-ears",
             "smoked-turkey-neck",
             "femur-bones",
-            "lamb-trachea"
+            "smoked-pig-foot"
         ]
     }
 ]
