@@ -54,7 +54,7 @@
 
         <li class="my-12" />
 
-        <li
+        <!-- <li
           v-for="link in userMenuLinks"
           :key="link.route"
           class="py-1"
@@ -65,7 +65,7 @@
           >
             {{ link.name }}
           </Link>
-        </li>
+        </li> -->
       </ul>
     </div>
   </transition>
