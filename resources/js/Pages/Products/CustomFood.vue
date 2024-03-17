@@ -45,7 +45,7 @@
   import CustomFoodForm from '@/Components/CustomFoodForm.vue';
 
   const crumbs = [
-    { title: 'Products', url: route('catalogue.index') },
+    { title: 'Products', url: 'catalogue.index' },
     { title: 'Custom Food', url: null }
   ]
 

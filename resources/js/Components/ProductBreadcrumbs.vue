@@ -22,7 +22,7 @@
       <li>
         <Link
           v-if="crumb.url"
-          :href="crumb.url"
+          :href="route(crumb.url)"
           class="no-underline font-roboto text-tan whitespace-nowrap"
         >
           {{ crumb.title }}
@@ -36,7 +36,7 @@
         </span>
       </li>
     </template>
-  </ul>
+</ul>
 </template>
 
 <script setup>

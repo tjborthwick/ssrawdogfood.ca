@@ -61,8 +61,8 @@ class CatalogueController extends Controller
         $category = $this->categories->firstWhere('title', $product->category);
 
         $breadcrumbs = [
-            ['title' => 'Products', 'url' => route('catalogue.index')],
-            ['title' => $product->category, 'url' => route($category->route) ],
+            ['title' => 'Products', 'url' => 'catalogue.index'],
+            ['title' => $product->category, 'url' => $category->route],
             ['title' => $product->title, 'url' => null],
         ];
 

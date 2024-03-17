@@ -36,7 +36,7 @@ import ProductBreadcrumbs from '@/Components/ProductBreadcrumbs.vue'
 import ProductGrid from '@/Components/Products/ProductGrid.vue'
 
 const crumbs = [
-  { title: 'Products', url: route('catalogue.index') },
+  { title: 'Products', url: 'catalogue.index' },
   { title: 'Gourmet Meals', url: null }
 ]
 
