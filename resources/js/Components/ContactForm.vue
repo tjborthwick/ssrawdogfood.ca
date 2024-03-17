@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="handleSubmit">
+  <form @submit.prevent="handleRecaptcha">
     <div class="mb-4">
       <label class="block font-bold">
         Name
@@ -36,6 +36,8 @@
       <input-error :message="form?.errors?.message"/>
     </div>
 
+    <input-error v-if="form?.errors?.captcha_token" :message="form.errors.captcha_token" class="mb-4" />
+
     <primary-button :inverted="true">
       Send
     </primary-button>
@@ -48,13 +50,25 @@ import InputError from '@/Components/InputError.vue'
 import PrimaryButton from '@/Components/PrimaryButton.vue'
 import TextareaInput from '@/Components/TextareaInput.vue'
 import TextInput from '@/Components/TextInput.vue'
+import { useReCaptcha } from 'vue-recaptcha-v3'
+
+const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
 
 const form = useForm({
   name: '',
   email: '',
   phone: '',
   message: '',
+  captcha_token: '',
 })
+
+const handleRecaptcha = async () => {
+  form.clearErrors();
+
+  await recaptchaLoaded()
+  form.captcha_token = await executeRecaptcha('contactUs')
+  handleSubmit()
+}
 
 const handleSubmit = function () {
   form.post(route('marketing.contact.send'), {

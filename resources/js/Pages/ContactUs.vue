@@ -36,7 +36,7 @@
             * By appointment only.
           </p>
 
-          <contact-form class="mt-10" :errors="errors"/>
+          <contact-form class="mt-10" />
         </div>
       </div>
     </div>

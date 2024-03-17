@@ -44,6 +44,7 @@ class HandleInertiaRequests extends Middleware
                 'warning' => fn () => $request->session()->get('warning'),
                 'error' => fn () => $request->session()->get('error'),
             ],
+            'recaptcha_site_key' => config('services.google_recaptcha.site_key'),
         ]);
     }
 }

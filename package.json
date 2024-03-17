@@ -20,6 +20,7 @@
         "vue": "^3.2.41"
     },
     "dependencies": {
+        "vue-recaptcha-v3": "^2.0.1",
         "vue-toast-notification": "^3.1.2"
     }
 }
