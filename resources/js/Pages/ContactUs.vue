@@ -32,6 +32,8 @@
             Saturday-Sunday: 9am-5pm
           </p>
 
+          <p class="mb-4"><a href="tel:+15197883417" class="font-light text-lg">(519) 788-3417</a></p>
+
           <p>
             * By appointment only.
           </p>

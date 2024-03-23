@@ -21,9 +21,9 @@
               {{ product.title }}
             </h1>
 
-            <product-price :product="product" class="text-2xl mb-4" />
+            <product-price :product="product" :is-product-page="true" class="text-2xl mb-4" />
 
-            <p class="text-grey-400 mb-4">
+            <p class="text-grey-400 my-4">
               {{ product.description }}
             </p>
 

@@ -36,7 +36,7 @@ const props = defineProps({
 <style scoped>
 @media (min-width: 769px) {
   .product-wrapper {
-    @apply flex flex-col justify-between;
+    @apply flex flex-col gap-y-8;
   }
 }
 </style>
