@@ -1,7 +1,7 @@
 <template>
   <textarea
     ref="input"
-    class="w-full py-1 px-2 bg-transparent border rounded-sm resize-y focus:outline-none shadow"
+    class="block w-full px-2 bg-transparent border rounded-sm resize-y focus:outline-none shadow"
     :class="classes"
     rows="2"
     @input="$emit('update:modelValue', $event.target.value)"
