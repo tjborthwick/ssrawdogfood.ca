@@ -56,10 +56,9 @@ import PrimaryButton from '@/Components/PrimaryButton.vue'
 import TextareaInput from '@/Components/TextareaInput.vue'
 import TextInput from '@/Components/TextInput.vue'
 import LoadingSpinner from '@/Components/LoadingSpinner.vue'
-import { ReCaptchaInstance } from 'recaptcha-v3'
 import { useReCaptcha } from 'vue-recaptcha-v3'
 
-const { executeRecaptcha, recaptchaLoaded, instance } = useReCaptcha()
+const { executeRecaptcha } = useReCaptcha()
 
 const form = useForm({
   name: '',
@@ -67,13 +66,6 @@ const form = useForm({
   phone: '',
   message: '',
   captcha_token: '',
-})
-
-onMounted(async () => {
-  await recaptchaLoaded()
-
-  // Hide recaptcha badge from users. It gets automatically embedded by Recaptcha
-  instance.value.hideBadge()
 })
 
 const handleRecaptcha = async () => {

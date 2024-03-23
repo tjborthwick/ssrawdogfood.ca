@@ -18,8 +18,7 @@ createInertiaApp({
         return createSSRApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue, Ziggy)
-            // .use(VueReCaptcha, { siteKey: captcheKey, loaderOptions: { useRecaptchaNet: true } })
-            .use(VueReCaptcha, { siteKey: captcheKey })
+            .use(VueReCaptcha, { siteKey: captcheKey, loaderOptions: { autoHideBadge: true } })
             .mount(el);
     },
     progress: {
