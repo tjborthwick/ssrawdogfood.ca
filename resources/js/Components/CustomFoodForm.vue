@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="handleSubmit" class="max-w-md">
+  <form @submit.prevent="handleRecaptcha" class="max-w-md">
     <div class="mb-4">
       <label class="block font-bold">
         Name
@@ -36,7 +36,11 @@
       <input-error :message="form?.errors?.message"/>
     </div>
 
-    <primary-button>Send</primary-button>
+    <div class="flex items-center gap-x-2">
+      <primary-button>Send</primary-button>
+
+      <loading-spinner v-if="form.processing" />
+    </div>
   </form>
 </template>
 
@@ -46,6 +50,10 @@ import InputError from '@/Components/InputError.vue'
 import PrimaryButton from '@/Components/PrimaryButton.vue'
 import TextareaInput from '@/Components/TextareaInput.vue'
 import TextInput from '@/Components/TextInput.vue'
+import LoadingSpinner from '@/Components/LoadingSpinner.vue'
+import { useReCaptcha } from 'vue-recaptcha-v3'
+
+const { executeRecaptcha } = useReCaptcha()
 
 const form = useForm({
   name: '',
@@ -53,6 +61,14 @@ const form = useForm({
   phone: '',
   message: '',
 })
+
+const handleRecaptcha = async () => {
+  form.processing = true
+  form.clearErrors()
+  form.captcha_token = await executeRecaptcha('customFood')
+
+  handleSubmit()
+}
 
 const handleSubmit = function () {
   form.post(route('catalogue.custom-food.send'), {
