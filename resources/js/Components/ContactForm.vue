@@ -38,9 +38,13 @@
 
     <input-error v-if="form?.errors?.captcha_token" :message="form.errors.captcha_token" class="mb-4" />
 
-    <primary-button :inverted="true">
-      Send
-    </primary-button>
+    <div class="flex items-center gap-x-2">
+      <primary-button :inverted="true">
+        Send
+      </primary-button>
+
+      <loading-spinner v-if="form.processing" />
+    </div>
   </form>
 </template>
 
@@ -50,6 +54,7 @@ import InputError from '@/Components/InputError.vue'
 import PrimaryButton from '@/Components/PrimaryButton.vue'
 import TextareaInput from '@/Components/TextareaInput.vue'
 import TextInput from '@/Components/TextInput.vue'
+import LoadingSpinner from '@/Components/LoadingSpinner.vue'
 import { useReCaptcha } from 'vue-recaptcha-v3'
 
 const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
