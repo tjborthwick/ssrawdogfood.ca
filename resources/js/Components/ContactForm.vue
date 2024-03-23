@@ -49,15 +49,17 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import { useForm } from '@inertiajs/vue3'
 import InputError from '@/Components/InputError.vue'
 import PrimaryButton from '@/Components/PrimaryButton.vue'
 import TextareaInput from '@/Components/TextareaInput.vue'
 import TextInput from '@/Components/TextInput.vue'
 import LoadingSpinner from '@/Components/LoadingSpinner.vue'
+import { ReCaptchaInstance } from 'recaptcha-v3'
 import { useReCaptcha } from 'vue-recaptcha-v3'
 
-const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
+const { executeRecaptcha, recaptchaLoaded, instance } = useReCaptcha()
 
 const form = useForm({
   name: '',
@@ -67,11 +69,18 @@ const form = useForm({
   captcha_token: '',
 })
 
-const handleRecaptcha = async () => {
-  form.clearErrors();
-
+onMounted(async () => {
   await recaptchaLoaded()
+
+  // Hide recaptcha badge from users. It gets automatically embedded by Recaptcha
+  instance.value.hideBadge()
+})
+
+const handleRecaptcha = async () => {
+  form.processing = true
+  form.clearErrors()
   form.captcha_token = await executeRecaptcha('contactUs')
+
   handleSubmit()
 }
 
