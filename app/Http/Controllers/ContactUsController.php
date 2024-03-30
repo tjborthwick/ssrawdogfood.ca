@@ -20,8 +20,10 @@ class ContactUsController extends Controller
     {
         $validated = $request->safe();
 
+        $recipient = config('app.contact_us_recipient');
+
         try {
-            Mail::to('tjborthwick@gmail.com')->send(new ContactUsMail($validated));
+            Mail::to($recipient)->send(new ContactUsMail($validated));
         } catch (\Exception $e) {
             Log::info('Contact Us Mail error: ' . $e?->getMessage());
         }

@@ -19,8 +19,10 @@ class CustomFoodController extends Controller
     {
         $validated = $request->safe();
 
+        $recipient = config('app.contact_us_recipient');
+
         try {
-            Mail::to('tjborthwick@gmail.com')->send(new CustomFoodMail($validated));
+            Mail::to($recipient)->send(new CustomFoodMail($validated));
         } catch (\Exception $e) {
             Log::info('Custom Food Mail error: ' . $e?->getMessage());
         }

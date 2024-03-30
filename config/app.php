@@ -212,4 +212,5 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'contact_us_recipient' => env('CONTACT_US_RECIPIENT'),
 ];
