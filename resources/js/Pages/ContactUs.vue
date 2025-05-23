@@ -28,8 +28,8 @@
 
 
           <p class="mb-4">
-            Monday-Friday: 5pm-8pm<br>
-            Saturday-Sunday: 9am-5pm
+            Monday-Saturday: 9am-6pm<br>
+            Sunday: 10am-5pm
           </p>
 
           <p class="mb-4"><a href="tel:+15197883417" class="font-light text-lg">(519) 788-3417</a></p>
