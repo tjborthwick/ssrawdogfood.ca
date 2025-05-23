@@ -4,10 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\CatalogueController;
 use App\Http\Controllers\ContactUsController;
-use App\Http\Controllers\CustomFoodController;
 use App\Http\Controllers\MarketingController;
+use App\Http\Controllers\CustomFoodController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,11 @@ Route::controller(ContactUsController::class)->group(function() {
 Route::controller(CustomFoodController::class)->group(function() {
     Route::get('/products/custom-food', 'index')->name('catalogue.custom-food');
     Route::post('/products/custom-food', 'send')->name('catalogue.custom-food.send');
+});
+
+Route::controller(DeliveryController::class)->group(function() {
+    Route::get('/delivery', 'index')->name('delivery.index');
+    Route::post('/delivery', 'send')->name('delivery.send');
 });
 
 Route::controller(CatalogueController::class)->group(function() {
