@@ -28,7 +28,7 @@
 
 
           <p class="mb-4">
-            Monday-Saturday: 9am-6pm<br>
+            Monday-Saturday: 9am-7pm<br>
             Sunday: 10am-5pm
           </p>
 
