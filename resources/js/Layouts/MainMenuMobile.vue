@@ -93,6 +93,7 @@ const mainMenuLinks = [
     { name: 'Gourmet Meals', route: 'catalogue.gourmet-meals' },
     { name: 'Custom Food', route: 'catalogue.custom-food' },
     { name: 'Dog Treats', route: 'catalogue.dog-treats' },
+    { name: 'Delivery', route: 'delivery.index' },
   ] },
   { name: 'Benefits of Raw', route: 'marketing.benefits' },
   { name: 'Transitioning & Feeding', route: 'marketing.feeding' },
