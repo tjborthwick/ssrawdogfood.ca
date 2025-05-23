@@ -40,8 +40,8 @@ Route::controller(CustomFoodController::class)->group(function() {
 });
 
 Route::controller(DeliveryController::class)->group(function() {
-    Route::get('/delivery', 'index')->name('delivery.index');
-    Route::post('/delivery', 'send')->name('delivery.send');
+    Route::get('/products/delivery', 'index')->name('delivery.index');
+    Route::post('/products/delivery', 'send')->name('delivery.send');
 });
 
 Route::controller(CatalogueController::class)->group(function() {

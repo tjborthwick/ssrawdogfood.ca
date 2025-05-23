@@ -12,7 +12,7 @@
             {{ link.name }}
           </template>
 
-          <template #content>
+<template #content>
             <ul
               class="py-4 px-7 bg-grey-400"
               :class="{ 'bg-white': isInverted }"
@@ -37,10 +37,10 @@
               </li>
             </ul>
           </template>
-        </main-menu-dropdown>
-      </template>
+</main-menu-dropdown>
+</template>
 
-      <template v-else>
+<template v-else>
         <responsive-nav-link
           :active="route().current(link.route)"
           :href="route(link.route)"
@@ -50,16 +50,13 @@
           {{ link.name }}
         </responsive-nav-link>
       </template>
-    </li>
+</li>
 
-    <li>
-      <user-menu
-        :inverted="isInverted"
-        class="pb-3"
-        @update:show-mobile-menu="payload => emit('update:showMobileMenu', payload)"
-      />
-    </li>
-  </ul>
+<li>
+  <user-menu :inverted="isInverted" class="pb-3"
+    @update:show-mobile-menu="payload => emit('update:showMobileMenu', payload)" />
+</li>
+</ul>
 </template>
 
 <script setup>
@@ -78,6 +75,7 @@ const textLinks = [
     { name: 'Gourmet Meals', route: 'catalogue.gourmet-meals' },
     { name: 'Custom Food', route: 'catalogue.custom-food' },
     { name: 'Dog Treats', route: 'catalogue.dog-treats' },
+    { name: 'Delivery', route: 'delivery.index' },
   ] },
   { name: 'Benefits', route: 'marketing.benefits' },
   { name: 'Transitioning & Feeding', route: 'marketing.feeding' },
